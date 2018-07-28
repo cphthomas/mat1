@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-<link rel="next" href="indledning.html">
+<link rel="prev" href="excel-liner-programmering.html">
+<link rel="next" href="lsning-af-ligningssystemer-med-excel.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -172,141 +172,186 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Udvidet Statistik for de finansielle uddannelser.</h1>
-<h4 class="author"><em>Thomas Petersen</em></h4>
-<h4 class="date"><em>2018-07-28</em></h4>
+<div id="excel-liner-regression" class="section level1">
+<h1><span class="header-section-number">Kapitel 17</span> Excel Lineær regression</h1>
+<div id="video-excel-liner-regression" class="section level3">
+<h3><span class="header-section-number">17.0.1</span> Video excel lineær regression</h3>
+<p><img src="media/image102.png" style="width:6in;height:3.75in" /></p>
+<p>Hvis man har et observationssæt med observerede x og y værdier, kunne man have en formodning om at der er en lineær sammenhæng mellem variablene. I nedenstående eksempel<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> har man indsamlet data om forskellige bilers vægt og benzinøkonomi. En mile er 1,6 kilometer, en gallon er 3,8 liter, dvs en Hyundai kører</p>
+<p><span class="math display">\[\frac{1,6 \cdot 30}{3,78} \approx 12,7\ km/l\ \]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>lmodel Væ</th>
+<th>gt kg. Mi</th>
+<th align="left">les/gallon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Honda Accord Sedan LX</td>
+<td>3164</td>
+<td align="left">34</td>
+</tr>
+<tr class="even">
+<td>Toyota Corolla</td>
+<td>2590</td>
+<td align="left">38</td>
+</tr>
+<tr class="odd">
+<td>Toyota Sequoia Limited 4WD</td>
+<td>5295</td>
+<td align="left">17</td>
+</tr>
+<tr class="even">
+<td>Mitsubishi Eclipse RS</td>
+<td>2976</td>
+<td align="left">31</td>
+</tr>
+<tr class="odd">
+<td>Hyundai Tiburon Base</td>
+<td>2997</td>
+<td align="left">30</td>
+</tr>
+<tr class="even">
+<td>Ford Freestar Wagon SE</td>
+<td>4275</td>
+<td align="left">23</td>
+</tr>
+<tr class="odd">
+<td>Dodge Grand Caravan XFWD</td>
+<td>4218</td>
+<td align="left">25</td>
+</tr>
+<tr class="even">
+<td>Toyota Sienna XLE FWD</td>
+<td>4165</td>
+<td align="left">27</td>
+</tr>
+<tr class="odd">
+<td>Chevrolet Colorado Extd. Cab 2WD</td>
+<td>3631</td>
+<td align="left">24</td>
+</tr>
+<tr class="even">
+<td>Dodge Dakota Club Cab</td>
+<td>3838</td>
+<td align="left">22</td>
+</tr>
+<tr class="odd">
+<td>Chevrolet Trail Blazer</td>
+<td>4612</td>
+<td align="left">21</td>
+</tr>
+<tr class="even">
+<td>Jeep Grand Cherokee Laredo</td>
+<td>3970</td>
+<td align="left">21</td>
+</tr>
+<tr class="odd">
+<td>Dodge Durango ST</td>
+<td>4981</td>
+<td align="left">18</td>
+</tr>
+<tr class="even">
+<td>Ford Expedition Eddie Bauer</td>
+<td>5671</td>
+<td align="left">17</td>
+</tr>
+<tr class="odd">
+<td>Chevrolet Tahoe 4WD</td>
+<td>5050</td>
+<td align="left">18</td>
+</tr>
+<tr class="even">
+<td>GMC Yukon 4WD</td>
+<td>5262</td>
+<td align="left">18</td>
+</tr>
+<tr class="odd">
+<td>Ford Thunderbird Premium</td>
+<td>3863</td>
+<td align="left">23</td>
+</tr>
+<tr class="even">
+<td>Mercedes-Benz SLR</td>
+<td>3220</td>
+<td align="left">22</td>
+</tr>
+<tr class="odd">
+<td>Jeep Liberty</td>
+<td>4115</td>
+<td align="left">21</td>
+</tr>
+<tr class="even">
+<td>Hyundai Santa Fe Base</td>
+<td>3574</td>
+<td align="left">27</td>
+</tr>
+<tr class="odd">
+<td>Buick Le Sabre Custom</td>
+<td>3567</td>
+<td align="left">29</td>
+</tr>
+<tr class="even">
+<td>Pontiac Bonneville</td>
+<td>3633</td>
+<td align="left">29</td>
+</tr>
+<tr class="odd">
+<td>Toyota Avalon</td>
+<td>3417</td>
+<td align="left">29</td>
+</tr>
+<tr class="even">
+<td>Toyota Celica GT</td>
+<td>2460</td>
+<td align="left">33</td>
+</tr>
+<tr class="odd">
+<td>Hummer H2</td>
+<td>6400</td>
+<td align="left">17</td>
+</tr>
+</tbody>
+</table>
+<p>Man kunne have en formodning om at jo tungere en bil var, desto færre miles kører den på en gallon. Det virker naturligt at påstå at benzinøkonomi i en eller anden grad afhænger af vægt. Derfor vil vi antage at x-værdierne skal være vægt, og at benzinøkonomien y’erne, er en funktion af vægten. Man kan klikke på billedet nedenfor og hente filen fra google docs.</p>
+<p>Er der en lineær sammenhæng og hvor udtalt er denne ?</p>
+<p>Man sætter data ind i excel → lyser hhv. x-værdi og y-værdi søjlerne op. Husk x-værdien skal stå først. → vælger fanen Charts → vælger Scatter → nu har man et plot af punkterne → Vælg Chart Quick Layouts → Vælg Layout 9 (se billede nedenfor eller screencast )</p>
+<p><img src="media/image103.png" style="width:4.77778in;height:4.05556in" /></p>
+<p>Nu skulle man gerne have en plot som nedenfor:</p>
+<p><img src="media/image104.png" style="width:6in;height:3.33681in" /></p>
+<p>Hvis man skal ændre f.eks. x-akse skalaen stiller man sig på et x-akse tal i Excel plottet → højreklikker → Format Axis → Vælg Scale → ret f.eks. minimum til 2000 → Ok</p>
+<p>Man kan direkte copy paste plottet ind i et worddokument som nedenfor. Linjen i plottet kaldes regressionslinjen. Den viser at der er en negativ sammenhæng mellem vægt og benzinøkonomi da hældningen -0.0052 er negativ. Det fortæller os at ifølge modellen (Det kalder vi regressionslinjen), vil en forøgelse af vægten på 1 kilo betyde at man kører 0,0052 miles kortere på en gallon. Det er måske mere meningsfuldt, at gange begge størrelser med 1000, så kan man sige at for hvert ton bilvægten forøges kører bilen 5,2 miles kortere på en gallon. Interceptet hvilket betyder skæringen med y-aksen 45,645 har ikke betydning. Vi kan kun udtale os om biler indenfor det vægtspænd, vi har observeret, vi kan ikke sige noget om biler der vejer 0 kilo.</p>
+<p><a href="https://docs.google.com/file/d/0B1E7VnhxsDMlOFJnQU9PQ2JWams/edit?usp=sharing"><span class="chart"><span class="math display">\[CHART\]</span></span></a></p>
+<p>Hvordan er linjen beregnet ? Regressionslinjen er dannet på baggrund af mindste kvadraters metode, det betyder denne linje minimerer den lodrette afstand mellem punkterne og linjen ( i vil høre meget mere om dette i statistik ). Hvor godt beskriver bilvægten benzinøkonomien. Målet for dette er <span class="math inline">\(R^{2} = 0,75\)</span>, det betyder at 75% af variationen i benzinøkonomien forklares ud fra bilernes vægt. Jo bedre modellen forklarer variationen i benzinøkonomien jo tættere på 1 dvs. 100% vil <span class="math inline">\(R^{2}\)</span> komme. Hvis der ingen sammenhæng mellem vægt og benzinøkonomi var, ville man bedst kunne beskrive benzinøkonomien for bilerne ved gennemsnittet af deres forbrug. Man ville altså have en regressionslinje der lå vandret.</p>
+<p><span class="math inline">\(\text{SS}_{\text{res}}\)</span> sums og squares residual angiver summen de lodrette kvadrerede afstande til regressionslinjen.</p>
+<p><span class="math inline">\(\text{SS}_{\text{tot}}\)</span> sums og squares total angiver summen de lodrette kvadrerede afstande til denne vandrette gennemsnitslinje.</p>
+<p>I tegningen nedenfor er en regressionslinje (den røde linje), modelleret på baggrund af kun 3 observationer. For observationen (2,1) er dens bidrag til sums og squares residual arealet af den gule firkant, det er den lodrette afstand til den røde regressionslinje i anden. For observationen (2,1) er dens bidrag til sums og squares total arealet af den grønne firkant, det er den lodrette afstand til den blå y gennemsnitslinje i anden. Den blå linje ville være bedst til at beskrive y-værdierne hvis der ikke er nogen lineær sammenhæng. I denne simple tegning ville <span class="math inline">\(\text{SS}_{\text{res}}\)</span> altså være summen af 3 gule arealer, de 3 punkter vil danne. <span class="math inline">\(\text{SS}_{\text{tot}}\)</span> vil være summen af de 3 grønne arealer.</p>
+<p><span class="math display">\[R^{2} = 1 - \frac{\text{SS}_{\text{res}}}{\text{SS}_{\text{tot}}} = 1 - \frac{\text{Gul\ sum}}{Gron\ sum}\]</span></p>
+<p>Når <span class="math inline">\(\text{SS}_{\text{res}}\)</span> gul sum er lille i forhold <span class="math inline">\(\text{SS}_{\text{tot}}\)</span> grøn sum er <span class="math inline">\(R^{2}\)</span> tæt på 1, bemærk <span class="math inline">\(\text{SS}_{\text{res}}\)</span> kan ikke blive større end <span class="math inline">\(\text{SS}_{\text{tot}},\\)</span>dvs. <span class="math inline">\(R^{2}\)</span> kan ikke blive mindre end nul.</p>
+<p><img src="media/image105.png" style="width:6in;height:3.65232in" /></p>
+<p>Man kan i excel prøve at rette i observationerne, og se hvordan <span class="math inline">\(R^{2}\)</span> ændrer sig.</p>
+<p><a href="https://docs.google.com/file/d/0B1E7VnhxsDMlOFJnQU9PQ2JWams/edit?usp=sharing"><span class="chart"><span class="math display">\[CHART\]</span></span></a></p>
 </div>
-<div id="matematik-med-konomisk-profil." class="section level1 unnumbered">
-<h1>Matematik med økonomisk profil.</h1>
-<!-- BEGIN SENTRY AJAX LOGIN FORM - version 3.1 (Beta Build A) - Member Login Code Copyright © Sentrylogin.com, Shawn, Co. https://www.sentrylogin.com -->
-<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
-<style>
-.handCursor {
-cursor:pointer;
-cursor:hand;
-} 
-#magicGroup form {
-margin: 0;
-padding: 0; 
-}
-#magicGroup A:link {text-decoration: none; color:black;}
-#magicGroup A:visited {text-decoration: none; color:black;}
-#magicGroup A:active {text-decoration: none; color:black;}
-#magicGroup A:hover {text-decoration: none; color:black;}
-.clearfix:after{
-  content:".";display:block;height:0;clear:both;visibility:hidden;
-}
-  .spacer0{clear:both; height:0px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer{clear:both; height:1px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer2{clear:both; height:2px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer3{clear:both; height:3px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer4{clear:both; height:4px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer5{clear:both; height:5px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer10{clear:both; height:10px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer20{clear:both; height:20px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  </style>
-<script type="text/javascript" src="https://www.sentrylogin.com/sentry/scripts/Sentry_AJAX.js"></script>
-<div id="Settings" alignment="CENTER" manner="GROW" style="display:none;">
-
-</div>
-<div id="Sentry_outermost" style="width:175px; position:relative;">
-
-
-<form name="Sentry_login_form" onsubmit="sentryLogin();">
-<div style="height:1px;">
-<a href="https://www.sentrylogin.com"><img src="https://www.sentrylogin.com/sentry/images/logo.gif" alt="Sentry Password Protection Member Login" width="2" height="1" border="0"></a>
-</div>
-<div id="TopBar" class="handCursor" onclick="Sentry_onClick(this.id);" style="width:175px; background-color:lightgrey; padding-top:2px; padding-bottom:2px; border-width:1px; border-style:none; border-color:LightGray; border-radius: 6px;">
-<div id="Sentry_label" style="text-align: right; font-family:sans-serif; font-size:12px; font-weight:bold; margin-bottom:3px;">
-<span id="Sentry_label_span" style="padding-right:10px; padding-left:5px;">Login eller opret klik her</span>
+<div id="video-jmp-regressionseksempel" class="section level3">
+<h3><span class="header-section-number">17.0.2</span> Video JMP regressionseksempel</h3>
+<p><img src="media/image106.png" style="width:6in;height:3.75in" /></p>
 </div>
 </div>
-<div id="magicGroup" style="z-index: 10000; background-color:lightgrey; text-align:left; position:absolute; left: -9999px; width:175px; padding-top:15px; border-style:solid; border-color:LightGray; border-top-width:0px; border-right-width:1px; border-bottom-width:1px; border-left-width:1px; border-radius: 6px;">
-<div id="messages" style="display:none; padding-left:15px; padding-right:15px; padding-bottom:15px; font-family: Arial; font-size:12px; color: red;">
-.
-</div>
-<div id="Sentry_emailDiv" style="width:146px; margin-left:15px;">
-<span style="text-align:left;">
-<input type="text" id="Sentry_email" style="padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);" value="E-mail"></span>
-</div>
-<div id="Sentry_passwordDiv" style="width:146px; margin-left:15px; margin-top:2px;">
-<span style="text-align:left;">
-<input type="text" id="Sentry_password" style=" padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);" value="Password"></span>
-</div>
-<div id="Sentry_HIDpasswordDiv" style="width:146px; display: none; margin-left:15px; margin-top:2px;">
-<span style="text-align:left;">
-<input type="password" id="Sentry_HIDpassword" style=" padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);"></span>
-</div>
-<div id="unHideDiv" style="margin-bottom:5px; font-family:Arial; font-size:10px;">
-<span id="forgotSpan" class="handCursor" onclick="Sentry_onClick(this.id);" style="vertical-align:top; margin-left:15px; font-family:Arial; font-size:10px; color:gray;">Glemt?</span>
-<input type="checkbox" id="unHide" style="height:12px; width:10px; margin:4px; display:none;" value="1">
-<span id="unHideSpan" class="handCursor" style="width:25px; vertical-align:top; font-family: Arial;font-size:10px; color:gray; margin-left:78px;" onclick="Sentry_onClick(this.id);" title="Do not reveal password in public">Vis</span>
-</div>
-<div id="buttonDiv" style="float:left; width:45px; margin-left:15px;">
-<button type="button" onclick="sentryLogin();" style="height:25px; padding:2; width:60px; font-family:Arial; font-size:11px;" id="Sentry_button">klik</button>
-</div>
-<div id="psistDiv" style="float:left; width:98px; text-align:right; margin-top:10px; margin-right:15px;">
-<input id="psist" type="checkbox" value="1" style="height:10px; width:10px; margin:0; margin-bottom:2px; margin-right:2px;" class="handCursor" title="Do not use when in public" onclick="Sentry_onClick(this.id);">
-<span id="psistSpan" class="handCursor" style="font-family: Arial;font-size:10px; color:gray;" onclick="Sentry_onClick(this.id);" title="Do not use when in public">Husk mig</span>
-</div>
-<div class="spacer0">
-
-</div>
-<div class="spacer10">
-
-</div>
-<div id="goInside" style="font-family: Arial;font-size:12px; text-align: right; margin-top:10px; margin-right:15px; margin-bottom:5px; margin-left:15px; display:none;">
-<span id="goInsideSpan" class="handCursor" style="font-weight:bold;">.</span>
-</div>
-<div id="myProfile" class="handCursor" onclick="Sentry_onClick(this.id);" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-left:15px;">
-Min profil
-</div>
-<div id="Tilmeld" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-bottom:5px; margin-left:15px;">
-<a href="https://www.sentrylogin.com/sentry/member_signup_list.asp?Site_ID=22367" title="Click to Subscribe Now">Opret</a>
-</div>
-<div id="logOut" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-bottom:5px; margin-left:15px; display:none;">
-<span class="handCursor" onclick="LogOut();">Log Out</span>
-</div>
-<div class="spacer0">
-
-</div>
-<div id="xbox" style="margin-top:12px;">
-<img id="xout" onclick="Sentry_onClick(this.id);" src="https://www.sentrylogin.com/sentry/images/x.png" style="margin:2px; margin-right:9px;" class="handCursor">
-</div>
-<div class="spacer5">
-
-</div>
-</div>
-<input id="Sentry_ID" type="hidden" value="22367">
-<input id="univ" type="hidden" value="1">
-<div id="Sentry_noJSLogin" style="width:175px; background-color:white;">
-<span style="color:red; font-family: Arial;font-size:12px; font-weight:bold;">Javascript Required</span>
-</div>
-</form>
-</div>
-<div id="Sentry_loggingIn" style="width:175px; display:none;">
-<img src="https://www.sentrylogin.com/sentry/images/wait_animated_sentry.gif">
-</div>
-<div id="Sentry_In" style="display:none;">
-For testing.
-</div>
-<script language="JavaScript" type="text/JavaScript">initializeSentry(); 
-  </script>
-<noscript>
-You must have JavaScript enabled in order to log in.
-</noscript>
-<!-- END SENTRY AJAX LOGIN FORM -->
-
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p>Data fra Agresti og Franklins &quot; The Art and Science of Learning From Data&quot;<a href="excel-liner-regression.html#fnref5" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="indledning.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="excel-liner-programmering.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lsning-af-ligningssystemer-med-excel.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

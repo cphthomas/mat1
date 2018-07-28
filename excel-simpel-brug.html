@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-<link rel="next" href="indledning.html">
+<link rel="prev" href="integralregning.html">
+<link rel="next" href="excel-investering.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -172,141 +172,45 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Udvidet Statistik for de finansielle uddannelser.</h1>
-<h4 class="author"><em>Thomas Petersen</em></h4>
-<h4 class="date"><em>2018-07-28</em></h4>
+<div id="excel-simpel-brug" class="section level1">
+<h1><span class="header-section-number">Kapitel 13</span> Excel simpel brug</h1>
+<div id="video-excel-simpel-brug" class="section level3">
+<h3><span class="header-section-number">13.0.1</span> Video excel simpel brug</h3>
+<p><img src="media/image81.png" style="width:6in;height:3.75in" /></p>
+<p>Når man bruger excel kan man arbejde i 1 eller flere celler, indtastningerne er vist i cellen til højre for selve der er skrevet i.</p>
+<p><img src="media/image82.png" style="width:3.52802in;height:5.45871in" /></p>
+<p>Når man skal skrive en formel som f.eks. sum skal skrive =SUM, når man skriver begynder der at komme autocomplete forslag op. Man kan vælge disse eller skrive videre.</p>
+<p><img src="media/image83.png" style="width:4.66699in;height:3.6947in" /></p>
+<p>Når man har skrevet kommandoen og en startparentes ( , får man en syntakshjælpe tekst op, der viser hvilken struktur argumenterne skal have.</p>
+<p><img src="media/image84.png" style="width:3.59747in;height:1.36121in" /></p>
+<p>Her kan man se at de forskellige argumenter adskilles af semikolon (Bemærk det kan også være komma , for andre OS/EXCEL versioner). Vil man have yderligere hjælp kan man klikke på den blå tekst, så får man en hjælpeside med eksempler, som nedenfor.</p>
+<p><img src="media/image85.png" style="width:6in;height:4.02986in" /></p>
+<p>Man kan kopiere celler med CTRL C (Windows) CMD C (MAC). Man kan paste celler med CTRL V (Windows) CMD V (MAC). Bemærk hvis der er cellereferencer flytter disse sig tilsvarende antal rækker og søjler.</p>
+<p>Eller man kan også kopiere ved at stille sig i højre hjørne af cellen og tryk og holde musen og trække celler.</p>
+<p>Man kan lyse flere celler op og trække for at fortsætte det system der var lyst op. F.eks. hvis man lyser med 1 2 og 3 i rækkefølge får man 4, 5, 6 …</p>
+<p>Dette virker også med f.eks. datoer, man kan så ændre cellers formatering ved CMD/CTRL 1, eller højreklik FORMAT CELLS</p>
+<p>Transponer dvs. ændre søjler til rækker eller rækker til søjler. Lys rækken/søjlen op kopier → Marker den celle hvor første element i søjlen/rækken skal være → vælg højreklik special paste eller CTRL CMD V → Sæt hak i transpose → tryk ok.</p>
+<p>Man kan tælle antal gange elementer forekommer i en række celler, hvor mange blanke felter etc. med COUNT COUNTBLANK og COUNTIF</p>
+<p><img src="media/image86.png" style="width:6in;height:6.84722in" /></p>
+<p>Her undersøges cellerne A1 til A20 for antal celler, antal blanke og antal gange der står 1.</p>
+<p>Hvis man vil kopiere en celle med referencer til andre celler, således at ikke alle referencer ændres kan man låse en række eller søjle ved at sætte $ foran række eller søjlenummeret . I eksemplet nedenfor er A1 låst i formlerne i 3. række, indholdet i formlerne fremgår af 4. Række. Det er kun søjlen der er låst. Hvis man ikke havde sat $ foran søjle indikatoren, resultatet være blevet som i række 8.</p>
+<p>Man kan bruge genvejstast CMD T på Mac, F4 på Windows, man kan shuffle mellem de forskellige $ låse ved at bruge genvejstasten flere gange.</p>
+<p><img src="media/image87.png" style="width:6in;height:2.49653in" /></p>
+<p>Excel kan godt tegne grafer, skriv f.eks. -5 i A1 → -4 i A2 → lys begge celler op og træk fra højre hjørne ned til A20 → nu skulle cellerne løbe fra -4 til 13 → skriv nu i B2 = klik på A1 cellen skriv ^2 tryk enter → nu skulle B2 gerne give 25 vi har kvadreret cellen. → Træk denne cellen med sort kryds hele vejen til B20 → lys B1 til B20 op → Vælg charts fanen → vælg scatter → vælg Smooth Lined Scatter → nu skulle der gerne være et plot af grafen</p>
+<p>Man skulle gerne få samme billede som nedenfor.</p>
+<p><img src="media/image88.png" style="width:6in;height:3.27083in" /></p>
+<p>Man kan også lægge flere plots i samme koordinatsystem man vælger dem søjlevis, holder CTRL (Windows) CMD (Mac) nede mens man vælger yderligere søjler. Se tegningen nedenfor</p>
+<p><img src="media/image89.png" style="width:6in;height:3.07014in" /></p>
+<p>{#section-2 .ListParagraph}</p>
 </div>
-<div id="matematik-med-konomisk-profil." class="section level1 unnumbered">
-<h1>Matematik med økonomisk profil.</h1>
-<!-- BEGIN SENTRY AJAX LOGIN FORM - version 3.1 (Beta Build A) - Member Login Code Copyright © Sentrylogin.com, Shawn, Co. https://www.sentrylogin.com -->
-<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
-<style>
-.handCursor {
-cursor:pointer;
-cursor:hand;
-} 
-#magicGroup form {
-margin: 0;
-padding: 0; 
-}
-#magicGroup A:link {text-decoration: none; color:black;}
-#magicGroup A:visited {text-decoration: none; color:black;}
-#magicGroup A:active {text-decoration: none; color:black;}
-#magicGroup A:hover {text-decoration: none; color:black;}
-.clearfix:after{
-  content:".";display:block;height:0;clear:both;visibility:hidden;
-}
-  .spacer0{clear:both; height:0px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer{clear:both; height:1px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer2{clear:both; height:2px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer3{clear:both; height:3px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer4{clear:both; height:4px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer5{clear:both; height:5px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer10{clear:both; height:10px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer20{clear:both; height:20px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  </style>
-<script type="text/javascript" src="https://www.sentrylogin.com/sentry/scripts/Sentry_AJAX.js"></script>
-<div id="Settings" alignment="CENTER" manner="GROW" style="display:none;">
-
-</div>
-<div id="Sentry_outermost" style="width:175px; position:relative;">
-
-
-<form name="Sentry_login_form" onsubmit="sentryLogin();">
-<div style="height:1px;">
-<a href="https://www.sentrylogin.com"><img src="https://www.sentrylogin.com/sentry/images/logo.gif" alt="Sentry Password Protection Member Login" width="2" height="1" border="0"></a>
-</div>
-<div id="TopBar" class="handCursor" onclick="Sentry_onClick(this.id);" style="width:175px; background-color:lightgrey; padding-top:2px; padding-bottom:2px; border-width:1px; border-style:none; border-color:LightGray; border-radius: 6px;">
-<div id="Sentry_label" style="text-align: right; font-family:sans-serif; font-size:12px; font-weight:bold; margin-bottom:3px;">
-<span id="Sentry_label_span" style="padding-right:10px; padding-left:5px;">Login eller opret klik her</span>
-</div>
-</div>
-<div id="magicGroup" style="z-index: 10000; background-color:lightgrey; text-align:left; position:absolute; left: -9999px; width:175px; padding-top:15px; border-style:solid; border-color:LightGray; border-top-width:0px; border-right-width:1px; border-bottom-width:1px; border-left-width:1px; border-radius: 6px;">
-<div id="messages" style="display:none; padding-left:15px; padding-right:15px; padding-bottom:15px; font-family: Arial; font-size:12px; color: red;">
-.
-</div>
-<div id="Sentry_emailDiv" style="width:146px; margin-left:15px;">
-<span style="text-align:left;">
-<input type="text" id="Sentry_email" style="padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);" value="E-mail"></span>
-</div>
-<div id="Sentry_passwordDiv" style="width:146px; margin-left:15px; margin-top:2px;">
-<span style="text-align:left;">
-<input type="text" id="Sentry_password" style=" padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);" value="Password"></span>
-</div>
-<div id="Sentry_HIDpasswordDiv" style="width:146px; display: none; margin-left:15px; margin-top:2px;">
-<span style="text-align:left;">
-<input type="password" id="Sentry_HIDpassword" style=" padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);"></span>
-</div>
-<div id="unHideDiv" style="margin-bottom:5px; font-family:Arial; font-size:10px;">
-<span id="forgotSpan" class="handCursor" onclick="Sentry_onClick(this.id);" style="vertical-align:top; margin-left:15px; font-family:Arial; font-size:10px; color:gray;">Glemt?</span>
-<input type="checkbox" id="unHide" style="height:12px; width:10px; margin:4px; display:none;" value="1">
-<span id="unHideSpan" class="handCursor" style="width:25px; vertical-align:top; font-family: Arial;font-size:10px; color:gray; margin-left:78px;" onclick="Sentry_onClick(this.id);" title="Do not reveal password in public">Vis</span>
-</div>
-<div id="buttonDiv" style="float:left; width:45px; margin-left:15px;">
-<button type="button" onclick="sentryLogin();" style="height:25px; padding:2; width:60px; font-family:Arial; font-size:11px;" id="Sentry_button">klik</button>
-</div>
-<div id="psistDiv" style="float:left; width:98px; text-align:right; margin-top:10px; margin-right:15px;">
-<input id="psist" type="checkbox" value="1" style="height:10px; width:10px; margin:0; margin-bottom:2px; margin-right:2px;" class="handCursor" title="Do not use when in public" onclick="Sentry_onClick(this.id);">
-<span id="psistSpan" class="handCursor" style="font-family: Arial;font-size:10px; color:gray;" onclick="Sentry_onClick(this.id);" title="Do not use when in public">Husk mig</span>
-</div>
-<div class="spacer0">
-
-</div>
-<div class="spacer10">
-
-</div>
-<div id="goInside" style="font-family: Arial;font-size:12px; text-align: right; margin-top:10px; margin-right:15px; margin-bottom:5px; margin-left:15px; display:none;">
-<span id="goInsideSpan" class="handCursor" style="font-weight:bold;">.</span>
-</div>
-<div id="myProfile" class="handCursor" onclick="Sentry_onClick(this.id);" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-left:15px;">
-Min profil
-</div>
-<div id="Tilmeld" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-bottom:5px; margin-left:15px;">
-<a href="https://www.sentrylogin.com/sentry/member_signup_list.asp?Site_ID=22367" title="Click to Subscribe Now">Opret</a>
-</div>
-<div id="logOut" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-bottom:5px; margin-left:15px; display:none;">
-<span class="handCursor" onclick="LogOut();">Log Out</span>
-</div>
-<div class="spacer0">
-
-</div>
-<div id="xbox" style="margin-top:12px;">
-<img id="xout" onclick="Sentry_onClick(this.id);" src="https://www.sentrylogin.com/sentry/images/x.png" style="margin:2px; margin-right:9px;" class="handCursor">
-</div>
-<div class="spacer5">
-
-</div>
-</div>
-<input id="Sentry_ID" type="hidden" value="22367">
-<input id="univ" type="hidden" value="1">
-<div id="Sentry_noJSLogin" style="width:175px; background-color:white;">
-<span style="color:red; font-family: Arial;font-size:12px; font-weight:bold;">Javascript Required</span>
-</div>
-</form>
-</div>
-<div id="Sentry_loggingIn" style="width:175px; display:none;">
-<img src="https://www.sentrylogin.com/sentry/images/wait_animated_sentry.gif">
-</div>
-<div id="Sentry_In" style="display:none;">
-For testing.
-</div>
-<script language="JavaScript" type="text/JavaScript">initializeSentry(); 
-  </script>
-<noscript>
-You must have JavaScript enabled in order to log in.
-</noscript>
-<!-- END SENTRY AJAX LOGIN FORM -->
-
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="indledning.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="integralregning.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="excel-investering.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

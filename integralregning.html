@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-<link rel="next" href="indledning.html">
+<link rel="prev" href="partielle-afledede-og-gradienten.html">
+<link rel="next" href="excel-simpel-brug.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -172,141 +172,71 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Udvidet Statistik for de finansielle uddannelser.</h1>
-<h4 class="author"><em>Thomas Petersen</em></h4>
-<h4 class="date"><em>2018-07-28</em></h4>
+<div id="integralregning" class="section level1">
+<h1><span class="header-section-number">Kapitel 12</span> Integralregning</h1>
+<p>Integralregning kan bruges til at finde arealer under kurver. Når man integrerer er det den modsatte matematiske operation af differentiation, vi kalder den integrerede funktion for stamfunktionen og skriver <span class="math inline">\(F(x)\)</span>.</p>
+<p><span class="math display">\[f\left( x \right) = 3x^{2}\]</span></p>
+<p><span class="math display">\[F\left( x \right) = \frac{3}{3}x^{2 + 1} = x^{3} + k\]</span></p>
+<p>Vi skriver et k for en konstant, man kunne også være lidt sløset med notationen og lege at k var 0. Når vi differentierer kommer vi tilbage til den oprindelige funktion :</p>
+<p><span class="math display">\[F^{&#39;}\left( x \right) = 3x^{2} = f(x)\]</span></p>
+<p>Konstanten forsvandt igen da differentierede vi er altså tilbage ved den oprindelige funktion. Man kan angive at vi skal integrere vha. et integraltegn.</p>
+<p><span class="math display">\[F\left( x \right) = \int\left( 3x^{2} \right)dx = x^{3}\]</span></p>
+<p>Der er et en del regneregler for integration nogle er listet nedenfor, vi vil ikke komme ind på alle teknikker som partiel integration og integration ved hjælp af substitution i noterne her.</p>
+<table>
+<thead>
+<tr class="header">
+<th>f(x)<span class="math display">\[                    \]</span></th>
+<th align="left">F(x)$$</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math display">\[x^{a}\]</span></td>
+<td align="left"><span class="math display">\[\frac{1}{a + 1}x^{a + 1} + k\]</span></td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[e^{x}\]</span></td>
+<td align="left"><span class="math display">\[e^{x} + k\]</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[\frac{1}{x} = x^{- 1}\]</span></td>
+<td align="left"><span class="math display">\[\ln\left( x \right) + k\]</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[\int k \cdot f\left( x \right)dx = k \cdot \int f\left( x \right)\text{dx}\]</span></p>
+<p>f.eks.</p>
+<p><span class="math display">\[\int_{}^{}5 \cdot x^{2}dx = 5\int x^{2}dx = \ 5 \cdot \frac{1}{3}x^{3} + k\]</span></p>
+<p><span class="math display">\[\int\left( f\left( x \right) \pm g\left( x \right) \right)dx = \int f\left( x \right)dx \pm \int g\left( x \right)\text{dx}\]</span></p>
+<p>f.eks.</p>
+<p><span class="math display">\[{\int\left( 3x^{2} + 2x - 3 \right)dx = \int 3x^{2}dx + \int 2xdx - \int 3dx = }{x^{3} + x^{2} - 3 + k}\]</span></p>
+<div id="partiel-integration" class="section level2">
+<h2><span class="header-section-number">12.1</span> Partiel integration</h2>
+<p>Hvis man ønsker at integrere produktet af 2 funktioner, er det muligt man kan finde en løsning vha. partiel integration.</p>
+<p><span class="math display">\[\int f\left( x \right) \cdot g\left( x \right)dx = f\left( x \right) \cdot G\left( x \right) - \int f&#39;\left( x \right) \cdot G\left( x \right)\text{dx}\]</span></p>
+<p>Man vælger selv hvilken funktion der skal være <span class="math inline">\(f\left( x \right)\)</span> og <span class="math inline">\(g\left( x \right)\)</span>, så man kan spare sig selv for bøvl, hvis man vælger klogt. Dvs. Hvis den ene funktion f.eks. bliver lettere at håndtere ved differentiation, er det en fordel at vælge denne som <span class="math inline">\(f\left( x \right)\)</span>.</p>
+<p>Eksempel:</p>
+<p><span class="math display">\[\int_{}^{}{\ln\left( x \right) \cdot x^{3}\text{dx}} = \ln\left( x \right) \cdot \frac{1}{4}x^{4} - \int_{}^{}{\frac{1}{x} \cdot}\frac{1}{4}x^{4}dx =\]</span></p>
+<p><span class="math display">\[{\ln\left( x \right) \cdot \frac{1}{4}x^{4} - \frac{1}{4} \cdot \int x^{3}dx = \ln\left( x \right) \cdot \frac{1}{4}x^{4} - \left( \frac{1}{4} \right)^{2}x^{4} =}\]</span></p>
+<p><span class="math display">\[{\frac{1}{4}x^{4}(\ln\left( x \right) - \frac{1}{4})}\]</span></p>
+<p>Hvis man er ude for en rigtig ubehagelig funktion, kan man måske integrere denne ved flere partielle integrationer. Man vil ikke altid kunne finde en stamfunktion til en funktion, f.eks. har tæthedsfunktionen for normalfordelingen ikke en eksplicit stamfunktion.</p>
 </div>
-<div id="matematik-med-konomisk-profil." class="section level1 unnumbered">
-<h1>Matematik med økonomisk profil.</h1>
-<!-- BEGIN SENTRY AJAX LOGIN FORM - version 3.1 (Beta Build A) - Member Login Code Copyright © Sentrylogin.com, Shawn, Co. https://www.sentrylogin.com -->
-<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
-<style>
-.handCursor {
-cursor:pointer;
-cursor:hand;
-} 
-#magicGroup form {
-margin: 0;
-padding: 0; 
-}
-#magicGroup A:link {text-decoration: none; color:black;}
-#magicGroup A:visited {text-decoration: none; color:black;}
-#magicGroup A:active {text-decoration: none; color:black;}
-#magicGroup A:hover {text-decoration: none; color:black;}
-.clearfix:after{
-  content:".";display:block;height:0;clear:both;visibility:hidden;
-}
-  .spacer0{clear:both; height:0px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer{clear:both; height:1px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer2{clear:both; height:2px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer3{clear:both; height:3px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer4{clear:both; height:4px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer5{clear:both; height:5px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer10{clear:both; height:10px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer20{clear:both; height:20px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  </style>
-<script type="text/javascript" src="https://www.sentrylogin.com/sentry/scripts/Sentry_AJAX.js"></script>
-<div id="Settings" alignment="CENTER" manner="GROW" style="display:none;">
-
+<div id="arealberegning" class="section level2">
+<h2><span class="header-section-number">12.2</span> Arealberegning</h2>
+<p>Hvis man skal beregne arealet nedenfor vha. integralregning, gør man dette vha. bestemte integraler, det betyder vi udregner arealet under kurven<span class="math inline">\(\\)</span>for <span class="math inline">\(x \in \rbrack\infty;2,5\rbrack\)</span>, 2,5 er den øvre grænse. Fra dette fratrækker vi arealet under kurven for <span class="math inline">\(x \in \rbrack\infty;1\rbrack\)</span>, hvor 1 er den nedre grænse.</p>
+<p><img src="media/image80.png" style="width:6in;height:3.65132in" /></p>
+<p>Notationsmæssigt opskriver man nedre og øvre grænse nederst og øverst på sit integral og mellemregningsparentes.</p>
+<p><span class="math display">\[{\int_{1}^{2,5}\left( - x^{3} + x^{2} + 4x + 4 \right)dx = \left\lbrack - \frac{1}{4}x^{4} + \frac{1}{3}x^{3} + 2x^{2} + 4x \right\rbrack_{1}^{2,5} = }{- \frac{1}{4}{2,5}^{4} + \frac{1}{3}{2,5}^{3} + 2{\cdot 2,5}^{2} + 4 \cdot 2,5 - \left( - \frac{1}{4}1^{4} + \frac{1}{3}1^{3} + 2{\cdot 1}^{2} + 4 \cdot 1 \right) =}\]</span></p>
+<p><span class="math display">\[{17,9427 - 6,0833 = 11,8594}\]</span></p>
 </div>
-<div id="Sentry_outermost" style="width:175px; position:relative;">
-
-
-<form name="Sentry_login_form" onsubmit="sentryLogin();">
-<div style="height:1px;">
-<a href="https://www.sentrylogin.com"><img src="https://www.sentrylogin.com/sentry/images/logo.gif" alt="Sentry Password Protection Member Login" width="2" height="1" border="0"></a>
-</div>
-<div id="TopBar" class="handCursor" onclick="Sentry_onClick(this.id);" style="width:175px; background-color:lightgrey; padding-top:2px; padding-bottom:2px; border-width:1px; border-style:none; border-color:LightGray; border-radius: 6px;">
-<div id="Sentry_label" style="text-align: right; font-family:sans-serif; font-size:12px; font-weight:bold; margin-bottom:3px;">
-<span id="Sentry_label_span" style="padding-right:10px; padding-left:5px;">Login eller opret klik her</span>
-</div>
-</div>
-<div id="magicGroup" style="z-index: 10000; background-color:lightgrey; text-align:left; position:absolute; left: -9999px; width:175px; padding-top:15px; border-style:solid; border-color:LightGray; border-top-width:0px; border-right-width:1px; border-bottom-width:1px; border-left-width:1px; border-radius: 6px;">
-<div id="messages" style="display:none; padding-left:15px; padding-right:15px; padding-bottom:15px; font-family: Arial; font-size:12px; color: red;">
-.
-</div>
-<div id="Sentry_emailDiv" style="width:146px; margin-left:15px;">
-<span style="text-align:left;">
-<input type="text" id="Sentry_email" style="padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);" value="E-mail"></span>
-</div>
-<div id="Sentry_passwordDiv" style="width:146px; margin-left:15px; margin-top:2px;">
-<span style="text-align:left;">
-<input type="text" id="Sentry_password" style=" padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);" value="Password"></span>
-</div>
-<div id="Sentry_HIDpasswordDiv" style="width:146px; display: none; margin-left:15px; margin-top:2px;">
-<span style="text-align:left;">
-<input type="password" id="Sentry_HIDpassword" style=" padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);"></span>
-</div>
-<div id="unHideDiv" style="margin-bottom:5px; font-family:Arial; font-size:10px;">
-<span id="forgotSpan" class="handCursor" onclick="Sentry_onClick(this.id);" style="vertical-align:top; margin-left:15px; font-family:Arial; font-size:10px; color:gray;">Glemt?</span>
-<input type="checkbox" id="unHide" style="height:12px; width:10px; margin:4px; display:none;" value="1">
-<span id="unHideSpan" class="handCursor" style="width:25px; vertical-align:top; font-family: Arial;font-size:10px; color:gray; margin-left:78px;" onclick="Sentry_onClick(this.id);" title="Do not reveal password in public">Vis</span>
-</div>
-<div id="buttonDiv" style="float:left; width:45px; margin-left:15px;">
-<button type="button" onclick="sentryLogin();" style="height:25px; padding:2; width:60px; font-family:Arial; font-size:11px;" id="Sentry_button">klik</button>
-</div>
-<div id="psistDiv" style="float:left; width:98px; text-align:right; margin-top:10px; margin-right:15px;">
-<input id="psist" type="checkbox" value="1" style="height:10px; width:10px; margin:0; margin-bottom:2px; margin-right:2px;" class="handCursor" title="Do not use when in public" onclick="Sentry_onClick(this.id);">
-<span id="psistSpan" class="handCursor" style="font-family: Arial;font-size:10px; color:gray;" onclick="Sentry_onClick(this.id);" title="Do not use when in public">Husk mig</span>
-</div>
-<div class="spacer0">
-
-</div>
-<div class="spacer10">
-
-</div>
-<div id="goInside" style="font-family: Arial;font-size:12px; text-align: right; margin-top:10px; margin-right:15px; margin-bottom:5px; margin-left:15px; display:none;">
-<span id="goInsideSpan" class="handCursor" style="font-weight:bold;">.</span>
-</div>
-<div id="myProfile" class="handCursor" onclick="Sentry_onClick(this.id);" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-left:15px;">
-Min profil
-</div>
-<div id="Tilmeld" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-bottom:5px; margin-left:15px;">
-<a href="https://www.sentrylogin.com/sentry/member_signup_list.asp?Site_ID=22367" title="Click to Subscribe Now">Opret</a>
-</div>
-<div id="logOut" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-bottom:5px; margin-left:15px; display:none;">
-<span class="handCursor" onclick="LogOut();">Log Out</span>
-</div>
-<div class="spacer0">
-
-</div>
-<div id="xbox" style="margin-top:12px;">
-<img id="xout" onclick="Sentry_onClick(this.id);" src="https://www.sentrylogin.com/sentry/images/x.png" style="margin:2px; margin-right:9px;" class="handCursor">
-</div>
-<div class="spacer5">
-
-</div>
-</div>
-<input id="Sentry_ID" type="hidden" value="22367">
-<input id="univ" type="hidden" value="1">
-<div id="Sentry_noJSLogin" style="width:175px; background-color:white;">
-<span style="color:red; font-family: Arial;font-size:12px; font-weight:bold;">Javascript Required</span>
-</div>
-</form>
-</div>
-<div id="Sentry_loggingIn" style="width:175px; display:none;">
-<img src="https://www.sentrylogin.com/sentry/images/wait_animated_sentry.gif">
-</div>
-<div id="Sentry_In" style="display:none;">
-For testing.
-</div>
-<script language="JavaScript" type="text/JavaScript">initializeSentry(); 
-  </script>
-<noscript>
-You must have JavaScript enabled in order to log in.
-</noscript>
-<!-- END SENTRY AJAX LOGIN FORM -->
-
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="indledning.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="partielle-afledede-og-gradienten.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="excel-simpel-brug.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

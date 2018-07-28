@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Udvidet Statistik for de finansielle uddannelser.</title>
+  <meta name="description" content="Matematik med økonomisk profil.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Udvidet Statistik for de finansielle uddannelser." />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Matematik med økonomisk profil." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Udvidet Statistik for de finansielle uddannelser." />
+  
+  <meta name="twitter:description" content="Matematik med økonomisk profil." />
+  
+
+<meta name="author" content="Thomas Petersen">
+
+
+<meta name="date" content="2018-07-28">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="prev" href="excel-omkostnings-eksempel.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Matematik med økonomisk profil.</a></li>
+<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a></li>
+<li class="chapter" data-level="2" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html"><i class="fa fa-check"></i><b>2</b> Grundlæggende regneregler</a><ul>
+<li class="chapter" data-level="2.1" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html#reduktions-regneregler"><i class="fa fa-check"></i><b>2.1</b> Reduktions regneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="brkregneregler.html"><a href="brkregneregler.html"><i class="fa fa-check"></i><b>3</b> Brøkregneregler</a><ul>
+<li class="chapter" data-level="3.1" data-path="brkregneregler.html"><a href="brkregneregler.html#procentregneregler"><i class="fa fa-check"></i><b>3.1</b> Procentregneregler</a></li>
+<li class="chapter" data-level="3.2" data-path="brkregneregler.html"><a href="brkregneregler.html#indekstal"><i class="fa fa-check"></i><b>3.2</b> Indekstal</a></li>
+<li class="chapter" data-level="3.3" data-path="brkregneregler.html"><a href="brkregneregler.html#procentpoint"><i class="fa fa-check"></i><b>3.3</b> Procentpoint</a></li>
+<li class="chapter" data-level="3.4" data-path="brkregneregler.html"><a href="brkregneregler.html#potensregneregler"><i class="fa fa-check"></i><b>3.4</b> Potensregneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="linere-funktioner.html"><a href="linere-funktioner.html"><i class="fa fa-check"></i><b>4</b> Lineære funktioner</a><ul>
+<li class="chapter" data-level="4.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#generel-forskift"><i class="fa fa-check"></i><b>4.1</b> Generel Forskift</a></li>
+<li class="chapter" data-level="4.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>4.2</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
+<li class="chapter" data-level="4.3" data-path="linere-funktioner.html"><a href="linere-funktioner.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>4.3</b> Løsning af ligninger</a></li>
+<li class="chapter" data-level="4.4" data-path="linere-funktioner.html"><a href="linere-funktioner.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>4.4</b> 2 ligninger med 2 ubekendte.</a></li>
+<li class="chapter" data-level="4.5" data-path="linere-funktioner.html"><a href="linere-funktioner.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>4.5</b> Udbuds- og efterspørgselskurver</a></li>
+<li class="chapter" data-level="4.6" data-path="linere-funktioner.html"><a href="linere-funktioner.html#addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6</b> Addition af lineære funktioner</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#vertikal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6.1</b> Vertikal addition af lineære funktioner</a></li>
+<li class="chapter" data-level="4.6.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#horisontal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6.2</b> Horisontal addition af lineære funktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="linere-funktioner.html"><a href="linere-funktioner.html#priselasticitet"><i class="fa fa-check"></i><b>4.7</b> Priselasticitet</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#video-om-priselasticitet"><i class="fa fa-check"></i><b>4.7.1</b> Video om priselasticitet</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>5</b> Polynomier</a><ul>
+<li class="chapter" data-level="5.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>5.1</b> 2. Gradspolynomier</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier"><i class="fa fa-check"></i><b>5.1.1</b> Video 2. Gradspolynomier</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html"><i class="fa fa-check"></i><b>6</b> Eksponentielle funktioner</a><ul>
+<li class="chapter" data-level="6.0.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#section"><i class="fa fa-check"></i><b>6.0.1</b> </a></li>
+<li class="chapter" data-level="6.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#fordoblings--og-halveringskonstant."><i class="fa fa-check"></i><b>6.1</b> Fordoblings- og halveringskonstant.</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>7</b> Finansiel regning</a><ul>
+<li class="chapter" data-level="7.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>7.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
+<li class="chapter" data-level="7.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>7.1</b> Annuiteter</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>7.1.1</b> Fremtidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="7.1.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>7.1.2</b> Nutidsværdi af en annuitet</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="inverse-funktioner.html"><a href="inverse-funktioner.html"><i class="fa fa-check"></i><b>8</b> Inverse funktioner</a></li>
+<li class="chapter" data-level="9" data-path="logaritmefunktioner.html"><a href="logaritmefunktioner.html"><i class="fa fa-check"></i><b>9</b> Logaritmefunktioner</a></li>
+<li class="chapter" data-level="10" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>10</b> Differentialregning</a><ul>
+<li class="chapter" data-level="10.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>10.1</b> Regneregler differentiation</a></li>
+<li class="chapter" data-level="10.2" data-path="differentialregning.html"><a href="differentialregning.html#differentiation-af-sammensatte-funktioner."><i class="fa fa-check"></i><b>10.2</b> Differentiation af sammensatte funktioner.</a></li>
+<li class="chapter" data-level="10.3" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>10.3</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="10.4" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>10.4</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="10.5" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>10.5</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="10.6" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>10.6</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="10.7" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>10.7</b> Optimeringseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html"><i class="fa fa-check"></i><b>11</b> Partielle afledede og gradienten</a><ul>
+<li class="chapter" data-level="11.0.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-om-partielle-afledede-og-gradienten"><i class="fa fa-check"></i><b>11.0.1</b> Video om partielle afledede og gradienten</a></li>
+<li class="chapter" data-level="11.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#cobb-douglas-funktioner"><i class="fa fa-check"></i><b>11.1</b> Cobb-Douglas funktioner</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-produktionsfunktioner"><i class="fa fa-check"></i><b>11.1.1</b> Video produktionsfunktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isoquantisokvant-kurver"><i class="fa fa-check"></i><b>11.2</b> Isoquant/isokvant kurver</a></li>
+<li class="chapter" data-level="11.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isocostisokost-kurver"><i class="fa fa-check"></i><b>11.3</b> Isocost/Isokost kurver</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-isocost-kurver"><i class="fa fa-check"></i><b>11.3.1</b> Video isocost kurver</a></li>
+<li class="chapter" data-level="11.3.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#section-1"><i class="fa fa-check"></i><b>11.3.2</b> </a></li>
+<li class="chapter" data-level="11.3.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>11.3.3</b> Eksempel på optimering af produktionsoutput for fast omkostningsniveau</a></li>
+<li class="chapter" data-level="11.3.4" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>11.3.4</b> Video optimering af produktionsoutput for fast omkostningsniveau</a></li>
+<li class="chapter" data-level="11.3.5" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-omkostningsniveauet-for-fast-produktionsniveau"><i class="fa fa-check"></i><b>11.3.5</b> Eksempel på optimering af omkostningsniveauet for fast produktionsniveau</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="integralregning.html"><a href="integralregning.html"><i class="fa fa-check"></i><b>12</b> Integralregning</a><ul>
+<li class="chapter" data-level="12.1" data-path="integralregning.html"><a href="integralregning.html#partiel-integration"><i class="fa fa-check"></i><b>12.1</b> Partiel integration</a></li>
+<li class="chapter" data-level="12.2" data-path="integralregning.html"><a href="integralregning.html#arealberegning"><i class="fa fa-check"></i><b>12.2</b> Arealberegning</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html"><i class="fa fa-check"></i><b>13</b> Excel simpel brug</a><ul>
+<li class="chapter" data-level="13.0.1" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html#video-excel-simpel-brug"><i class="fa fa-check"></i><b>13.0.1</b> Video excel simpel brug</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="excel-investering.html"><a href="excel-investering.html"><i class="fa fa-check"></i><b>14</b> Excel Investering</a><ul>
+<li class="chapter" data-level="14.0.1" data-path="excel-investering.html"><a href="excel-investering.html#video-om-investering-med-excel"><i class="fa fa-check"></i><b>14.0.1</b> Video om investering med excel</a></li>
+<li class="chapter" data-level="14.1" data-path="excel-investering.html"><a href="excel-investering.html#investeringer-med-ikke-periodiske-varierende-betalingsstrmme-i-excel"><i class="fa fa-check"></i><b>14.1</b> Investeringer med ikke-periodiske varierende betalingsstrømme i excel</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="excel-malsgning.html"><a href="excel-malsgning.html"><i class="fa fa-check"></i><b>15</b> Excel målsøgning</a></li>
+<li class="chapter" data-level="16" data-path="excel-liner-programmering.html"><a href="excel-liner-programmering.html"><i class="fa fa-check"></i><b>16</b> Excel lineær programmering</a></li>
+<li class="chapter" data-level="17" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html"><i class="fa fa-check"></i><b>17</b> Excel Lineær regression</a><ul>
+<li class="chapter" data-level="17.0.1" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-excel-liner-regression"><i class="fa fa-check"></i><b>17.0.1</b> Video excel lineær regression</a></li>
+<li class="chapter" data-level="17.0.2" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-jmp-regressionseksempel"><i class="fa fa-check"></i><b>17.0.2</b> Video JMP regressionseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="lsning-af-ligningssystemer-med-excel.html"><a href="lsning-af-ligningssystemer-med-excel.html"><i class="fa fa-check"></i><b>18</b> Løsning af ligningssystemer med excel</a></li>
+<li class="chapter" data-level="19" data-path="excel-omkostnings-eksempel.html"><a href="excel-omkostnings-eksempel.html"><i class="fa fa-check"></i><b>19</b> Excel omkostnings-eksempel</a></li>
+<li class="chapter" data-level="20" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>20</b> Excel oversættelser</a></li>
+<li class="divider"></li>
+<li><a href="https://tepedu.com" target="blank">Thomas Petersen</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Udvidet Statistik for de finansielle uddannelser.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="excel-oversttelser" class="section level1">
+<h1><span class="header-section-number">Kapitel 20</span> Excel oversættelser</h1>
+<p>Nedenfor er en liste med de forskellige engelske og danske koder hentet fra hjemmesiden <a href="http://www.testmig.dk/fof/excel/excel_engelsk_dansk.asp">[http://www.testmig.dk/fof/excel/excel_engelsk_dansk.asp]</a>, man kan søge i filen hvis man skal finde en kode. Det er ofte en fordel, hvis man skal finde argumenter til en funktion eller eksempler, at man kan Google den engelske kode.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Engelsk kode** **</th>
+<th align="left">Dansk kode**</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ABS</td>
+<td align="left">ABS</td>
+</tr>
+<tr class="even">
+<td>ACCRINT</td>
+<td align="left">PÅLØBRENTE</td>
+</tr>
+<tr class="odd">
+<td>ACCRINTM</td>
+<td align="left">PÅLØBRENTE.UDLØB</td>
+</tr>
+<tr class="even">
+<td>ACOS</td>
+<td align="left">ARCCOS</td>
+</tr>
+<tr class="odd">
+<td>ACOSH</td>
+<td align="left">ARCCOSH</td>
+</tr>
+<tr class="even">
+<td>ADDRESS</td>
+<td align="left">ADRESSE</td>
+</tr>
+<tr class="odd">
+<td>AMORDEGRC</td>
+<td align="left">AMORDEGRC</td>
+</tr>
+<tr class="even">
+<td>AMORLINC</td>
+<td align="left">AMORLINC</td>
+</tr>
+<tr class="odd">
+<td>AND</td>
+<td align="left">OG</td>
+</tr>
+<tr class="even">
+<td>AREAS</td>
+<td align="left">OMRÅDER</td>
+</tr>
+<tr class="odd">
+<td>ASIN</td>
+<td align="left">ARCSIN</td>
+</tr>
+<tr class="even">
+<td>ASINH</td>
+<td align="left">ARCSINH</td>
+</tr>
+<tr class="odd">
+<td>ATAN</td>
+<td align="left">ARCTAN</td>
+</tr>
+<tr class="even">
+<td>ATAN2</td>
+<td align="left">ARCTAN2</td>
+</tr>
+<tr class="odd">
+<td>ATANH</td>
+<td align="left">ARCTANH</td>
+</tr>
+<tr class="even">
+<td>AVEDEV</td>
+<td align="left">MAD</td>
+</tr>
+<tr class="odd">
+<td>AVERAGE</td>
+<td align="left">MIDDEL</td>
+</tr>
+<tr class="even">
+<td>AVERAGEA</td>
+<td align="left">MIDDELV</td>
+</tr>
+<tr class="odd">
+<td>BATHTEXT</td>
+<td align="left">BATHTEKST (ikke Excel 2000)</td>
+</tr>
+<tr class="even">
+<td>BESSELI</td>
+<td align="left">BESSELI</td>
+</tr>
+<tr class="odd">
+<td>BESSELJ</td>
+<td align="left">BESSELJ</td>
+</tr>
+<tr class="even">
+<td>BESSELK</td>
+<td align="left">BESSELK</td>
+</tr>
+<tr class="odd">
+<td>BESSELY</td>
+<td align="left">BESSELY</td>
+</tr>
+<tr class="even">
+<td>BETADIST</td>
+<td align="left">BETAFORDELING</td>
+</tr>
+<tr class="odd">
+<td>BETAINV</td>
+<td align="left">BETAINV</td>
+</tr>
+<tr class="even">
+<td>BIN2DEC</td>
+<td align="left">BIN.TIL.DEC</td>
+</tr>
+<tr class="odd">
+<td>BIN2HEX</td>
+<td align="left">BIN.TIL.HEX</td>
+</tr>
+<tr class="even">
+<td>BIN2OCT</td>
+<td align="left">BIN.TIL.OKT</td>
+</tr>
+<tr class="odd">
+<td>BINOMDIST</td>
+<td align="left">BINOMIALFORDELING</td>
+</tr>
+<tr class="even">
+<td>CALL</td>
+<td align="left">KALD (kun Excel 2000)</td>
+</tr>
+<tr class="odd">
+<td>CEILING</td>
+<td align="left">AFRUND.LOFT</td>
+</tr>
+<tr class="even">
+<td>CELL</td>
+<td align="left">CELLE</td>
+</tr>
+<tr class="odd">
+<td>CHAR</td>
+<td align="left">TEGN</td>
+</tr>
+<tr class="even">
+<td>CHIDIST</td>
+<td align="left">CHIFORDELING</td>
+</tr>
+<tr class="odd">
+<td>CHIINV</td>
+<td align="left">CHIINV</td>
+</tr>
+<tr class="even">
+<td>CHITEST</td>
+<td align="left">CHITEST</td>
+</tr>
+<tr class="odd">
+<td>CHOOSE</td>
+<td align="left">VÆLG</td>
+</tr>
+<tr class="even">
+<td>CLEAN</td>
+<td align="left">RENS</td>
+</tr>
+<tr class="odd">
+<td>CODE</td>
+<td align="left">KODE</td>
+</tr>
+<tr class="even">
+<td>COLUMN</td>
+<td align="left">KOLONNE</td>
+</tr>
+<tr class="odd">
+<td>COLUMNS</td>
+<td align="left">KOLONNER</td>
+</tr>
+<tr class="even">
+<td>COMBIN</td>
+<td align="left">KOMBIN</td>
+</tr>
+<tr class="odd">
+<td>COMPLEX</td>
+<td align="left">KOMPLEKS</td>
+</tr>
+<tr class="even">
+<td>CONCATENATE</td>
+<td align="left">SAMMENKÆDNING</td>
+</tr>
+<tr class="odd">
+<td>CONFIDENCE</td>
+<td align="left">KONFIDENSINTERVAL</td>
+</tr>
+<tr class="even">
+<td>CONVERT</td>
+<td align="left">KONVERTER</td>
+</tr>
+<tr class="odd">
+<td>CORREL</td>
+<td align="left">KORRELATION</td>
+</tr>
+<tr class="even">
+<td>COS</td>
+<td align="left">COS</td>
+</tr>
+<tr class="odd">
+<td>COSH</td>
+<td align="left">COSH</td>
+</tr>
+<tr class="even">
+<td>COUNT</td>
+<td align="left">TÆL</td>
+</tr>
+<tr class="odd">
+<td>COUNTA</td>
+<td align="left">TÆLV</td>
+</tr>
+<tr class="even">
+<td>COUNTBLANK</td>
+<td align="left">ANTAL.BLANKE</td>
+</tr>
+<tr class="odd">
+<td>COUNTIF</td>
+<td align="left">TÆL.HVIS</td>
+</tr>
+<tr class="even">
+<td>COUPDAYBS</td>
+<td align="left">KUPONDAGE.SA</td>
+</tr>
+<tr class="odd">
+<td>COUPDAYS</td>
+<td align="left">KUPONDAGE.A</td>
+</tr>
+<tr class="even">
+<td>COUPDAYSNC</td>
+<td align="left">KUPONDAGE.ANK</td>
+</tr>
+<tr class="odd">
+<td>COUPNCD</td>
+<td align="left">KUPONDAG.NÆSTE</td>
+</tr>
+<tr class="even">
+<td>COUPNUM</td>
+<td align="left">KUPONBETALINGER</td>
+</tr>
+<tr class="odd">
+<td>COUPPCD</td>
+<td align="left">KUPONDAG.FORRIGE</td>
+</tr>
+<tr class="even">
+<td>COVAR</td>
+<td align="left">KOVARIANS</td>
+</tr>
+<tr class="odd">
+<td>CRITBINOM</td>
+<td align="left">KRITBINOM</td>
+</tr>
+<tr class="even">
+<td>CUMIPMT</td>
+<td align="left">AKKUM.RENTE</td>
+</tr>
+<tr class="odd">
+<td>CUMPRINC</td>
+<td align="left">AKKUM.HOVEDSTOL</td>
+</tr>
+<tr class="even">
+<td>DATE</td>
+<td align="left">DATO</td>
+</tr>
+<tr class="odd">
+<td>DATEDIF</td>
+<td align="left">DATO.FORSKEL</td>
+</tr>
+<tr class="even">
+<td>DATEVALUE</td>
+<td align="left">DATOVÆRDI</td>
+</tr>
+<tr class="odd">
+<td>DAVERAGE</td>
+<td align="left">DMIDDEL</td>
+</tr>
+<tr class="even">
+<td>DAY</td>
+<td align="left">DAG</td>
+</tr>
+<tr class="odd">
+<td>DAYS360</td>
+<td align="left">DAGE360</td>
+</tr>
+<tr class="even">
+<td>DB</td>
+<td align="left">DB</td>
+</tr>
+<tr class="odd">
+<td>DCOUNT</td>
+<td align="left">DTÆL</td>
+</tr>
+<tr class="even">
+<td>DCOUNTA</td>
+<td align="left">DTÆLV</td>
+</tr>
+<tr class="odd">
+<td>DDB</td>
+<td align="left">DSA</td>
+</tr>
+<tr class="even">
+<td>DEC2BIN</td>
+<td align="left">DEC.TIL.BIN</td>
+</tr>
+<tr class="odd">
+<td>DEC2HEX</td>
+<td align="left">DEC.TIL.HEX</td>
+</tr>
+<tr class="even">
+<td>DEC2OCT</td>
+<td align="left">DEC.TIL.OKT</td>
+</tr>
+<tr class="odd">
+<td>DEGREES</td>
+<td align="left">GRADER</td>
+</tr>
+<tr class="even">
+<td>DELTA</td>
+<td align="left">DELTA</td>
+</tr>
+<tr class="odd">
+<td>DEVSQ</td>
+<td align="left">SAK</td>
+</tr>
+<tr class="even">
+<td>DGET</td>
+<td align="left">DHENT</td>
+</tr>
+<tr class="odd">
+<td>DISC</td>
+<td align="left">DISKONTO</td>
+</tr>
+<tr class="even">
+<td>DMAX</td>
+<td align="left">DMAKS</td>
+</tr>
+<tr class="odd">
+<td>DMIN</td>
+<td align="left">DMIN</td>
+</tr>
+<tr class="even">
+<td>DOLLAR</td>
+<td align="left">KR</td>
+</tr>
+<tr class="odd">
+<td>DOLLARDE</td>
+<td align="left">KR.DECIMAL</td>
+</tr>
+<tr class="even">
+<td>DOLLARFR</td>
+<td align="left">KR.BRØK</td>
+</tr>
+<tr class="odd">
+<td>DPRODUCT</td>
+<td align="left">DPRODUKT</td>
+</tr>
+<tr class="even">
+<td>DSTDEV</td>
+<td align="left">DSTDAFV</td>
+</tr>
+<tr class="odd">
+<td>DSTDEVP</td>
+<td align="left">DSTDAFVP</td>
+</tr>
+<tr class="even">
+<td>DSUM</td>
+<td align="left">DSUM</td>
+</tr>
+<tr class="odd">
+<td>DURATION</td>
+<td align="left">VARIGHED</td>
+</tr>
+<tr class="even">
+<td>DVAR</td>
+<td align="left">DVARIANS</td>
+</tr>
+<tr class="odd">
+<td>DVARP</td>
+<td align="left">DVARIANSP</td>
+</tr>
+<tr class="even">
+<td>EDATE</td>
+<td align="left">EDATO</td>
+</tr>
+<tr class="odd">
+<td>EFFECT</td>
+<td align="left">EFFEKTIV.RENTE</td>
+</tr>
+<tr class="even">
+<td>EOMONTH</td>
+<td align="left">SLUT.PÅ.MÅNED</td>
+</tr>
+<tr class="odd">
+<td>ERF</td>
+<td align="left">FEJLFUNK</td>
+</tr>
+<tr class="even">
+<td>ERFC</td>
+<td align="left">FEJLFUNK.KOMP</td>
+</tr>
+<tr class="odd">
+<td>ERROR.TYPE</td>
+<td align="left">FEJLTYPE</td>
+</tr>
+<tr class="even">
+<td>EVEN</td>
+<td align="left">LIGE</td>
+</tr>
+<tr class="odd">
+<td>EXACT</td>
+<td align="left">EKSAKT</td>
+</tr>
+<tr class="even">
+<td>EXP</td>
+<td align="left">EKSP</td>
+</tr>
+<tr class="odd">
+<td>EXPONDIST</td>
+<td align="left">EKSPFORDELING</td>
+</tr>
+<tr class="even">
+<td>FACT</td>
+<td align="left">FAKULTET</td>
+</tr>
+<tr class="odd">
+<td>FACTDOUBLE</td>
+<td align="left">DOBBELT.FAKULTET</td>
+</tr>
+<tr class="even">
+<td>FALSE</td>
+<td align="left">FALSK</td>
+</tr>
+<tr class="odd">
+<td>FDIST</td>
+<td align="left">FFORDELING</td>
+</tr>
+<tr class="even">
+<td>FIND</td>
+<td align="left">FIND</td>
+</tr>
+<tr class="odd">
+<td>FINV</td>
+<td align="left">FINV</td>
+</tr>
+<tr class="even">
+<td>FISHER</td>
+<td align="left">FISHER</td>
+</tr>
+<tr class="odd">
+<td>FISHERINV</td>
+<td align="left">FISHERINV</td>
+</tr>
+<tr class="even">
+<td>FIXED</td>
+<td align="left">FAST</td>
+</tr>
+<tr class="odd">
+<td>FLOOR</td>
+<td align="left">AFRUND.GULV</td>
+</tr>
+<tr class="even">
+<td>FORECAST</td>
+<td align="left">PROGNOSE</td>
+</tr>
+<tr class="odd">
+<td>FREQUENCY</td>
+<td align="left">FREKVENS</td>
+</tr>
+<tr class="even">
+<td>FTEST</td>
+<td align="left">FTEST</td>
+</tr>
+<tr class="odd">
+<td>FV</td>
+<td align="left">FV</td>
+</tr>
+<tr class="even">
+<td>FVSCHEDULE</td>
+<td align="left">FVTABEL</td>
+</tr>
+<tr class="odd">
+<td>GAMMADIST</td>
+<td align="left">GAMMAFORDELING</td>
+</tr>
+<tr class="even">
+<td>GAMMAINV</td>
+<td align="left">GAMMAINV</td>
+</tr>
+<tr class="odd">
+<td>GAMMALN</td>
+<td align="left">GAMMALN</td>
+</tr>
+<tr class="even">
+<td>GCD</td>
+<td align="left">STØRSTE.FÆLLES.DIVISOR</td>
+</tr>
+<tr class="odd">
+<td>GEOMEAN</td>
+<td align="left">GEOMIDDELVÆRDI</td>
+</tr>
+<tr class="even">
+<td>GESTEP</td>
+<td align="left">GETRIN</td>
+</tr>
+<tr class="odd">
+<td>GETPIVOTDATA</td>
+<td align="left">GETPIVOTDATA</td>
+</tr>
+<tr class="even">
+<td>GROWTH</td>
+<td align="left">FORØGELSE</td>
+</tr>
+<tr class="odd">
+<td>HARMEAN</td>
+<td align="left">HARMIDDELVÆRDI</td>
+</tr>
+<tr class="even">
+<td>HEX2BIN</td>
+<td align="left">HEX.TIL.BIN</td>
+</tr>
+<tr class="odd">
+<td>HEX2DEC</td>
+<td align="left">HEX.TIL.DEC</td>
+</tr>
+<tr class="even">
+<td>HEX2OCT</td>
+<td align="left">HEX.TIL.OKT</td>
+</tr>
+<tr class="odd">
+<td>HLOOKUP</td>
+<td align="left">VOPSLAG</td>
+</tr>
+<tr class="even">
+<td>HOUR</td>
+<td align="left">TIME</td>
+</tr>
+<tr class="odd">
+<td>HYPERLINK</td>
+<td align="left">HYPERLINK</td>
+</tr>
+<tr class="even">
+<td>HYPGEOMDIST</td>
+<td align="left">HYPGEOFORDELING</td>
+</tr>
+<tr class="odd">
+<td>IF</td>
+<td align="left">HVIS</td>
+</tr>
+<tr class="even">
+<td>IMABS</td>
+<td align="left">IMAGABS</td>
+</tr>
+<tr class="odd">
+<td>IMAGINARY</td>
+<td align="left">IMAGINÆR</td>
+</tr>
+<tr class="even">
+<td>IMARGUMENT</td>
+<td align="left">IMAGARGUMENT</td>
+</tr>
+<tr class="odd">
+<td>IMCONJUGATE</td>
+<td align="left">IMAGKONJUGERE</td>
+</tr>
+<tr class="even">
+<td>IMCOS</td>
+<td align="left">IMAGCOS</td>
+</tr>
+<tr class="odd">
+<td>IMDIV</td>
+<td align="left">IMAGDIV</td>
+</tr>
+<tr class="even">
+<td>IMEXP</td>
+<td align="left">IMAGEKSP</td>
+</tr>
+<tr class="odd">
+<td>IMLN</td>
+<td align="left">IMAGLN</td>
+</tr>
+<tr class="even">
+<td>IMLOG10</td>
+<td align="left">IMAGLOG10</td>
+</tr>
+<tr class="odd">
+<td>IMLOG2</td>
+<td align="left">IMAGLOG2</td>
+</tr>
+<tr class="even">
+<td>IMPOWER</td>
+<td align="left">IMAGPOTENS</td>
+</tr>
+<tr class="odd">
+<td>IMPRODUCT</td>
+<td align="left">IMAGPRODUKT</td>
+</tr>
+<tr class="even">
+<td>IMREAL</td>
+<td align="left">IMAGREELT</td>
+</tr>
+<tr class="odd">
+<td>IMSIN</td>
+<td align="left">IMAGSIN</td>
+</tr>
+<tr class="even">
+<td>IMSQRT</td>
+<td align="left">IMAGKVROD</td>
+</tr>
+<tr class="odd">
+<td>IMSUB</td>
+<td align="left">IMAGSUB</td>
+</tr>
+<tr class="even">
+<td>IMSUM</td>
+<td align="left">IMAGSUM</td>
+</tr>
+<tr class="odd">
+<td>INDEX</td>
+<td align="left">INDEKS</td>
+</tr>
+<tr class="even">
+<td>INDIRECT</td>
+<td align="left">INDIREKTE</td>
+</tr>
+<tr class="odd">
+<td>INFO</td>
+<td align="left">INFO</td>
+</tr>
+<tr class="even">
+<td>INT</td>
+<td align="left">HELTAL</td>
+</tr>
+<tr class="odd">
+<td>INTERCEPT</td>
+<td align="left">SKÆRING</td>
+</tr>
+<tr class="even">
+<td>INTRATE</td>
+<td align="left">RENTEFOD</td>
+</tr>
+<tr class="odd">
+<td>IPMT</td>
+<td align="left">R.YDELSE</td>
+</tr>
+<tr class="even">
+<td>IRR</td>
+<td align="left">IA</td>
+</tr>
+<tr class="odd">
+<td>ISBLANK</td>
+<td align="left">ER.TOM</td>
+</tr>
+<tr class="even">
+<td>ISERR</td>
+<td align="left">ER.FJL</td>
+</tr>
+<tr class="odd">
+<td>ISERROR</td>
+<td align="left">ER.FEJL</td>
+</tr>
+<tr class="even">
+<td>ISEVEN</td>
+<td align="left">ER.LIGE</td>
+</tr>
+<tr class="odd">
+<td>ISLOGICAL</td>
+<td align="left">ER.LOGISK</td>
+</tr>
+<tr class="even">
+<td>ISNA</td>
+<td align="left">ER.IKKE.TILGÆNGELIG</td>
+</tr>
+<tr class="odd">
+<td>ISNONTEXT</td>
+<td align="left">ER.IKKE.TEKST</td>
+</tr>
+<tr class="even">
+<td>ISNUMBER</td>
+<td align="left">ER.TAL</td>
+</tr>
+<tr class="odd">
+<td>ISODD</td>
+<td align="left">ER.ULIGE</td>
+</tr>
+<tr class="even">
+<td>ISPMT</td>
+<td align="left">ISPMT</td>
+</tr>
+<tr class="odd">
+<td>ISREF</td>
+<td align="left">ER.REFERENCE</td>
+</tr>
+<tr class="even">
+<td>ISTEXT</td>
+<td align="left">ER.TEKST</td>
+</tr>
+<tr class="odd">
+<td>KURT</td>
+<td align="left">TOPSTEJL</td>
+</tr>
+<tr class="even">
+<td>LARGE</td>
+<td align="left">STØRSTE</td>
+</tr>
+<tr class="odd">
+<td>LCM</td>
+<td align="left">MINDSTE.FÆLLES.MULTIPLUM</td>
+</tr>
+<tr class="even">
+<td>LEFT</td>
+<td align="left">VENSTRE</td>
+</tr>
+<tr class="odd">
+<td>LEN</td>
+<td align="left">LÆNGDE</td>
+</tr>
+<tr class="even">
+<td>LINEST</td>
+<td align="left">LINREGR</td>
+</tr>
+<tr class="odd">
+<td>LN</td>
+<td align="left">LN</td>
+</tr>
+<tr class="even">
+<td>LOG</td>
+<td align="left">LOG</td>
+</tr>
+<tr class="odd">
+<td>LOG10</td>
+<td align="left">LOG10</td>
+</tr>
+<tr class="even">
+<td>LOGEST</td>
+<td align="left">LOGREGR</td>
+</tr>
+<tr class="odd">
+<td>LOGINV</td>
+<td align="left">LOGINV</td>
+</tr>
+<tr class="even">
+<td>LOGNORMDIST</td>
+<td align="left">LOGNORMFORDELING</td>
+</tr>
+<tr class="odd">
+<td>LOOKUP</td>
+<td align="left">SLÅ.OP</td>
+</tr>
+<tr class="even">
+<td>LOWER</td>
+<td align="left">SMÅ.BOGSTAVER</td>
+</tr>
+<tr class="odd">
+<td>MATCH</td>
+<td align="left">SAMMENLIGN</td>
+</tr>
+<tr class="even">
+<td>MAX</td>
+<td align="left">MAKS</td>
+</tr>
+<tr class="odd">
+<td>MAXA</td>
+<td align="left">MAKSV</td>
+</tr>
+<tr class="even">
+<td>MDETERM</td>
+<td align="left">MDETERM</td>
+</tr>
+<tr class="odd">
+<td>MDURATION</td>
+<td align="left">MVARIGHED</td>
+</tr>
+<tr class="even">
+<td>MEDIAN</td>
+<td align="left">MEDIAN</td>
+</tr>
+<tr class="odd">
+<td>MID</td>
+<td align="left">MIDT</td>
+</tr>
+<tr class="even">
+<td>MIN</td>
+<td align="left">MIN</td>
+</tr>
+<tr class="odd">
+<td>MINA</td>
+<td align="left">MINV</td>
+</tr>
+<tr class="even">
+<td>MINUTE</td>
+<td align="left">MINUT</td>
+</tr>
+<tr class="odd">
+<td>MINVERSE</td>
+<td align="left">MINVERT</td>
+</tr>
+<tr class="even">
+<td>MIRR</td>
+<td align="left">MIA</td>
+</tr>
+<tr class="odd">
+<td>MMULT</td>
+<td align="left">MPRODUKT</td>
+</tr>
+<tr class="even">
+<td>MOD</td>
+<td align="left">REST</td>
+</tr>
+<tr class="odd">
+<td>MODE</td>
+<td align="left">HYPPIGST</td>
+</tr>
+<tr class="even">
+<td>MONTH</td>
+<td align="left">MÅNED</td>
+</tr>
+<tr class="odd">
+<td>MROUND</td>
+<td align="left">MAFRUND</td>
+</tr>
+<tr class="even">
+<td>MULTINOMIAL</td>
+<td align="left">MULTINOMIAL</td>
+</tr>
+<tr class="odd">
+<td>N</td>
+<td align="left">TAL</td>
+</tr>
+<tr class="even">
+<td>NA</td>
+<td align="left">IKKE.TILGÆNGELIG</td>
+</tr>
+<tr class="odd">
+<td>NEGBINOMDIST</td>
+<td align="left">NEGBINOMFORDELING</td>
+</tr>
+<tr class="even">
+<td>NETWORKDAYS</td>
+<td align="left">ANTAL.ARBEJDSDAGE</td>
+</tr>
+<tr class="odd">
+<td>NOMINAL</td>
+<td align="left">NOMINEL</td>
+</tr>
+<tr class="even">
+<td>NORMDIST</td>
+<td align="left">NORMFORDELING</td>
+</tr>
+<tr class="odd">
+<td>NORMINV</td>
+<td align="left">NORMINV</td>
+</tr>
+<tr class="even">
+<td>NORMSDIST</td>
+<td align="left">STANDARDNORMFORDELING</td>
+</tr>
+<tr class="odd">
+<td>NORMSINV</td>
+<td align="left">STANDARDNORMINV</td>
+</tr>
+<tr class="even">
+<td>NOT</td>
+<td align="left">IKKE</td>
+</tr>
+<tr class="odd">
+<td>NOW</td>
+<td align="left">NU</td>
+</tr>
+<tr class="even">
+<td>NPER</td>
+<td align="left">NPER</td>
+</tr>
+<tr class="odd">
+<td>NPV</td>
+<td align="left">NUTIDSVÆRDI</td>
+</tr>
+<tr class="even">
+<td>OCT2BIN</td>
+<td align="left">OKT.TIL.BIN</td>
+</tr>
+<tr class="odd">
+<td>OCT2DEC</td>
+<td align="left">OKT.TIL.DEC</td>
+</tr>
+<tr class="even">
+<td>OCT2HEX</td>
+<td align="left">OKT.TIL.HEX</td>
+</tr>
+<tr class="odd">
+<td>ODD</td>
+<td align="left">ULIGE</td>
+</tr>
+<tr class="even">
+<td>ODDFPRICE</td>
+<td align="left">ULIGE.KURS.PÅLYDENDE</td>
+</tr>
+<tr class="odd">
+<td>ODDFYIELD</td>
+<td align="left">ULIGE.FØRSTE.AFKAST</td>
+</tr>
+<tr class="even">
+<td>ODDLPRICE</td>
+<td align="left">ULIGE.SIDSTE.KURS</td>
+</tr>
+<tr class="odd">
+<td>ODDLYIELD</td>
+<td align="left">ULIGE.SIDSTE.AFKAST</td>
+</tr>
+<tr class="even">
+<td>OFFSET</td>
+<td align="left">FORSKYDNING</td>
+</tr>
+<tr class="odd">
+<td>OR</td>
+<td align="left">ELLER</td>
+</tr>
+<tr class="even">
+<td>PEARSON</td>
+<td align="left">PEARSON</td>
+</tr>
+<tr class="odd">
+<td>PERCENTILE</td>
+<td align="left">FRAKTIL</td>
+</tr>
+<tr class="even">
+<td>PERCENTRANK</td>
+<td align="left">PROCENTPLADS</td>
+</tr>
+<tr class="odd">
+<td>PERMUT</td>
+<td align="left">PERMUT</td>
+</tr>
+<tr class="even">
+<td>PI</td>
+<td align="left">PI</td>
+</tr>
+<tr class="odd">
+<td>PMT</td>
+<td align="left">YDELSE</td>
+</tr>
+<tr class="even">
+<td>POISSON</td>
+<td align="left">POISSON</td>
+</tr>
+<tr class="odd">
+<td>POWER</td>
+<td align="left">POTENS</td>
+</tr>
+<tr class="even">
+<td>PPMT</td>
+<td align="left">H.YDELSE</td>
+</tr>
+<tr class="odd">
+<td>PRICE</td>
+<td align="left">KURS</td>
+</tr>
+<tr class="even">
+<td>PRICEDISC</td>
+<td align="left">KURS.DISKONTO</td>
+</tr>
+<tr class="odd">
+<td>PRICEMAT</td>
+<td align="left">KURS.UDLØB</td>
+</tr>
+<tr class="even">
+<td>PROB</td>
+<td align="left">SANDSYNLIGHED</td>
+</tr>
+<tr class="odd">
+<td>PRODUCT</td>
+<td align="left">PRODUKT</td>
+</tr>
+<tr class="even">
+<td>PROPER</td>
+<td align="left">STORT.FORBOGSTAV</td>
+</tr>
+<tr class="odd">
+<td>PV</td>
+<td align="left">NV</td>
+</tr>
+<tr class="even">
+<td>QUARTILE</td>
+<td align="left">KVARTIL</td>
+</tr>
+<tr class="odd">
+<td>QUOTIENT</td>
+<td align="left">KVOTIENT</td>
+</tr>
+<tr class="even">
+<td>RADIANS</td>
+<td align="left">RADIANER</td>
+</tr>
+<tr class="odd">
+<td>RAND</td>
+<td align="left">SLUMP</td>
+</tr>
+<tr class="even">
+<td>RANDBETWEEN</td>
+<td align="left">SLUMPMELLEM</td>
+</tr>
+<tr class="odd">
+<td>RANK</td>
+<td align="left">PLADS</td>
+</tr>
+<tr class="even">
+<td>RATE</td>
+<td align="left">RENTE</td>
+</tr>
+<tr class="odd">
+<td>RECEIVED</td>
+<td align="left">MODTAGET.VED.UDLØB</td>
+</tr>
+<tr class="even">
+<td>REGISTER.ID</td>
+<td align="left">REGISTER.ID</td>
+</tr>
+<tr class="odd">
+<td>REPLACE</td>
+<td align="left">ERSTAT</td>
+</tr>
+<tr class="even">
+<td>REPT</td>
+<td align="left">GENTAG</td>
+</tr>
+<tr class="odd">
+<td>RIGHT</td>
+<td align="left">HØJRE</td>
+</tr>
+<tr class="even">
+<td>ROMAN</td>
+<td align="left">ROMERTAL</td>
+</tr>
+<tr class="odd">
+<td>ROUND</td>
+<td align="left">AFRUND</td>
+</tr>
+<tr class="even">
+<td>ROUNDDOWN</td>
+<td align="left">RUND.NED</td>
+</tr>
+<tr class="odd">
+<td>ROUNDUP</td>
+<td align="left">RUND.OP</td>
+</tr>
+<tr class="even">
+<td>ROW</td>
+<td align="left">RÆKKE</td>
+</tr>
+<tr class="odd">
+<td>ROWS</td>
+<td align="left">RÆKKER</td>
+</tr>
+<tr class="even">
+<td>RSQ</td>
+<td align="left">FORKLARINGSGRAD</td>
+</tr>
+<tr class="odd">
+<td>RTD</td>
+<td align="left">RTD (ikke Excel 2000)</td>
+</tr>
+<tr class="even">
+<td>SEARCH</td>
+<td align="left">SØG</td>
+</tr>
+<tr class="odd">
+<td>SECOND</td>
+<td align="left">SEKUND</td>
+</tr>
+<tr class="even">
+<td>SERIESSUM</td>
+<td align="left">SERIESUM</td>
+</tr>
+<tr class="odd">
+<td>SIGN</td>
+<td align="left">FORTEGN</td>
+</tr>
+<tr class="even">
+<td>SIN</td>
+<td align="left">SIN</td>
+</tr>
+<tr class="odd">
+<td>SINH</td>
+<td align="left">SINH</td>
+</tr>
+<tr class="even">
+<td>SKEW</td>
+<td align="left">SKÆVHED</td>
+</tr>
+<tr class="odd">
+<td>SLN</td>
+<td align="left">LA</td>
+</tr>
+<tr class="even">
+<td>SLOPE</td>
+<td align="left">STIGNING</td>
+</tr>
+<tr class="odd">
+<td>SMALL</td>
+<td align="left">MINDSTE</td>
+</tr>
+<tr class="even">
+<td>SQRT</td>
+<td align="left">KVROD</td>
+</tr>
+<tr class="odd">
+<td>SQRTPI</td>
+<td align="left">KVRODPI</td>
+</tr>
+<tr class="even">
+<td>STANDARDIZE</td>
+<td align="left">STANDARDISER</td>
+</tr>
+<tr class="odd">
+<td>STDEV</td>
+<td align="left">STDAFV</td>
+</tr>
+<tr class="even">
+<td>STDEVA</td>
+<td align="left">STDAFVV</td>
+</tr>
+<tr class="odd">
+<td>STDEVP</td>
+<td align="left">STDAFVP</td>
+</tr>
+<tr class="even">
+<td>STDEVPA</td>
+<td align="left">STDAFVPV</td>
+</tr>
+<tr class="odd">
+<td>STEYX</td>
+<td align="left">STFYX</td>
+</tr>
+<tr class="even">
+<td>SUBSTITUTE</td>
+<td align="left">UDSKIFT</td>
+</tr>
+<tr class="odd">
+<td>SUBTOTAL</td>
+<td align="left">SUBTOTAL</td>
+</tr>
+<tr class="even">
+<td>SUM</td>
+<td align="left">SUM</td>
+</tr>
+<tr class="odd">
+<td>SUMIF</td>
+<td align="left">SUM.HVIS</td>
+</tr>
+<tr class="even">
+<td>SUMPRODUCT</td>
+<td align="left">SUMPRODUKT</td>
+</tr>
+<tr class="odd">
+<td>SUMSQ</td>
+<td align="left">SUMKV</td>
+</tr>
+<tr class="even">
+<td>SUMX2MY2</td>
+<td align="left">SUMX2MY2</td>
+</tr>
+<tr class="odd">
+<td>SUMX2PY2</td>
+<td align="left">SUMX2PY2</td>
+</tr>
+<tr class="even">
+<td>SUMXMY2</td>
+<td align="left">SUMXMY2</td>
+</tr>
+<tr class="odd">
+<td>SYD</td>
+<td align="left">ÅRSAFSKRIVNING</td>
+</tr>
+<tr class="even">
+<td>TAN</td>
+<td align="left">TAN</td>
+</tr>
+<tr class="odd">
+<td>TANH</td>
+<td align="left">TANH</td>
+</tr>
+<tr class="even">
+<td>TBILLEQ</td>
+<td align="left">STATSOBLIGATION</td>
+</tr>
+<tr class="odd">
+<td>TBILLPRICE</td>
+<td align="left">STATSOBLIGATION.KURS</td>
+</tr>
+<tr class="even">
+<td>TBILLYIELD</td>
+<td align="left">STATSOBLIGATION.AFKAST</td>
+</tr>
+<tr class="odd">
+<td>TDIST</td>
+<td align="left">TFORDELING</td>
+</tr>
+<tr class="even">
+<td>TEXT</td>
+<td align="left">TEKST</td>
+</tr>
+<tr class="odd">
+<td>TIME</td>
+<td align="left">TID</td>
+</tr>
+<tr class="even">
+<td>TIMEVALUE</td>
+<td align="left">TIDSVÆRDI</td>
+</tr>
+<tr class="odd">
+<td>TINV</td>
+<td align="left">TINV</td>
+</tr>
+<tr class="even">
+<td>TODAY</td>
+<td align="left">IDAG</td>
+</tr>
+<tr class="odd">
+<td>TRANSPOSE</td>
+<td align="left">TRANSPONER</td>
+</tr>
+<tr class="even">
+<td>TREND</td>
+<td align="left">TENDENS</td>
+</tr>
+<tr class="odd">
+<td>TRIM</td>
+<td align="left">FJERN.OVERFLØDIGE.BLANKE</td>
+</tr>
+<tr class="even">
+<td>TRIMMEAN</td>
+<td align="left">TRIMMIDDELVÆRDI</td>
+</tr>
+<tr class="odd">
+<td>TRUE</td>
+<td align="left">SAND</td>
+</tr>
+<tr class="even">
+<td>TRUNC</td>
+<td align="left">AFKORT</td>
+</tr>
+<tr class="odd">
+<td>TTEST</td>
+<td align="left">TTEST</td>
+</tr>
+<tr class="even">
+<td>TYPE</td>
+<td align="left">VÆRDITYPE</td>
+</tr>
+<tr class="odd">
+<td>UPPER</td>
+<td align="left">STORE.BOGSTAVER</td>
+</tr>
+<tr class="even">
+<td>VALUE</td>
+<td align="left">VÆRDI</td>
+</tr>
+<tr class="odd">
+<td>VAR</td>
+<td align="left">VARIANS</td>
+</tr>
+<tr class="even">
+<td>VARA</td>
+<td align="left">VARIANSV</td>
+</tr>
+<tr class="odd">
+<td>VARP</td>
+<td align="left">VARIANSP</td>
+</tr>
+<tr class="even">
+<td>VARPA</td>
+<td align="left">VARIANSPV</td>
+</tr>
+<tr class="odd">
+<td>VDB</td>
+<td align="left">VSA</td>
+</tr>
+<tr class="even">
+<td>VLOOKUP</td>
+<td align="left">LOPSLAG</td>
+</tr>
+<tr class="odd">
+<td>WEEKDAY</td>
+<td align="left">UGEDAG</td>
+</tr>
+<tr class="even">
+<td>WEEKNUM</td>
+<td align="left">UGE.NR</td>
+</tr>
+<tr class="odd">
+<td>WEIBULL</td>
+<td align="left">WEIBULL</td>
+</tr>
+<tr class="even">
+<td>WORKDAY</td>
+<td align="left">ARBEJDSDAG</td>
+</tr>
+<tr class="odd">
+<td>XIRR</td>
+<td align="left">INTERN.RENTE</td>
+</tr>
+<tr class="even">
+<td>XNPV</td>
+<td align="left">NETTO.NUTIDSVÆRDI</td>
+</tr>
+<tr class="odd">
+<td>YEAR</td>
+<td align="left">ÅR</td>
+</tr>
+<tr class="even">
+<td>YEARFRAC</td>
+<td align="left">ÅR.BRØK</td>
+</tr>
+<tr class="odd">
+<td>YIELD</td>
+<td align="left">AFKAST</td>
+</tr>
+<tr class="even">
+<td>YIELDDISC</td>
+<td align="left">AFKAST.DISKONTO</td>
+</tr>
+<tr class="odd">
+<td>YIELDMAT</td>
+<td align="left">AFKAST.UDLØBSDATO</td>
+</tr>
+<tr class="even">
+<td>ZTEST</td>
+<td align="left">ZTEST</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="excel-omkostnings-eksempel.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

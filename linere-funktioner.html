@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Udvidet Statistik for de finansielle uddannelser.</title>
+  <meta name="description" content="Matematik med økonomisk profil.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Udvidet Statistik for de finansielle uddannelser." />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Matematik med økonomisk profil." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Udvidet Statistik for de finansielle uddannelser." />
+  
+  <meta name="twitter:description" content="Matematik med økonomisk profil." />
+  
+
+<meta name="author" content="Thomas Petersen">
+
+
+<meta name="date" content="2018-07-28">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="prev" href="brkregneregler.html">
+<link rel="next" href="polynomier.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Matematik med økonomisk profil.</a></li>
+<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a></li>
+<li class="chapter" data-level="2" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html"><i class="fa fa-check"></i><b>2</b> Grundlæggende regneregler</a><ul>
+<li class="chapter" data-level="2.1" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html#reduktions-regneregler"><i class="fa fa-check"></i><b>2.1</b> Reduktions regneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="brkregneregler.html"><a href="brkregneregler.html"><i class="fa fa-check"></i><b>3</b> Brøkregneregler</a><ul>
+<li class="chapter" data-level="3.1" data-path="brkregneregler.html"><a href="brkregneregler.html#procentregneregler"><i class="fa fa-check"></i><b>3.1</b> Procentregneregler</a></li>
+<li class="chapter" data-level="3.2" data-path="brkregneregler.html"><a href="brkregneregler.html#indekstal"><i class="fa fa-check"></i><b>3.2</b> Indekstal</a></li>
+<li class="chapter" data-level="3.3" data-path="brkregneregler.html"><a href="brkregneregler.html#procentpoint"><i class="fa fa-check"></i><b>3.3</b> Procentpoint</a></li>
+<li class="chapter" data-level="3.4" data-path="brkregneregler.html"><a href="brkregneregler.html#potensregneregler"><i class="fa fa-check"></i><b>3.4</b> Potensregneregler</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="linere-funktioner.html"><a href="linere-funktioner.html"><i class="fa fa-check"></i><b>4</b> Lineære funktioner</a><ul>
+<li class="chapter" data-level="4.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#generel-forskift"><i class="fa fa-check"></i><b>4.1</b> Generel Forskift</a></li>
+<li class="chapter" data-level="4.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>4.2</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
+<li class="chapter" data-level="4.3" data-path="linere-funktioner.html"><a href="linere-funktioner.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>4.3</b> Løsning af ligninger</a></li>
+<li class="chapter" data-level="4.4" data-path="linere-funktioner.html"><a href="linere-funktioner.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>4.4</b> 2 ligninger med 2 ubekendte.</a></li>
+<li class="chapter" data-level="4.5" data-path="linere-funktioner.html"><a href="linere-funktioner.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>4.5</b> Udbuds- og efterspørgselskurver</a></li>
+<li class="chapter" data-level="4.6" data-path="linere-funktioner.html"><a href="linere-funktioner.html#addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6</b> Addition af lineære funktioner</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#vertikal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6.1</b> Vertikal addition af lineære funktioner</a></li>
+<li class="chapter" data-level="4.6.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#horisontal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6.2</b> Horisontal addition af lineære funktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="linere-funktioner.html"><a href="linere-funktioner.html#priselasticitet"><i class="fa fa-check"></i><b>4.7</b> Priselasticitet</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#video-om-priselasticitet"><i class="fa fa-check"></i><b>4.7.1</b> Video om priselasticitet</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>5</b> Polynomier</a><ul>
+<li class="chapter" data-level="5.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>5.1</b> 2. Gradspolynomier</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier"><i class="fa fa-check"></i><b>5.1.1</b> Video 2. Gradspolynomier</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html"><i class="fa fa-check"></i><b>6</b> Eksponentielle funktioner</a><ul>
+<li class="chapter" data-level="6.0.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#section"><i class="fa fa-check"></i><b>6.0.1</b> </a></li>
+<li class="chapter" data-level="6.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#fordoblings--og-halveringskonstant."><i class="fa fa-check"></i><b>6.1</b> Fordoblings- og halveringskonstant.</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>7</b> Finansiel regning</a><ul>
+<li class="chapter" data-level="7.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>7.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
+<li class="chapter" data-level="7.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>7.1</b> Annuiteter</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>7.1.1</b> Fremtidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="7.1.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>7.1.2</b> Nutidsværdi af en annuitet</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="inverse-funktioner.html"><a href="inverse-funktioner.html"><i class="fa fa-check"></i><b>8</b> Inverse funktioner</a></li>
+<li class="chapter" data-level="9" data-path="logaritmefunktioner.html"><a href="logaritmefunktioner.html"><i class="fa fa-check"></i><b>9</b> Logaritmefunktioner</a></li>
+<li class="chapter" data-level="10" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>10</b> Differentialregning</a><ul>
+<li class="chapter" data-level="10.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>10.1</b> Regneregler differentiation</a></li>
+<li class="chapter" data-level="10.2" data-path="differentialregning.html"><a href="differentialregning.html#differentiation-af-sammensatte-funktioner."><i class="fa fa-check"></i><b>10.2</b> Differentiation af sammensatte funktioner.</a></li>
+<li class="chapter" data-level="10.3" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>10.3</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="10.4" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>10.4</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="10.5" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>10.5</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="10.6" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>10.6</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="10.7" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>10.7</b> Optimeringseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html"><i class="fa fa-check"></i><b>11</b> Partielle afledede og gradienten</a><ul>
+<li class="chapter" data-level="11.0.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-om-partielle-afledede-og-gradienten"><i class="fa fa-check"></i><b>11.0.1</b> Video om partielle afledede og gradienten</a></li>
+<li class="chapter" data-level="11.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#cobb-douglas-funktioner"><i class="fa fa-check"></i><b>11.1</b> Cobb-Douglas funktioner</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-produktionsfunktioner"><i class="fa fa-check"></i><b>11.1.1</b> Video produktionsfunktioner</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isoquantisokvant-kurver"><i class="fa fa-check"></i><b>11.2</b> Isoquant/isokvant kurver</a></li>
+<li class="chapter" data-level="11.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isocostisokost-kurver"><i class="fa fa-check"></i><b>11.3</b> Isocost/Isokost kurver</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-isocost-kurver"><i class="fa fa-check"></i><b>11.3.1</b> Video isocost kurver</a></li>
+<li class="chapter" data-level="11.3.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#section-1"><i class="fa fa-check"></i><b>11.3.2</b> </a></li>
+<li class="chapter" data-level="11.3.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>11.3.3</b> Eksempel på optimering af produktionsoutput for fast omkostningsniveau</a></li>
+<li class="chapter" data-level="11.3.4" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>11.3.4</b> Video optimering af produktionsoutput for fast omkostningsniveau</a></li>
+<li class="chapter" data-level="11.3.5" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-omkostningsniveauet-for-fast-produktionsniveau"><i class="fa fa-check"></i><b>11.3.5</b> Eksempel på optimering af omkostningsniveauet for fast produktionsniveau</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="integralregning.html"><a href="integralregning.html"><i class="fa fa-check"></i><b>12</b> Integralregning</a><ul>
+<li class="chapter" data-level="12.1" data-path="integralregning.html"><a href="integralregning.html#partiel-integration"><i class="fa fa-check"></i><b>12.1</b> Partiel integration</a></li>
+<li class="chapter" data-level="12.2" data-path="integralregning.html"><a href="integralregning.html#arealberegning"><i class="fa fa-check"></i><b>12.2</b> Arealberegning</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html"><i class="fa fa-check"></i><b>13</b> Excel simpel brug</a><ul>
+<li class="chapter" data-level="13.0.1" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html#video-excel-simpel-brug"><i class="fa fa-check"></i><b>13.0.1</b> Video excel simpel brug</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="excel-investering.html"><a href="excel-investering.html"><i class="fa fa-check"></i><b>14</b> Excel Investering</a><ul>
+<li class="chapter" data-level="14.0.1" data-path="excel-investering.html"><a href="excel-investering.html#video-om-investering-med-excel"><i class="fa fa-check"></i><b>14.0.1</b> Video om investering med excel</a></li>
+<li class="chapter" data-level="14.1" data-path="excel-investering.html"><a href="excel-investering.html#investeringer-med-ikke-periodiske-varierende-betalingsstrmme-i-excel"><i class="fa fa-check"></i><b>14.1</b> Investeringer med ikke-periodiske varierende betalingsstrømme i excel</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="excel-malsgning.html"><a href="excel-malsgning.html"><i class="fa fa-check"></i><b>15</b> Excel målsøgning</a></li>
+<li class="chapter" data-level="16" data-path="excel-liner-programmering.html"><a href="excel-liner-programmering.html"><i class="fa fa-check"></i><b>16</b> Excel lineær programmering</a></li>
+<li class="chapter" data-level="17" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html"><i class="fa fa-check"></i><b>17</b> Excel Lineær regression</a><ul>
+<li class="chapter" data-level="17.0.1" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-excel-liner-regression"><i class="fa fa-check"></i><b>17.0.1</b> Video excel lineær regression</a></li>
+<li class="chapter" data-level="17.0.2" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-jmp-regressionseksempel"><i class="fa fa-check"></i><b>17.0.2</b> Video JMP regressionseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="lsning-af-ligningssystemer-med-excel.html"><a href="lsning-af-ligningssystemer-med-excel.html"><i class="fa fa-check"></i><b>18</b> Løsning af ligningssystemer med excel</a></li>
+<li class="chapter" data-level="19" data-path="excel-omkostnings-eksempel.html"><a href="excel-omkostnings-eksempel.html"><i class="fa fa-check"></i><b>19</b> Excel omkostnings-eksempel</a></li>
+<li class="chapter" data-level="20" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>20</b> Excel oversættelser</a></li>
+<li class="divider"></li>
+<li><a href="https://tepedu.com" target="blank">Thomas Petersen</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Udvidet Statistik for de finansielle uddannelser.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="linere-funktioner" class="section level1">
+<h1><span class="header-section-number">Kapitel 4</span> Lineære funktioner</h1>
+<div id="generel-forskift" class="section level2">
+<h2><span class="header-section-number">4.1</span> Generel Forskift</h2>
+<p><img src="media/image4.png" style="width:6in;height:3.65132in" /></p>
+<p>Figure 1</p>
+<p>En funktion er et redskab, der beskriver sammenhængen mellem en uafhængig variabel x og en afhængig variabel y = f(x). Formen for en lineær funktionsforskrift skrives som:</p>
+<p><span class="math display">\[f\left( x \right) = ax + b\]</span></p>
+<p><span class="math display">\[hvor\ a,\ b\  \in \mathbb{R}\]</span></p>
+<p>Vi kalder a for hældningskoefficienten, dette tal fortæller hvor meget y ændrer sig når x vokser med 1. Det vil sige hvor meget ændres funktionsværdien, når vi går en til højre på x-aksen. b er skæringen med y-aksen. Punktet hvor linjen skærer y-aksen har altid første-koordinat 0, dvs. punktet hedder (0,b).</p>
+<p>På figuren ovenfor er <span class="math inline">\(f\left( x \right) = 0,5x + 2\)</span> tegnet ind. Her ses som nævnt, at linjen skærer y-aksen i (0,2), og hældningskoefficienten er 0,5.</p>
+<p>Når man indsætter en x-værdi i funktionsforskriften får man funktionsværdien eller y-værdien. F.eks. vil x=2 give en y-værdi <span class="math inline">\(f\left( 2 \right) = 0,5 \cdot 2 + 2 = 3\)</span>, det betyder punktet <span class="math inline">\(\left( 2,\ 3 \right)\)</span> ligger på den rette linje.</p>
+<p>En lineær funktion med positiv hældning <span class="math inline">\(\left( her\ a = 0,5 \right)\)</span> er en monotont voksende funktion, en sådan funktion ligner en bakke der går opad. Jo større a er des stejlere er bakken. En lineær funktion med negativ hældning, er en funktion der er monotont aftagende, det er en funktion der går nedad.</p>
+</div>
+<div id="bestemmelse-af-forskrift-baseret-pa-2-punkter" class="section level2">
+<h2><span class="header-section-number">4.2</span> Bestemmelse af forskrift baseret på 2 punkter</h2>
+<p>Hvis vi kender 2 punkter <span class="math inline">\(\left( x_{1},y_{1} \right)\ og\ (x_{2},y_{2})\)</span> på en ligning kan vi bestemme funktionsforskriften, <span class="math inline">\(f(x) = ax + b\)</span></p>
+<p><span class="math display">\[a = \frac{y_{1} - y_{2}}{x_{1} - x_{2}}\]</span></p>
+<p><span class="math display">\[b = y_{1} - ax_{1}\]</span></p>
+<p>Hvorfor ? Fordi vi kan skrive opskrive 2 ligninger med 2 ubekendte (a og b), når vi kender den generelle funktionsforskrift og de to punkter:</p>
+<p><span class="math display">\[y_{1} = ax_{1} + b\]</span></p>
+<p><span class="math display">\[{y_{2} = ax_{2} + b}\]</span></p>
+<p>Se i senere afsnit hvordan man kan løse 2 ligninger med 2 ubekendte, her er de ubekendte jo a og b alle andre størrelser i ligningerne er kendte. Man kan så trække den ene ligning fra den anden, så forsvinder b, og man har en ligning med en ubekendt tilbage.</p>
+<p>Hvis vi kender 2 punkter (2,3) og (4,1) på en lineær funktion og ønsker at bestemme forskriften, kan vi altså først finde a:</p>
+<p><span class="math display">\[a = \frac{y_{1} - y_{2}}{x_{1} - x_{2}} = \frac{4 - 2}{1 - 3} = - \frac{2}{2} = - 1\]</span></p>
+<p>Bemærk det er ligegyldigt hvilket punkt man vælger som <span class="math inline">\((x_{1},y_{1})\)</span> og <span class="math inline">\((x_{2},y_{2})\)</span>, men rækkefølgen i brøken, når man har valgt, er vigtig.</p>
+<p>Man bestemmer nemt b, da det nu er den eneste ukendte i de 2 ligninger, behøver vi blot indsætte de øvrige kendte værdier i den ene ligning.</p>
+<p><span class="math display">\[b = y_{1} - ax_{1} = 3 - \left( - 1 \right) \cdot 2 = 5\]</span></p>
+<p>Så forskriften bliver altså</p>
+<p><span class="math display">\[y = - x + 5\]</span></p>
+<p><img src="media/image5.png" style="width:6in;height:3.65232in" /></p>
+</div>
+<div id="lsning-af-ligninger" class="section level2">
+<h2><span class="header-section-number">4.3</span> Løsning af ligninger</h2>
+<p>Vi har følgende regneregler for ligninger:</p>
+<p>Man må addere og subtrahere med en konstant c, når man gør det på både højre og venstresiden.</p>
+<p><span class="math display">\[Nar\ a = b\ er\ a + c = b + c\]</span></p>
+<p><span class="math display">\[Nar\ a = b\ er\ a - c = b - c\]</span></p>
+<p>$$$$</p>
+<p>Man må multiplicere og dividere med en konstant c forskellig fra 0, f.eks:</p>
+<p><span class="math display">\[Nar\ a = b\ er\ a*c = b*c\]</span></p>
+<p><span class="math display">\[Nar\ a = b\ er\frac{a}{c} = \frac{b}{c}\]</span></p>
+<p>At løse en ligning betyder: bestem de variabelværdier for hvilken ligningen er sand, vi kalder mængden af disse værdier løsningsmængden L. Hvis vi betragter 1. Grads ligningen:</p>
+<p><span class="math display">\[3x + 2 = 4\]</span></p>
+<p>Her tilhører x=3 f.eks. ikke løsningsmængden L. for</p>
+<p><span class="math display">\[3*3 + 2 \neq 4\]</span></p>
+<p>Man kan hurtigt bestemme løsningsmængden ved at isolere x.</p>
+<p><span class="math display">\[3x + 2 = 4 \Leftrightarrow\]</span></p>
+<p><span class="math display">\[3x + 2 - 2 = 4 - 2 \Leftrightarrow\]</span></p>
+<p><span class="math display">\[3x = 2 \Leftrightarrow\]</span></p>
+<p><span class="math display">\[\frac{3x}{3} = \frac{2}{3} \Leftrightarrow\]</span></p>
+<p><span class="math display">\[x = \frac{2}{3}\]</span></p>
+<p><span class="math display">\[L = \{\frac{2}{3}\}\]</span></p>
+<p>Der findes specialtilfælde af ligninger hvor <span class="math inline">\(L = O\\)</span></p>
+<p><span class="math display">\[{5x = 7 + 5x}{0x = 7}{\ L = O}\]</span></p>
+<p>Eller <span class="math inline">\(L\mathbb{= R}\)</span></p>
+<p><span class="math display">\[{5x + 3 = 7 + 5x - 4}{0x = 0}{\text{\ L}\mathbb{= R}}\]</span></p>
+<p>Man kan måske få en bedre forståelse ved at løse 1. Gradsligningen, ved at indtegne hhv. højre- og venstreside som funktioner i et koordinatsystem.</p>
+<p><img src="media/image6.png" style="width:6in;height:3.65132in" /></p>
+</div>
+<div id="ligninger-med-2-ubekendte." class="section level2">
+<h2><span class="header-section-number">4.4</span> 2 ligninger med 2 ubekendte.</h2>
+<p>En ligning med 2 ubekendte kan f.eks. være:</p>
+<p><span class="math display">\[3x = 2y + 6\]</span></p>
+<p>Denne ligning kan vi omskrive til:</p>
+<p><span class="math display">\[{y = 1\frac{1}{2}x - 3}\]</span></p>
+<p>I koordinatsystemet vil denne ligning kunne afbilledes som nedenfor:</p>
+<p><img src="media/image7.png" style="width:6in;height:3.65232in" /></p>
+<p>Hvis man skal løse 2 ligninger med 2 ubekendte, skal man gøre det samme, som når man løser en ligning med en ubekendt. Man skal altså finde de værdier af de 2 ubekendte der gør begge ligninger sande samtidigt. Vi kalder også 2 ligninger med 2 ubekendte for et ligningssystem. Sådanne ligninger med 2 ubekendte kan tegnes som rette linjer i et koordinatsystem, og derefter løses grafisk. Det betyder ikke noget at de ubekendte hedder noget andet end x og y, man navngiver dem blot som hhv. x og y. Hvis man tegner ligningerne med de 2 ubekendte ind i koordinatsystemet, er skæringspunktet mellem de to rette linjer, netop der hvor begge ligninger er sande.</p>
+<p>Hvis vi f.eks. skal løse de 2 ligninger:</p>
+<p><span class="math display">\[3x = 2y + 6\]</span></p>
+<p><span class="math display">\[y = \frac{1}{2}x + 1\]</span></p>
+<p>Kan vi omskrive dem dvs. isolere y’erne på venstresiden:</p>
+<p><span class="math display">\[y = 1\frac{1}{2}x - 3\]</span></p>
+<p><span class="math display">\[y = \frac{1}{2}x + 1\]</span></p>
+<p>Og vi indtegner disse og finder skæringspunktet:</p>
+<p><span class="math display">\[3x = 2y + 6\]</span></p>
+<p><span class="math display">\[y = 2x + 1\]</span></p>
+<p><img src="media/image8.png" style="width:6in;height:3.65232in" /></p>
+<p>Ligesom med en ligning kan løsningsmængden være tom (hvis de 2 linjer de 2 ligninger danner er parallelle) eller <span class="math inline">\(\mathbb{R}^{2}\)</span>, (hvis ligningerne der dannes er identiske ). Men oftest vil linjerne skære hinanden.</p>
+<p><img src="media/image9.png" style="width:6in;height:3.65232in" /></p>
+<p>Der findes flere metoder til løsning af 2 ligninger med 2 ubekendte bl.a. substitutionsmetoden. Når vi benytter substitutionsmetoden, isolerer vi y i begge ligninger:</p>
+<p><span class="math display">\[y = 1\frac{1}{2}x - 3\]</span></p>
+<p><span class="math display">\[y = \frac{1}{2}x + 1\]</span></p>
+<p>Vi ved at y i første og anden ligning skal have samme værdi når vi finder en løsning. Derfor ved vi også at venstresiderne skal være ens. Vi sætter så venstresiderne lig med hinanden og isolerer x:</p>
+<p><span class="math display">\[1\frac{1}{2}x - 3 = \frac{1}{2}x + 1\]</span></p>
+<p><span class="math display">\[1\frac{1}{2}x - \frac{1}{2}x = 3 + 1\]</span></p>
+<p><span class="math display">\[x = 4\]</span></p>
+<p>Vi ved nu at når x er lig med 4, har vi en løsning. Så kan vi bare indsætte x=4, i en af de oprindelige ligninger og finde værdien af y.</p>
+<p><span class="math display">\[y = 1\frac{1}{2}x - 3\]</span></p>
+<p><span class="math display">\[y = 1\frac{1}{2} \cdot 4 - 3\]</span></p>
+<p><span class="math display">\[y = 3\]</span></p>
+<p>og vi ser at vi får samme løsning som da vi benyttede den grafiske metode.</p>
+<p><span class="math display">\[(4,3)\]</span></p>
+<p>Man kan løse ligningssystemer med flere end 2 ubekendte med matrix kommandoerne mmult og minverse i excel, men dette når vi ikke at gennemgå på dette kursus.</p>
+</div>
+<div id="udbuds--og-eftersprgselskurver" class="section level2">
+<h2><span class="header-section-number">4.5</span> Udbuds- og efterspørgselskurver</h2>
+<p>En vares prissætning er afgørende for hvor meget man kan afsætte af den pågældende vare. Jo højere pris desto færre varer kan man afsætte. Tilsvarende vil prissætningen være afgørende for, hvor meget producenterne vil udbyde, jo højere pris des flere varer udbydes. Vi forudsætter her at sammenhængen mellem pris og afsætning er lineær. Vi kan tegne efterspørgselskurver i et koordinatsystem med pris på y-aksen og afsætning på x-aksen. Dette er omvendt af hvordan vi normalt i matematik ville tegne en lineær funktion, idet vores forklarende variabel pris der styrer afsætningen er y.</p>
+<p><img src="media/image10.png" style="width:6in;height:3.65132in" /></p>
+<p>Efterspørgselskurven har negativ hældning og udbudskurven har positiv hældning.</p>
+<p>Et marked er i ligevægt hvor udbuds- og efterspørgselskurven skærer hinanden.</p>
+<p><img src="media/image11.png" style="width:6in;height:3.65132in" /></p>
+<p>Hvordan finder vi ligevægtspris og afsætning ?</p>
+<p>Det gør vi ved <a href="linere-funktioner.html#ligninger-med-2-ubekendte.">[substitutionsmetoden]</a>, som vi så tidligere.</p>
+</div>
+<div id="addition-af-linere-funktioner" class="section level2">
+<h2><span class="header-section-number">4.6</span> Addition af lineære funktioner</h2>
+<div id="vertikal-addition-af-linere-funktioner" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> Vertikal addition af lineære funktioner</h3>
+<p>Ofte vil man indenfor økonomi have behov for at addere/summere funktioner. Skal man foretage en lodret/vertikal addition af funktioner kan man blot lægge forskrifterne sammen. Hvis vi har 2 funktioner med samme definitionsmængde.</p>
+<p><span class="math display">\[f\left( x \right) = - 2x + 5\]</span></p>
+<p><span class="math display">\[g\left( x \right) = - x + 2\]</span></p>
+<p>og vi ønsker at addere disse vertikalt, kan dette gøres direkte</p>
+<p><span class="math display">\[h\left( x \right) = f\left( x \right) + g\left( x \right) = - 2x + 5 - x + 2 = - 3x + 7\]</span></p>
+<p><img src="media/image12.png" style="width:6in;height:3.65132in" /></p>
+<p>Hvis funktionerne ikke har samme definitionsmængde vil summen af disse blive en stykvis lineær funktion. Man vil da kunne opskrive funktionen som en gaffelforskrift. Hvis vi har de lineære funktioner.</p>
+<p><span class="math display">\[f\left( x \right) = - x + 2,\ x \in \left\lbrack 0;2 \right\rbrack\]</span></p>
+<p><span class="math display">\[g\left( x \right) = - 0.5x + 1,\ x \in \left\lbrack 1;4 \right\rbrack\]</span></p>
+<p>Første tegning nedenfor er f(x) og g(x)</p>
+<p><img src="media/image13.png" style="width:6in;height:3.65132in" /></p>
+<p>Nu bliver den vertikalt adderede funktion:</p>
+<p><span class="math display">\[h\left( x \right) = \left\{ \begin{matrix}
+ - x + 2,\ x \in \lbrack 0;1\lbrack \\
+ - 1.5x + 3\ x \in \left\lbrack 1;2 \right\rbrack \\
+ - 0.5x + 1,\ x \in \rbrack 2;4\rbrack \\
+\end{matrix} \right.\ \]</span></p>
+<p>Den er tegnet ind nedenfor, prikken uden fyld i punktet (1,1) indikerer at vi i dette punkt ikke ligger på funktionens graf.</p>
+<p><img src="media/image14.png" style="width:6in;height:3.65132in" /></p>
+</div>
+<div id="horisontal-addition-af-linere-funktioner" class="section level3">
+<h3><span class="header-section-number">4.6.2</span> Horisontal addition af lineære funktioner</h3>
+<p>En virksomhed kan afsætte sine varer på to markeder. På marked 1 kan man afsætte varerne allerede ved en pris på 2 pris afsætningsfunktionen er <span class="math inline">\(f\left( x \right) = - 0,5x + 2\)</span>. På marked 2 kan man først afsætte varerne når prisen er 1.</p>
+<p>Hvis man forestiller sig at man pga. frygt for parallelimport, ikke kan differentiere priserne på de 2 markeder, kan man ved horisontal addition finde en fælles pris afsætningsfunktion.</p>
+<p>Hvis vi indtegner pris afsætningskurver for 2 markeder i samme koordinatsystem, kan man grafisk finde hvad forskriften for den vandret adderede funktion vil være. Når prisen er mellem <span class="math display">\[1;2\]</span>, vil sumfunktionen have samme forskrift som g(x), til denne pris vil man jo kun kunne afsætte på marked 1. Når prisen er mellem 1 og 0 er det nemmest blot at bestemme 2 afsætninger i dette interval. Når man har bestemt disse kan man jo bestemme forskriften for den lineære funktion, ved at addere de 2 funktioner.</p>
+<p><img src="media/image15.png" style="width:6in;height:3.84004in" /></p>
+<p>På næste tegning ses den første del af sumfunktionen, samt 2 punkter (2,1) og (5,0) på den øvrige del af sumkurven.</p>
+<p><img src="media/image16.png" style="width:6in;height:3.84004in" /></p>
+<p>Når vi har 2 punkter kan vi bestemme forskriften har vi set set tidligere.</p>
+<p><span class="math display">\[a = \frac{y_{2} - y_{1}}{x_{2} - x_{1}} = \frac{0 - 1}{5 - 2} = - \frac{1}{3}\]</span></p>
+<p>b bestemmes som den ukendte i en af de 2 ligninger basereret på funktionsforskrifterne</p>
+<p><span class="math display">\[{y = ax + b}{0 = - \frac{1}{3} \cdot 5 + b}{b = \frac{5}{3} = 1\frac{2}{3}}\]</span></p>
+<p>Forskriften og sumfunktionen er tegnet ind nedenfor.</p>
+<p><img src="media/image17.png" style="width:6in;height:3.84004in" /></p>
+<p>Man kunne også løse horisontal addition af funktioner, algebraisk ved i den del af prisspændet, hvor begge markeder har positiv afsætning, at isolere x’erne og addere funktionerne. Bemærk vi skal isolere x’erne fordi vi ønsker at addere vandret, i modsætning til forrige kapitel, hvor vi gerne ville addere lodret.</p>
+<p><span class="math display">\[{h\left( x \right) = - x + 1 \Leftrightarrow }{y = - x + 1 \Leftrightarrow }{x = - y + 1}\]</span></p>
+<p><span class="math display">\[{g\left( x \right) = - 0,5x + 2 \Leftrightarrow }{y = - 0,5x + 2 \Leftrightarrow }{x = - 2y + 4}\]</span></p>
+<p>Vi lægger nu forskrifterne sammen <span class="math inline">\(- y + 1 - 2y + 4 = - 3y + 5\)</span>, og isolerer igen y i den ny forskrift.</p>
+<p><span class="math display">\[x = - 3y + 5 \Leftrightarrow\]</span></p>
+<p><span class="math display">\[y = - \frac{1}{3}\ x + \frac{5}{3} \Leftrightarrow\]</span></p>
+<p>Dette er jo kun forskriften i den del af prisintervallet, hvor der på begge markeder er positiv afsætning, den samlede summerede funktion er som vi på tegningerne tidligere.</p>
+<p><span class="math display">\[f\left( x \right) = \left\{ \begin{matrix}
+ - \frac{1}{2}x + 2,\ x \in \lbrack 0;2\rbrack \\
+ - \frac{1}{3}\ x + \frac{5}{3},x \in \lbrack 2;5\rbrack \\
+\end{matrix} \right.\ \]</span></p>
+</div>
+</div>
+<div id="priselasticitet" class="section level2">
+<h2><span class="header-section-number">4.7</span> Priselasticitet</h2>
+<div id="video-om-priselasticitet" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> Video om priselasticitet</h3>
+<p><img src="media/image18.png" style="width:6in;height:3.75in" /></p>
+<p>Priselasticiteten fortæller hvor mange procent afsætningen ændres, når prisen ændres med 1%. Hvis man. har en priselasticitet på 2 betyder det at afsætningen stiger/falder med 2% når prisen sænkes/hæves med 1%. Matematisk vil priselasticiteten altid være negativ, da vi jo har et modsat forhold mellem pris og afsætning, derfor angiver man ofte kun de numeriske værdier. Når man har en elasticitet mellem 0 og 1, siger vi at en vare er uelastisk. F.eks betyder en elasticitet 0,8 at en prisændring på 1% medfører en afsætningsændring på 0,8%.</p>
+<p>Formlen er :</p>
+<p><span class="math display">\[e = \frac{\frac{Q_{2} - Q_{1}}{\frac{Q_{2} + Q_{1}}{2}}}{\frac{\frac{P_{2} - P_{1}}{P_{2} + P_{1}}}{2}}\]</span></p>
+<p>Hvis vi har 2 pris- afsætningspunkter f.eks. <span class="math inline">\(\left( 10,\ 100 \right)\ og\ (8,\ 200)\)</span>, får vi</p>
+<p><span class="math display">\[e = \frac{\frac{\frac{200 - 100}{150}}{8 - 10}}{9} = 3\]</span></p>
+<p><img src="media/image19.png" style="width:6in;height:2.98593in" /></p>
+<p>En vare siges at være neutralelastisk hvis elasticiteten er netop en. Hvis vi har en pris/afsætnings funktion, kan vi beregne omsætningsfunktionen ved at gange med x. Vi kan herefter beregne DOMS differensomsætningsfunktionen, ved at differentiere omsætningsfunktion mht. x. Der gælder at pris- afsætnings par for afsætninger i intervallet med voksende omsætning og dermed positiv DOMS funktionsværdi har elastiske. Tilsvarende elasticiteten mindre end 1 når pris- afsætnings parrene er i intervallet med aftagende omsætning/negativ DOMS værdi.</p>
+<p><img src="media/image20.png" style="width:6in;height:3.65132in" /></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="brkregneregler.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="polynomier.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

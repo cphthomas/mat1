@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-<link rel="next" href="indledning.html">
+<link rel="prev" href="grundlggende-regneregler.html">
+<link rel="next" href="linere-funktioner.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -172,141 +172,233 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Udvidet Statistik for de finansielle uddannelser.</h1>
-<h4 class="author"><em>Thomas Petersen</em></h4>
-<h4 class="date"><em>2018-07-28</em></h4>
-</div>
-<div id="matematik-med-konomisk-profil." class="section level1 unnumbered">
-<h1>Matematik med økonomisk profil.</h1>
-<!-- BEGIN SENTRY AJAX LOGIN FORM - version 3.1 (Beta Build A) - Member Login Code Copyright © Sentrylogin.com, Shawn, Co. https://www.sentrylogin.com -->
-<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
-<style>
-.handCursor {
-cursor:pointer;
-cursor:hand;
-} 
-#magicGroup form {
-margin: 0;
-padding: 0; 
-}
-#magicGroup A:link {text-decoration: none; color:black;}
-#magicGroup A:visited {text-decoration: none; color:black;}
-#magicGroup A:active {text-decoration: none; color:black;}
-#magicGroup A:hover {text-decoration: none; color:black;}
-.clearfix:after{
-  content:".";display:block;height:0;clear:both;visibility:hidden;
-}
-  .spacer0{clear:both; height:0px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer{clear:both; height:1px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer2{clear:both; height:2px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer3{clear:both; height:3px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer4{clear:both; height:4px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer5{clear:both; height:5px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer10{clear:both; height:10px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  .spacer20{clear:both; height:20px; margin:0px; padding:0px; line-height:0px; font-size:0px;}
-  </style>
-<script type="text/javascript" src="https://www.sentrylogin.com/sentry/scripts/Sentry_AJAX.js"></script>
-<div id="Settings" alignment="CENTER" manner="GROW" style="display:none;">
+<div id="brkregneregler" class="section level1">
+<h1><span class="header-section-number">Kapitel 3</span> Brøkregneregler</h1>
+<p>En brøk består af en tæller øverst og en nævner nederst<span class="math inline">\(.\)</span> Hvis man tænker på tælleren som hvor mange stykker lagkage der er, og nævneren som hvor store stykkerne er. En brøk repræsenterer det præcise tal man får ved at dividere tælleren med nævneren. <span class="math inline">\(\frac{1}{3}\)</span>repræsenterer således <span class="math inline">\(1:3\)</span>, der udtrykt som <a href="https://da.wikipedia.org/w/index.php?title=Decimalbr%C3%B8k&amp;action=edit&amp;redlink=1">decimalbrøk</a> er ca. 0,6667, dette tal kan faktisk ikke skrives helt præcist som et <a href="https://da.wikipedia.org/wiki/Decimaltal">decimaltal</a>, så brøker er fine hvis man ønsker at beregne noget helt eksakt. Der gælder at hvis både tæller og nævner er et <a href="https://da.wikipedia.org/wiki/Heltal">heltal</a> <span class="math inline">\(\mathbb{Z}\)</span>, så er brøken et <a href="https://da.wikipedia.org/wiki/Rationale_tal">rationalt tal</a>.</p>
+<p>Man kan forlænge brøker ved at gange med samme tal i tæller og nævner:</p>
+<p><span class="math display">\[\frac{a}{b} = \frac{a \cdot c}{b \cdot c}\]</span></p>
+<p>Man kan forkorte brøker ved at dividere med samme tal i tæller og nævner, det er god stil når man rapporterer et brøktal som slutresultat, at dette er mest muligt forkortet:</p>
+<p><span class="math display">\[\frac{a}{b} = \frac{\frac{a}{c}}{\frac{b}{c}}\]</span></p>
+<p>Hvis 2 brøker har samme nævner kan man addere eller subtrahere dem direkte.</p>
+<p><span class="math display">\[\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c}\]</span></p>
+<p><span class="math display">\[\frac{a}{c} - \frac{b}{c} = \frac{a - b}{c}\]</span></p>
+<p>Har 2 brøker ikke samme nævner, må man først skaffe fællesnævner ved at forlænge den ene eller begge. Er man i tvivl kan man altid forlænge begge brøker, med den anden brøks nævner således er man sikker på at de har fællesnævner.</p>
+<p><span class="math display">\[\frac{a}{c} + \frac{b}{d} = \frac{a \cdot d}{c \cdot d} + \frac{b \cdot c}{c \cdot d} = \frac{a \cdot d + b \cdot c}{c \cdot d}\]</span></p>
+<p><span class="math display">\[\frac{a}{c} - \frac{b}{d} = \frac{a \cdot d}{c \cdot d} - \frac{b \cdot c}{c \cdot d} = \frac{a \cdot d - b \cdot c}{c \cdot d}\]</span></p>
+<p>Man ganger en brøk med et tal, ved at gange tallet med tælleren.</p>
+<p><span class="math display">\[\frac{a}{b} \cdot c = \frac{a \cdot c}{b}\]</span></p>
+<p>Brøk gange brøk er tæller gange tæller og nævner gange nævner.</p>
+<p><span class="math display">\[\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}\]</span></p>
+<p>Man dividerer en brøk med et tal, ved at gange tallet ind i nævneren.</p>
+<p><span class="math display">\[\frac{a}{b}:c = \frac{a}{b \cdot c}\]</span></p>
+<p>Man dividerer et tal med en brøk, ved at gange tallet med den omvendte brøk.</p>
+<p><span class="math display">\[c:\frac{a}{b} = \frac{c \cdot b}{a}\]</span></p>
+<p>Man dividerer en brøk med en anden, ved at gange den første med den omvendte brøk.</p>
+<p><span class="math display">\[\frac{a}{b}:\frac{c}{d} = \frac{a \cdot d}{b \cdot c}\]</span></p>
 
+<div id="procentregneregler" class="section level2">
+<h2><span class="header-section-number">3.1</span> Procentregneregler</h2>
+<p>Procent betyder hundrededele, vi angiver procent med symbolet %.</p>
+<p>Har man 200 kr. er 1% af 200 kr., altså en hundrededel af 200 kr. dvs. <span class="math inline">\(\frac{200\ kr.}{100} = 2\ kr.\\)</span></p>
+<p>Af de 200 kr. er 100% af 200 kr., altså hundrede hundrededele af 200 kr. dvs. <span class="math inline">\(\frac{200\ kr.}{100} \cdot 100 = 200\ kr.\\)</span> altså hele beløbet.</p>
+<p>Af de 200 kr. er 40% af 200 kr., altså hundrede hundrededele af 200 kr. dvs. <span class="math inline">\(\frac{200\ kr.}{100} \cdot 40 = 80\ kr.\)</span></p>
+<p>Af de 200 kr. er 120% af 200 kr., altså hundrede hundrededele af 200 kr. dvs. <span class="math inline">\(\frac{200\ kr.}{100} \cdot 120 = 240\ kr.\)</span></p>
+<p>Vi dividerer altså med 100, når vi skal finde 1 %, og ganger med antallet af procent vi skal bestemme.</p>
+<p>Hvor mange procent udgør 10 kr. af 100 kr.?</p>
+<p>Dette kan vi finde ud af ved at bestemme andelen af 10 kr. ud af 100 kr., og derefter gange med 100:</p>
+<p><span class="math display">\[\frac{10}{100} \cdot 100\% = 10\%\]</span></p>
+<p>Hvor mange procent udgør 20 kr. af 400 kr.?</p>
+<p><span class="math display">\[\frac{20}{400} \cdot 100\% = 5\%\]</span></p>
+<p>Hvad er 50 + 10%</p>
+<p><span class="math display">\[50 + \frac{50}{100} \cdot 10 = 55\]</span></p>
+<p>Eller mere generelt og lidt nemmere, de 50 kr. er 100% + 10% er 110%, når vi omskriver dette til decimaltal får vi <span class="math inline">\(\frac{110\%}{100} = 1,1\)</span></p>
+<p>Dvs. vi kan finde 50 + 10% som <span class="math inline">\(50 \cdot 1,1 = 55\)</span></p>
+<p>Tilsvarende kan vi hurtigt finde 50 kr. - 10% som 100%-10%=90%=0.9</p>
+<p><span class="math display">\[50*0.9 = 45\]</span></p>
+<p>Et beløb er faldet fra 400 kr. til 250 kr. Hvor mange % er beløbet faldet?</p>
+<p><span class="math display">\[\frac{400 - 250}{400} \cdot 100\% = 37.5\%\]</span></p>
+<p>Efter at have lagt momsen 25% til et beløb, er beløbet vokset til 1000 kr. hvad var beløbet før vi lagde 25% til. Det betyder vi har lagt 25% til det ukendte beløb X, altså ganget det med 1.25.</p>
+<p>Her kan vi tænke på udregningen som en ligning, dvs. et udsagn der skal være sandt.</p>
+<p><span class="math display">\[X \cdot 1.25 = 1000\ kr.\]</span></p>
+<p>Vi skal nu bestemme/isolere X, ved at dividere med 1.25 på begge sider:</p>
+<p><span class="math display">\[\frac{X \cdot 1.25}{1.25} = 1000\ kr.\frac{1}{1.25} \rightarrow X = 1000\ kr.\  \cdot 0.8 \rightarrow X = 800\ kr.\]</span></p>
+<p>Vi kan når man skal finde et beløb uden moms 25%, gange med <span class="math inline">\(\frac{1}{1.25} = 0.8\\)</span></p>
 </div>
-<div id="Sentry_outermost" style="width:175px; position:relative;">
-
-
-<form name="Sentry_login_form" onsubmit="sentryLogin();">
-<div style="height:1px;">
-<a href="https://www.sentrylogin.com"><img src="https://www.sentrylogin.com/sentry/images/logo.gif" alt="Sentry Password Protection Member Login" width="2" height="1" border="0"></a>
+<div id="indekstal" class="section level2">
+<h2><span class="header-section-number">3.2</span> Indekstal</h2>
+<p>Tal omregnes til indekstal, ved at lade indekstallene være procentværdier i forhold til en bestemt værdi kaldet basis der har indeks 100.</p>
+<p><span class="math display">\[Indeks = \frac{Vaerdi}{\text{basis}} \cdot 100\]</span></p>
+<p>Hvis fx en aktie er steget fra kurs 133 til kurs 180, kan vi indeksere ved at sætte kurs 133 til basis og bestemme, den indekserede værdi af den nye kurs 180.</p>
+<p><span class="math display">\[Indeks = \frac{180}{133} \cdot 100 = 135.34\]</span></p>
+<p>Dette er smart hvis vi skal sammenligne, hvordan forskellige værdier udvikler sig over tiden.</p>
+<p>Herunder har vi kurserne for Danske Bank og Nordea på udvalgte dage.</p>
+<table>
+<thead>
+<tr class="header">
+<th>to 31</th>
+<th>/12/2016 31</th>
+<th>/01/2017 28</th>
+<th>/02/2017 31</th>
+<th>/03/2017 30</th>
+<th>/04/2017 31</th>
+<th>/05/2017 30</th>
+<th>/06/2017 31</th>
+<th>/07/2017 31</th>
+<th>/08/2017 30</th>
+<th>/09/2017 31</th>
+<th>/10/2017 30</th>
+<th align="left">/11/2017</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Danske Bank</td>
+<td>220.94</td>
+<td>225.66</td>
+<td>228.84</td>
+<td>248.00</td>
+<td>248.70</td>
+<td>250.40</td>
+<td>254.50</td>
+<td>242.80</td>
+<td>251.80</td>
+<td>243.70</td>
+<td>233.60</td>
+<td align="left">245.00</td>
+</tr>
+<tr class="even">
+<td>Nordea</td>
+<td>82.36</td>
+<td>81.47</td>
+<td>79.29</td>
+<td>84.05</td>
+<td>85.70</td>
+<td>83.15</td>
+<td>79.65</td>
+<td>84.05</td>
+<td>85.15</td>
+<td>77.05</td>
+<td>73.80</td>
+<td align="left">76.50</td>
+</tr>
+</tbody>
+</table>
+<p>Herunder ses udviklingen grafisk:</p>
+<p><span class="chart"><span class="math display">\[CHART\]</span></span></p>
+<p>Vi kan sammenligne udviklingerne i aktiekursen ved at indeksere kurserne for de to banker.</p>
+<table>
+<thead>
+<tr class="header">
+<th>to 31</th>
+<th>/12/2016 31</th>
+<th>/01/2017 28</th>
+<th>/02/2017 31</th>
+<th>/03/2017 30</th>
+<th>/04/2017 31</th>
+<th>/05/2017 30</th>
+<th>/06/2017 31</th>
+<th>/07/2017 31</th>
+<th>/08/2017 30</th>
+<th>/09/2017 31</th>
+<th>/10/2017 30</th>
+<th align="left">/11/2017</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Danske Bank</td>
+<td>100.00</td>
+<td>102.14</td>
+<td>103.58</td>
+<td>112.25</td>
+<td>112.56</td>
+<td>113.33</td>
+<td>115.19</td>
+<td>109.89</td>
+<td>113.97</td>
+<td>110.30</td>
+<td>105.73</td>
+<td align="left">110.89</td>
+</tr>
+<tr class="even">
+<td>Nordea</td>
+<td>100.00</td>
+<td>98.92</td>
+<td>96.27</td>
+<td>102.05</td>
+<td>104.05</td>
+<td>100.96</td>
+<td>96.71</td>
+<td>102.05</td>
+<td>103.38</td>
+<td>93.55</td>
+<td>89.60</td>
+<td align="left">92.88</td>
+</tr>
+</tbody>
+</table>
+<p>Fx er Danske bank 30/6 indekseret ved <span class="math inline">\(\frac{254.5}{220.94} \cdot 100 = 115.19\)</span>.</p>
+<p><span class="chart"><span class="math display">\[CHART\]</span></span></p>
+<p>Vi kan se det er nemmere at sammenligne de 2 indekserede aktiekurser. I hele perioden har Danske Bank været en bedre investering end Nordea aktien.</p>
+<p>Du kan se i videoen <a href="https://youtu.be/aHqd7CJOwTw">[https://youtu.be/aHqd7CJOwTw]</a> hvordan man indekserer hurtigt i Excel.</p>
+<p>Hvordan kommer man fra indekstal til det oprindelige beløb, hvis man forestiller sig at Danske Bank aktien i næste periode 31/12 2017, har indeks 115. Hvad er da prisen i denne periode?</p>
+<p>Nu kan man opstille en ligning for beregning af indekstal, med en ubekendt værdi kursen 31/12 2017 nemlig:</p>
+<p><span class="math display">\[\frac{X}{220.94}*100 = 115 \rightarrow X = 115*\frac{220.94}{100} \rightarrow X = 254.08\]</span></p>
+<p>Det betyder kursen 31/12 vil være 254.08.</p>
 </div>
-<div id="TopBar" class="handCursor" onclick="Sentry_onClick(this.id);" style="width:175px; background-color:lightgrey; padding-top:2px; padding-bottom:2px; border-width:1px; border-style:none; border-color:LightGray; border-radius: 6px;">
-<div id="Sentry_label" style="text-align: right; font-family:sans-serif; font-size:12px; font-weight:bold; margin-bottom:3px;">
-<span id="Sentry_label_span" style="padding-right:10px; padding-left:5px;">Login eller opret klik her</span>
+<div id="procentpoint" class="section level2">
+<h2><span class="header-section-number">3.3</span> Procentpoint</h2>
+<p>Procentpoint angiver hvor meget ændringen er i indekstallene. Hvis fx en indekseret kurs er ændret fra 110 til 130 er ændringen: 130-110=20 procentpoint. Vi kan udregne den procentvise ændring som:</p>
+<p><span class="math inline">\(\frac{130 - 110}{110} \cdot 100 = 18,18\%\)</span></p>
+<p>Modtager en kandidat til kommunalvalget 4% af stemmerne, mod 2% forrige periode, er stigningen 2 procentpoint. Stigningen i procent er imidlertid:</p>
+<p><span class="math display">\[\frac{4 - 2}{2} \cdot 100 = 100\%\]</span></p>
 </div>
+<div id="potensregneregler" class="section level2">
+<h2><span class="header-section-number">3.4</span> Potensregneregler</h2>
+<p>Lad a, b være reelle tal og m og n naturlige tal, der gælder følgende regler for potensregneregler.</p>
+<p><span class="math display">\[a^{n} \cdot a^{m} = a^{n + m}\]</span></p>
+<p><span class="math display">\[3^{2} \cdot 3^{4} = 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 = 3^{6}\]</span></p>
+<p><span class="math display">\[\frac{a^{n}}{a^{m}} = a^{n - m}\]</span></p>
+<p><span class="math display">\[\frac{3^{4}}{3^{2}} = \frac{3 \cdot 3 \cdot 3 \cdot 3}{3 \cdot 3} = 3 \cdot 3 = 3^{2}\]</span></p>
+<p><span class="math display">\[a^{n^{m}} = a^{n \cdot m}\]</span></p>
+<p><span class="math display">\[4^{2^{3}} = 4^{2} \cdot 4^{2} \cdot 4^{2} = 4^{2 \cdot 3}\]</span></p>
+<p><span class="math display">\[a^{n} \cdot b^{n} = \left( a \cdot b \right)^{n}\]</span></p>
+<p><span class="math display">\[4^{3} \cdot 7^{3} = 4 \cdot 4 \cdot 4 \cdot 7 \cdot 7 \cdot 7 = 4 \cdot 7 \cdot 4 \cdot 7 \cdot 4 \cdot 7 = 28^{3} = \left( 4 \cdot 7 \right)^{3}\]</span></p>
+<p><span class="math display">\[\frac{a^{n}}{b^{n}} = \left( \frac{a}{b} \right)^{n}\]</span></p>
+<p><span class="math display">\[\frac{3^{3}}{4^{3}} = \frac{3 \cdot 3 \cdot 3}{4 \cdot 4 \cdot 4} = \frac{3}{4} \cdot \frac{3}{4} \cdot \frac{3}{4} = \left( \frac{3}{4} \right)^{3}\]</span></p>
+<p><span class="math display">\[\frac{1}{a^{n}} = a^{- n}\]</span></p>
+<p><span class="math display">\[\frac{1}{4^{3}} = \frac{4^{0}}{4^{3}} = 4^{0 - 3} = 4^{- 3}\]</span></p>
+<p><span class="math display">\[a^{0} = 1\]</span></p>
+<p><span class="math display">\[37^{0} = 1\]</span></p>
+<p>Resultatet af kvadratroden af 16, <span class="math inline">\(\sqrt{16}\)</span>, er det tal der gange med sig selv giver 16</p>
+<p><span class="math display">\[\sqrt{16} \cdot \sqrt{16} = 16 = 4 \cdot 4\]</span></p>
+<p>dvs.</p>
+<p><span class="math display">\[\sqrt{16} = 4\]</span></p>
+<p>Bemærk her noget helt fantastisk ‼!</p>
+<p><span class="math display">\[\sqrt{16} \cdot \sqrt{16} = 16 = 16^{1} = 16^{\frac{1}{2} + \frac{1}{2}} = 16^{\frac{1}{2}} \cdot 16^{\frac{1}{2}}\]</span></p>
+<p>Vi kan altså skrive <span class="math inline">\(\sqrt{16}\)</span> som <span class="math inline">\(16^{\frac{1}{2}}\)</span></p>
+<p>Tilsvarende betyder f.eks. 4 roden af 256, <span class="math inline">\(\sqrt[4]{256}\\)</span>, at man skal finde det tal der gange med sig selv 4 gange giver 256.</p>
+<p><span class="math display">\[\sqrt[4]{256} = 4\]</span></p>
+<p>Fordi</p>
+<p><span class="math display">\[4 \cdot 4 \cdot 4 \cdot 4 = 256\]</span></p>
+<p>Det kan vi skrive som</p>
+<p><span class="math display">\[\sqrt[4]{256} = 256^{\frac{1}{4}}\]</span></p>
+<p>Husk et par nyttige regler eksemplificeret nedenfor:</p>
+<p><span class="math display">\[\frac{1}{x} = x^{- 1}\]</span></p>
+<p><span class="math display">\[\frac{1}{x^{17}} = x^{- 17}\]</span></p>
+<p><span class="math display">\[\sqrt{x} = \sqrt[2]{x} = x^{\frac{1}{2}}\]</span></p>
+<p><span class="math display">\[\sqrt[7]{x^{3}} = x^{\frac{3}{7}}\]</span></p>
+<p><span class="math display">\[x^{0} = 1\]</span></p>
+<p><span class="math display">\[2 \cdot \sqrt{2} = \sqrt{2} \cdot \sqrt{2} \cdot \sqrt{2} = \sqrt{8}\]</span></p>
 </div>
-<div id="magicGroup" style="z-index: 10000; background-color:lightgrey; text-align:left; position:absolute; left: -9999px; width:175px; padding-top:15px; border-style:solid; border-color:LightGray; border-top-width:0px; border-right-width:1px; border-bottom-width:1px; border-left-width:1px; border-radius: 6px;">
-<div id="messages" style="display:none; padding-left:15px; padding-right:15px; padding-bottom:15px; font-family: Arial; font-size:12px; color: red;">
-.
-</div>
-<div id="Sentry_emailDiv" style="width:146px; margin-left:15px;">
-<span style="text-align:left;">
-<input type="text" id="Sentry_email" style="padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);" value="E-mail"></span>
-</div>
-<div id="Sentry_passwordDiv" style="width:146px; margin-left:15px; margin-top:2px;">
-<span style="text-align:left;">
-<input type="text" id="Sentry_password" style=" padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);" value="Password"></span>
-</div>
-<div id="Sentry_HIDpasswordDiv" style="width:146px; display: none; margin-left:15px; margin-top:2px;">
-<span style="text-align:left;">
-<input type="password" id="Sentry_HIDpassword" style=" padding-left: 3px; border-style:solid; border-width:1px; border-color:LightGray; border-radius: 6px; width:146px; height:24px;" onfocus="Sentry_onfocus(this.id);" onkeydown="Sentry_onkeydown(event, this.id);" onkeyup="Sentry_onkeyup(this.value, this.id, event);" onblur="Sentry_onblur(this.value, this.id);"></span>
-</div>
-<div id="unHideDiv" style="margin-bottom:5px; font-family:Arial; font-size:10px;">
-<span id="forgotSpan" class="handCursor" onclick="Sentry_onClick(this.id);" style="vertical-align:top; margin-left:15px; font-family:Arial; font-size:10px; color:gray;">Glemt?</span>
-<input type="checkbox" id="unHide" style="height:12px; width:10px; margin:4px; display:none;" value="1">
-<span id="unHideSpan" class="handCursor" style="width:25px; vertical-align:top; font-family: Arial;font-size:10px; color:gray; margin-left:78px;" onclick="Sentry_onClick(this.id);" title="Do not reveal password in public">Vis</span>
-</div>
-<div id="buttonDiv" style="float:left; width:45px; margin-left:15px;">
-<button type="button" onclick="sentryLogin();" style="height:25px; padding:2; width:60px; font-family:Arial; font-size:11px;" id="Sentry_button">klik</button>
-</div>
-<div id="psistDiv" style="float:left; width:98px; text-align:right; margin-top:10px; margin-right:15px;">
-<input id="psist" type="checkbox" value="1" style="height:10px; width:10px; margin:0; margin-bottom:2px; margin-right:2px;" class="handCursor" title="Do not use when in public" onclick="Sentry_onClick(this.id);">
-<span id="psistSpan" class="handCursor" style="font-family: Arial;font-size:10px; color:gray;" onclick="Sentry_onClick(this.id);" title="Do not use when in public">Husk mig</span>
-</div>
-<div class="spacer0">
-
-</div>
-<div class="spacer10">
-
-</div>
-<div id="goInside" style="font-family: Arial;font-size:12px; text-align: right; margin-top:10px; margin-right:15px; margin-bottom:5px; margin-left:15px; display:none;">
-<span id="goInsideSpan" class="handCursor" style="font-weight:bold;">.</span>
-</div>
-<div id="myProfile" class="handCursor" onclick="Sentry_onClick(this.id);" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-left:15px;">
-Min profil
-</div>
-<div id="Tilmeld" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-bottom:5px; margin-left:15px;">
-<a href="https://www.sentrylogin.com/sentry/member_signup_list.asp?Site_ID=22367" title="Click to Subscribe Now">Opret</a>
-</div>
-<div id="logOut" style="font-family: Arial;font-size:12px; font-weight:bold; text-align: right; margin-top:2px; margin-right:15px; margin-bottom:5px; margin-left:15px; display:none;">
-<span class="handCursor" onclick="LogOut();">Log Out</span>
-</div>
-<div class="spacer0">
-
-</div>
-<div id="xbox" style="margin-top:12px;">
-<img id="xout" onclick="Sentry_onClick(this.id);" src="https://www.sentrylogin.com/sentry/images/x.png" style="margin:2px; margin-right:9px;" class="handCursor">
-</div>
-<div class="spacer5">
-
-</div>
-</div>
-<input id="Sentry_ID" type="hidden" value="22367">
-<input id="univ" type="hidden" value="1">
-<div id="Sentry_noJSLogin" style="width:175px; background-color:white;">
-<span style="color:red; font-family: Arial;font-size:12px; font-weight:bold;">Javascript Required</span>
-</div>
-</form>
-</div>
-<div id="Sentry_loggingIn" style="width:175px; display:none;">
-<img src="https://www.sentrylogin.com/sentry/images/wait_animated_sentry.gif">
-</div>
-<div id="Sentry_In" style="display:none;">
-For testing.
-</div>
-<script language="JavaScript" type="text/JavaScript">initializeSentry(); 
-  </script>
-<noscript>
-You must have JavaScript enabled in order to log in.
-</noscript>
-<!-- END SENTRY AJAX LOGIN FORM -->
-
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="indledning.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="grundlggende-regneregler.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="linere-funktioner.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
