@@ -388,28 +388,24 @@ altså hele beløbet.</p>
 <p><span class="math display">\[Indeks = \frac{180}{133} \cdot 100 = 135.34\]</span></p>
 <p>Dette er smart hvis vi skal sammenligne, hvordan forskellige værdier udvikler sig over tiden.</p>
 <p>Herunder har vi de justerede slutkurser for Danske Bank og Nordea på 12 udvalgte dage.</p>
-<pre><code>##  [1] &quot;2020-12-31&quot; &quot;2020-01-31&quot; &quot;2020-02-28&quot; &quot;2020-03-31&quot; &quot;2020-04-30&quot;
-##  [6] &quot;2020-05-31&quot; &quot;2020-06-30&quot; &quot;2020-07-31&quot; &quot;2020-08-31&quot; &quot;2020-09-30&quot;
-## [11] &quot;2020-10-31&quot; &quot;2020-11-30&quot;</code></pre>
 <pre><code>## 
 ## WARNING: There have been significant changes to Yahoo Finance data.
 ## Please see the Warning section of &#39;?getSymbols.yahoo&#39; for details.
 ## 
 ## This message is shown once per session and may be disabled by setting
 ## options(&quot;getSymbols.yahoo.warning&quot;=FALSE).</code></pre>
-<pre><code>## [1] &quot;DANSKE.CO&quot; &quot;JYSK.CO&quot;   &quot;SYDB.CO&quot;</code></pre>
-<div id="htmlwidget-ef404276095ca89d2990" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ef404276095ca89d2990">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank","labels":["month","Danske Bank","Jyske Bank"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[233.528656,236.118088,216.169846,215.399994,207,199.75,187.800003],[341.173584,356.328094,352.096619,370.899994,345.899994,350,360.100006]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4fa8ef671ab88a7751df" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4fa8ef671ab88a7751df">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank","labels":["month","Danske Bank","Jyske Bank"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[233.528656,236.118088,216.169846,215.399994,207,199.75,187.800003],[341.173584,356.328094,352.096619,370.899994,345.899994,350,360.100006]]},"evals":[],"jsHooks":[]}</script>
 <p>Her ses kursudviklingen grafisk:</p>
 <!-- <img src="img/ddbnordea1.png" align="center" width="80%" height="80%"style="border:0.0px solid #eeeeee; padding:5px; margin:6px;"/> -->
 <p><img src="img/ddbnordea1.png" align="right" width="50%" height="50%"style="border:0.0px solid #eeeeee; padding:5px; margin:6px;"/></p>
 <!-- <img src="img/ddbnordea1.png" align="left" width="80%" height="80%"style="border:0.0px solid #eeeeee; padding:5px; margin:6px;"/> -->
 <p>Vi kan sammenligne udviklingerne i aktiekursen ved at indeksere kurserne for de to banker.</p>
-<div id="htmlwidget-3b173b823db332446388" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3b173b823db332446388">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12"],["31/12/2016","31/01/2017","28/02/2017","31/03/2017","30/04/2017","31/05/2017","30/06/2017","31/07/2017","31/08/2017","30/09/2017","31/10/2017","30/11/2017"],["100","102.14","103.58","112.25","112.56","113.33","115.19","109.89","113.97","110.3","105.73","110.89"],["100","98.92","96.27","102.05","104.05","100.96","96.71","102.05","103.38","93.55","89.6","92.88"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Dato<\/th>\n      <th>DanskeBank<\/th>\n      <th>Nordea<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"autoWidth":true,"order":[],"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[10,12,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># library(dygraphs)</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co"># ts(cbind(Dato,DanskeBank,Nordea))</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># dygraph(ts(cbind(Dato,DanskeBank,Nordea)),ylim(80,120))</span></a></code></pre></div>
+<div id="htmlwidget-2c04b4a34a835295a9ff" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2c04b4a34a835295a9ff">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12"],["31/12/2016","31/01/2017","28/02/2017","31/03/2017","30/04/2017","31/05/2017","30/06/2017","31/07/2017","31/08/2017","30/09/2017","31/10/2017","30/11/2017"],["100","102.14","103.58","112.25","112.56","113.33","115.19","109.89","113.97","110.3","105.73","110.89"],["100","98.92","96.27","102.05","104.05","100.96","96.71","102.05","103.38","93.55","89.6","92.88"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Dato<\/th>\n      <th>DanskeBank<\/th>\n      <th>Nordea<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"autoWidth":true,"order":[],"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[10,12,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># library(dygraphs)</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># ts(cbind(Dato,DanskeBank,Nordea))</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># dygraph(ts(cbind(Dato,DanskeBank,Nordea)),ylim(80,120))</span></a></code></pre></div>
 <p>Fx er Danske bank 30/6 indekseret ved <span class="math inline">\(\frac{254.5}{220.94} \cdot 100 = 115.19\)</span>.</p>
 <p>Vi kan se det er nemmere at sammenligne de 2 indekserede aktiekurser. I hele perioden har Danske Bank været en bedre investering end Nordea aktien.</p>
 <p>Hvordan kommer man fra indekstal til det oprindelige beløb, hvis man forestiller sig at Danske Bank aktien i næste periode 31/12 2017, har indeks 115. Hvad er da prisen i denne periode?</p>
