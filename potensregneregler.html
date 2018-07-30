@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="prev" href="polynomier.html">
-<link rel="next" href="finansiel-regning.html">
+<link rel="prev" href="grundlggende-regneregler.html">
+<link rel="next" href="linere-funktioner.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -191,46 +191,53 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="eksponentielle-funktioner" class="section level1">
-<h1><span class="header-section-number">Kapitel 6</span> Eksponentielle funktioner</h1>
-<p>Eksponentielle funktioner benyttes bl.a. i finansiel regning, som vi ser på i næste kapitel. Ved en eksponentiel funktion forstås en funktion med forskriften:</p>
-<p><span class="math display">\[f\left( x \right) = b{\cdot a}^{x}\ hvor\ a&gt;0,b \in \mathbb{R}\ \]</span></p>
-<p>Tallet 𝑎 kaldes grundtallet, og tallet 𝑏 kaldes begyndelsesværdien, a er grundtallet eller væksttallet.r=a-1 er vækstraten.</p>
-<p><span class="math display">\[\text{Dm}\left( f \right) = \mathbb{R}\]</span>
-<span class="math display">\[VM(f)\in]0;\infty[\]</span></p>
-<p>funktionen er monotont aftagende for 0&lt;a&lt;1<br />
-funktionen er monotont voksende for a&gt;1<br />
-f(0)=b</p>
-<p><img src="media/image27.png" style="width:6in;height:3.65232in" /></p>
-<p>Hvis begyndelsesværdien b er 1 dvs. <span class="math inline">\(f\left( x \right) = a^{x}\)</span>, kaldes funktionen en eksponentialfunktion.</p>
-<p>Sætning:</p>
-<p>Hvis grafen for en eksponentiel funktion <span class="math inline">\(\text{f}\left( x \right) = \ b \cdot a^{x}\)</span> , går gennem de to forskel-</p>
-<p>lige punkter <span class="math inline">\((x_{1}\ ,\ y_{2}\ )\ og\ (x_{2}\ \ ,\ y_{2}\ )\)</span>, kan konstanterne <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span> bestemmes ved</p>
-<p><span class="math display">\[a = \left( \frac{y_{2}}{y_{1}} \right)^{\frac{1}{x_{2} - x_{1}}},\ b = \frac{y_{1}}{a^{x_{1}}}\]</span></p>
-<p>På tegningen nedenfor er afsat 2 punkter <span class="math inline">\(\left( x_{1},y_{1} \right) = \left( 2,3 \right),\left( x_{2},y_{2} \right) = \left( 4,5 \right)\)</span> , vha. denne sætning er forskriften for den eksponentielle funktion bestemt.</p>
-<p><img src="media/image28.png" style="width:6in;height:3.65232in" /></p>
-<div id="section-1" class="section level3">
-<h3><span class="header-section-number">6.0.1</span> </h3>
+<div id="potensregneregler" class="section level1">
+<h1><span class="header-section-number">Kapitel 3</span> Potensregneregler</h1>
+<p>Lad a, b være reelle tal og m og n naturlige tal, der gælder følgende regler for potensregneregler.</p>
+<p><span class="math display">\[a^{n} \cdot a^{m} = a^{n + m}\]</span></p>
+<div id="cdot-34-3-cdot-3-cdot-3-cdot-3-cdot-3-cdot-3-36" class="section level2">
+<h2><span class="header-section-number">3.1</span> <span class="math display">\[3^{2} \cdot 3^{4} = 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 = 3^{6}\]</span></h2>
+<p><span class="math display">\[\frac{a^{n}}{a^{m}} = a^{n - m}\]</span></p>
+<p><span class="math display">\[\frac{3^{4}}{3^{2}} = \frac{3 \cdot 3 \cdot 3 \cdot 3}{3 \cdot 3} = 3 \cdot 3 = 3^{2}\]</span></p>
+<hr />
+<p><span class="math display">\[a^{n^{m}} = a^{n \cdot m}\]</span></p>
+<p><span class="math display">\[4^{2^{3}} = 4^{2} \cdot 4^{2} \cdot 4^{2} = 4^{2 \cdot 3}\]</span></p>
+<hr />
+<p><span class="math display">\[a^{n} \cdot b^{n} = \left( a \cdot b \right)^{n}\]</span></p>
 </div>
-<div id="fordoblings--og-halveringskonstant." class="section level2">
-<h2><span class="header-section-number">6.1</span> Fordoblings- og halveringskonstant.</h2>
-<p>Fordoblingskonstanten er den bestemte værdi, der hvis man tillægger værdien til et vilkårligt x, fordobler funktionsværdien. På tegningen nedenfor ses at funktionsværdien fordobles hver gang x vokser med 3.8.</p>
-<p><img src="media/image30.png" style="width:6in;height:3.65132in" /></p>
-<p>For den monotont voksende eksponentielle funktion <span class="math inline">\(f(x)\  = \ ba^{x}\)</span>, hvor a &gt; 1 , er fordoblingskonstanten <span class="math inline">\(T_{2}\)</span> givet ved:</p>
-<p><span class="math display">\[T_{2}\  = \frac{\ln\left( 2 \right)}{\ln(a)}\]</span></p>
-<p>Fordi:</p>
-<p><span class="math display">\[f\left( x + T_{2} \right) = 2 \cdot f\left( x \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\text{ba}^{\left( x + T_{2} \right)}\  = 2 \cdot f\left( x \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\text{ba}^{x} \cdot a^{T_{2}}\  = 2 \cdot \text{ba}^{x} \Leftrightarrow\]</span></p>
-<p><span class="math display">\[a^{T_{2}}\  = 2 \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\ln{(a}^{T_{2}})\  = ln(2) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[T_{2}\ln\left( a \right) = \ln\left( 2 \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[T_{2} = \frac{\ln\left( 2 \right)}{\ln\left( a \right)}\]</span></p>
-<p>Halveringskonstanten</p>
-<p>Halveringskonstanten er en bestemt værdi for en monotont aftagende eksponentielfunktion . Hver gang værdien lægges til x halveres funktionsværdien.</p>
-<p><img src="media/image31.png" style="width:6in;height:3.65232in" /></p>
-<p>For den monotont aftagende eksponentielle funktion <span class="math inline">\(f(x)\  = \ ba^{x}\)</span>, hvor <span class="math inline">\(0 &lt; \ a\  &lt; \ 1\)</span> , er halveringskonstanten <span class="math inline">\(T_{\frac{1}{2}}\)</span> givet ved:</p>
-<p><span class="math display">\[T_{\frac{1}{2}}\  = \frac{\ln\left( \frac{1}{2} \right)}{ln(a)}\]</span></p>
+<div id="cdot-73-4-cdot-4-cdot-4-cdot-7-cdot-7-cdot-7-4-cdot-7-cdot-4-cdot-7-cdot-4-cdot-7-283-left-4-cdot-7-right3" class="section level2">
+<h2><span class="header-section-number">3.2</span> <span class="math display">\[4^{3} \cdot 7^{3} = 4 \cdot 4 \cdot 4 \cdot 7 \cdot 7 \cdot 7 = 4 \cdot 7 \cdot 4 \cdot 7 \cdot 4 \cdot 7 = 28^{3} = \left( 4 \cdot 7 \right)^{3}\]</span></h2>
+<p><span class="math display">\[\frac{a^{n}}{b^{n}} = \left( \frac{a}{b} \right)^{n}\]</span></p>
+<p><span class="math display">\[\frac{3^{3}}{4^{3}} = \frac{3 \cdot 3 \cdot 3}{4 \cdot 4 \cdot 4} = \frac{3}{4} \cdot \frac{3}{4} \cdot \frac{3}{4} = \left( \frac{3}{4} \right)^{3}\]</span></p>
+<hr />
+<p><span class="math display">\[\frac{1}{a^{n}} = a^{- n}\]</span></p>
+</div>
+<div id="frac143-frac4043-40---3-4--3" class="section level2">
+<h2><span class="header-section-number">3.3</span> <span class="math display">\[\frac{1}{4^{3}} = \frac{4^{0}}{4^{3}} = 4^{0 - 3} = 4^{- 3}\]</span></h2>
+<p><span class="math display">\[a^{0} = 1\]</span></p>
+</div>
+<div id="section" class="section level2">
+<h2><span class="header-section-number">3.4</span> <span class="math display">\[37^{0} = 1\]</span></h2>
+<p>Resultatet af kvadratroden af 16, <span class="math inline">\(\sqrt{16}\)</span>, er det tal der gange med sig selv giver 16</p>
+<p><span class="math display">\[\sqrt{16} \cdot \sqrt{16} = 16 = 4 \cdot 4\]</span></p>
+<p>dvs.</p>
+<p><span class="math display">\[\sqrt{16} = 4\]</span></p>
+<p>Bemærk her noget helt fantastisk!</p>
+<p><span class="math display">\[\sqrt{16} \cdot \sqrt{16} = 16 = 16^{1} = 16^{\frac{1}{2} + \frac{1}{2}} = 16^{\frac{1}{2}} \cdot 16^{\frac{1}{2}}\]</span></p>
+<p>Vi kan altså skrive <span class="math inline">\(\sqrt{16}\)</span> som <span class="math inline">\(16^{\frac{1}{2}}\)</span></p>
+<p>Tilsvarende betyder f.eks. 4 roden af 256, <span class="math inline">\(\sqrt[4]{256}\)</span>, at man skal finde det tal der gange med sig selv 4 gange giver 256.</p>
+<p><span class="math display">\[\sqrt[4]{256} = 4\]</span></p>
+<p>Fordi</p>
+<p><span class="math display">\[4 \cdot 4 \cdot 4 \cdot 4 = 256\]</span></p>
+<p>Det kan vi skrive som</p>
+<p><span class="math display">\[\sqrt[4]{256} = 256^{\frac{1}{4}}\]</span></p>
+<p>Husk et par nyttige regler eksemplificeret nedenfor:</p>
+<p><span class="math display">\[\frac{1}{x} = x^{- 1}\]</span></p>
+<p><span class="math display">\[\frac{1}{x^{17}} = x^{- 17}\]</span></p>
+<p><span class="math display">\[\sqrt{x} = \sqrt[2]{x} = x^{\frac{1}{2}}\]</span></p>
+<p><span class="math display">\[\sqrt[7]{x^{3}} = x^{\frac{3}{7}}\]</span></p>
+<p><span class="math display">\[x^{0} = 1\]</span></p>
+<p><span class="math display">\[2 \cdot \sqrt{2} = \sqrt{2} \cdot \sqrt{2} \cdot \sqrt{2} = \sqrt{8}\]</span></p>
 </div>
 </div>
             </section>
@@ -238,8 +245,8 @@ f(0)=b</p>
           </div>
         </div>
       </div>
-<a href="polynomier.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="finansiel-regning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="grundlggende-regneregler.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="linere-funktioner.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
