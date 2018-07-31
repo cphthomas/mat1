@@ -81,7 +81,9 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Matematik med økonomisk profil.</a></li>
-<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a></li>
+<li class="chapter" data-level="1" data-path="indledning.html"><a href="indledning.html"><i class="fa fa-check"></i><b>1</b> Indledning</a><ul>
+<li class="chapter" data-level="1.1" data-path="indledning.html"><a href="indledning.html#video-excel-for-begyndere."><i class="fa fa-check"></i><b>1.1</b> Video Excel for begyndere.</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="procentregneregler.html"><a href="procentregneregler.html"><i class="fa fa-check"></i><b>2</b> Procentregneregler</a><ul>
 <li class="chapter" data-level="2.1" data-path="procentregneregler.html"><a href="procentregneregler.html#video-procentregning"><i class="fa fa-check"></i><b>2.1</b> Video procentregning</a></li>
 </ul></li>
@@ -199,24 +201,24 @@
 <p><span class="math display">\[Indeks = \frac{180}{133} \cdot 100 = 135.34\]</span></p>
 <p>Dette er smart hvis vi skal sammenligne, hvordan forskellige værdier udvikler sig over tiden.</p>
 <p>Herunder har vi de de seneste justerede slutkurser for Danske Bank og Jyske Bank på månedsbasis.</p>
-<p><div id="htmlwidget-e78dfaf09877f38ae922" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e78dfaf09877f38ae922">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank<\/th>\n      <th>Jyske.Bank<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p><div id="htmlwidget-509d544f6b958604a713" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-509d544f6b958604a713">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank<\/th>\n      <th>Jyske.Bank<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <br>
 <br>
-<div id="htmlwidget-aaf6accb8eff2d197016" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
-<script type="application/json" data-for="htmlwidget-aaf6accb8eff2d197016">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank","labels":["month","Danske Bank","Jyske Bank"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-625767ec3420ecd3b2f0" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-625767ec3420ecd3b2f0">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank","labels":["month","Danske Bank","Jyske Bank"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]]},"evals":[],"jsHooks":[]}</script>
 <br>
 <br>
 <br>
 Vi kan bedre sammenligne udviklingerne i aktiekursen ved at indeksere kurserne for de to banker.<br />
 <br>
-<div id="htmlwidget-a17c56c51bc64c7ff9f6" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a17c56c51bc64c7ff9f6">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank.indekseret<\/th>\n      <th>Jyske.Bank.indekseret<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3b49d2ae33c30d27edf3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3b49d2ae33c30d27edf3">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank.indekseret<\/th>\n      <th>Jyske.Bank.indekseret<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <br>
 <br></p>
 <p>Her ses den indekseredde kursudvikling grafisk:</p>
-<div id="htmlwidget-4c1de14cd05d81cfeedd" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4c1de14cd05d81cfeedd">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank indekseret","labels":["month","Danske Bank indekseret","Jyske Bank indekseret"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e36999437f9e59fea912" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e36999437f9e59fea912">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank indekseret","labels":["month","Danske Bank indekseret","Jyske Bank indekseret"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]]},"evals":[],"jsHooks":[]}</script>
 <p><br>
 <br>
 Hvordan kommer man fra indekstal til det oprindelige beløb, når Danske Bank aktien i har kurs 233.53 2017-12-31, hvad er da kursen 2018-01-31 når indeks er 101.11?</p>
