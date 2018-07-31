@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="prev" href="polynomier.html">
-<link rel="next" href="finansiel-regning.html">
+<link rel="prev" href="procentregneregler.html">
+<link rel="next" href="procentpoint.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -182,55 +182,46 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="eksponentielle-funktioner" class="section level1">
-<h1><span class="header-section-number">Kapitel 9</span> Eksponentielle funktioner</h1>
-<p>Eksponentielle funktioner benyttes bl.a. i finansiel regning, som vi ser på i næste kapitel. Ved en eksponentiel funktion forstås en funktion med forskriften:</p>
-<p><span class="math display">\[f\left( x \right) = b{\cdot a}^{x}\ hvor\ a&gt;0,b \in \mathbb{R}\ \]</span></p>
-<p>Tallet 𝑎 kaldes grundtallet, og tallet 𝑏 kaldes begyndelsesværdien, a er grundtallet eller væksttallet.r=a-1 er vækstraten.</p>
-<p><span class="math display">\[\text{Dm}\left( f \right) = \mathbb{R}\]</span>
-<span class="math display">\[VM(f)\in]0;\infty[\]</span></p>
-<p>funktionen er monotont aftagende for 0&lt;a&lt;1<br />
-funktionen er monotont voksende for a&gt;1<br />
-f(0)=b</p>
-<p><img src="media/image27.png" style="width:6in;height:3.65232in" /></p>
-<p>Hvis begyndelsesværdien b er 1 dvs. <span class="math inline">\(f\left( x \right) = a^{x}\)</span>, kaldes funktionen en eksponentialfunktion.</p>
-<p>Sætning:</p>
-<p>Hvis grafen for en eksponentiel funktion <span class="math inline">\(\text{f}\left( x \right) = \ b \cdot a^{x}\)</span> , går gennem de to forskel-</p>
-<p>lige punkter <span class="math inline">\((x_{1}\ ,\ y_{2}\ )\ og\ (x_{2}\ \ ,\ y_{2}\ )\)</span>, kan konstanterne <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span> bestemmes ved</p>
-<p><span class="math display">\[a = \left( \frac{y_{2}}{y_{1}} \right)^{\frac{1}{x_{2} - x_{1}}},\ b = \frac{y_{1}}{a^{x_{1}}}\]</span></p>
-<p>På tegningen nedenfor er afsat 2 punkter <span class="math inline">\(\left( x_{1},y_{1} \right) = \left( 2,3 \right),\left( x_{2},y_{2} \right) = \left( 4,5 \right)\)</span> , vha. denne sætning er forskriften for den eksponentielle funktion bestemt.</p>
-<p><img src="media/image28.png" style="width:6in;height:3.65232in" /></p>
-<div id="section" class="section level3">
-<h3><span class="header-section-number">9.0.1</span> </h3>
-</div>
-<div id="fordoblings--og-halveringskonstant." class="section level2">
-<h2><span class="header-section-number">9.1</span> Fordoblings- og halveringskonstant.</h2>
-<p>Fordoblingskonstanten er den bestemte værdi, der hvis man tillægger værdien til et vilkårligt x, fordobler funktionsværdien. På tegningen nedenfor ses at funktionsværdien fordobles hver gang x vokser med 3.8.</p>
-<p><img src="media/image30.png" style="width:6in;height:3.65132in" /></p>
-<p>For den monotont voksende eksponentielle funktion <span class="math inline">\(f(x)\  = \ ba^{x}\)</span>, hvor a &gt; 1 , er fordoblingskonstanten <span class="math inline">\(T_{2}\)</span> givet ved:</p>
-<p><span class="math display">\[T_{2}\  = \frac{\ln\left( 2 \right)}{\ln(a)}\]</span></p>
-<p>Fordi:</p>
-<p><span class="math display">\[f\left( x + T_{2} \right) = 2 \cdot f\left( x \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\text{ba}^{\left( x + T_{2} \right)}\  = 2 \cdot f\left( x \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\text{ba}^{x} \cdot a^{T_{2}}\  = 2 \cdot \text{ba}^{x} \Leftrightarrow\]</span></p>
-<p><span class="math display">\[a^{T_{2}}\  = 2 \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\ln{(a}^{T_{2}})\  = ln(2) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[T_{2}\ln\left( a \right) = \ln\left( 2 \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[T_{2} = \frac{\ln\left( 2 \right)}{\ln\left( a \right)}\]</span></p>
-<p>Halveringskonstanten</p>
-<p>Halveringskonstanten er en bestemt værdi for en monotont aftagende eksponentielfunktion . Hver gang værdien lægges til x halveres funktionsværdien.</p>
-<p><img src="media/image31.png" style="width:6in;height:3.65232in" /></p>
-<p>For den monotont aftagende eksponentielle funktion <span class="math inline">\(f(x)\  = \ ba^{x}\)</span>, hvor <span class="math inline">\(0 &lt; \ a\  &lt; \ 1\)</span> , er halveringskonstanten <span class="math inline">\(T_{\frac{1}{2}}\)</span> givet ved:</p>
-<p><span class="math display">\[T_{\frac{1}{2}}\  = \frac{\ln\left( \frac{1}{2} \right)}{ln(a)}\]</span></p>
-</div>
+<div id="indekstal" class="section level1">
+<h1><span class="header-section-number">Kapitel 3</span> Indekstal</h1>
+<p>Tal omregnes til indekstal, ved at lade indekstallene være procentværdier i forhold til en bestemt værdi kaldet basis der har indeks 100.</p>
+<p><span class="math display">\[Indeks = \frac{Væ\ \ rdi}{\text{basis}} \cdot 100\]</span></p>
+<p>Hvis fx en aktie er steget fra kurs 133 til kurs 180, kan vi indeksere ved at sætte kurs 133 til basis og bestemme, den indekserede værdi af den nye kurs 180.</p>
+<p><span class="math display">\[Indeks = \frac{180}{133} \cdot 100 = 135.34\]</span></p>
+<p>Dette er smart hvis vi skal sammenligne, hvordan forskellige værdier udvikler sig over tiden.</p>
+<p>Herunder har vi de de seneste justerede slutkurser for Danske Bank og Jyske Bank på månedsbasis.</p>
+<p><div id="htmlwidget-f1c75de5615d9dc0c8f3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f1c75de5615d9dc0c8f3">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank<\/th>\n      <th>Jyske.Bank<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<br>
+<br>
+<div id="htmlwidget-162b200e0eeadacc4821" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-162b200e0eeadacc4821">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank","labels":["month","Danske Bank","Jyske Bank"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]]},"evals":[],"jsHooks":[]}</script>
+<br>
+<br>
+<br>
+Vi kan bedre sammenligne udviklingerne i aktiekursen ved at indeksere kurserne for de to banker.<br />
+<br>
+<div id="htmlwidget-75ecb0371a7c9d210938" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-75ecb0371a7c9d210938">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank.indekseret<\/th>\n      <th>Jyske.Bank.indekseret<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<br>
+<br></p>
+<p>Her ses den indekseredde kursudvikling grafisk:</p>
+<div id="htmlwidget-b26b0f560ff19dcca2ea" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b26b0f560ff19dcca2ea">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank indekseret","labels":["month","Danske Bank indekseret","Jyske Bank indekseret"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]]},"evals":[],"jsHooks":[]}</script>
+<p><br>
+<br>
+Hvordan kommer man fra indekstal til det oprindelige beløb, når Danske Bank aktien i har kurs 233.53 2017-12-31, hvad er da kursen 2018-01-31 når indeks er 101.11?</p>
+<p>Nu kan man opstille en ligning for beregning af indekstal, med en ubekendt værdi kursen 2018-01-31 nemlig:</p>
+<p><span class="math display">\[\frac{X}{233.53}*100 = 101.11 \rightarrow X = 101.11*\frac{233.53}{100} \rightarrow X = 236.12\]</span></p>
+<p>Det betyder kursen 2018-01-31 vil være 236.12.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="polynomier.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="finansiel-regning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="procentregneregler.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="procentpoint.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

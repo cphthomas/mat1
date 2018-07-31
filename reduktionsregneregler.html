@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="prev" href="polynomier.html">
-<link rel="next" href="finansiel-regning.html">
+<link rel="prev" href="procentpoint.html">
+<link rel="next" href="brkregneregler.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -182,55 +182,48 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="eksponentielle-funktioner" class="section level1">
-<h1><span class="header-section-number">Kapitel 9</span> Eksponentielle funktioner</h1>
-<p>Eksponentielle funktioner benyttes bl.a. i finansiel regning, som vi ser på i næste kapitel. Ved en eksponentiel funktion forstås en funktion med forskriften:</p>
-<p><span class="math display">\[f\left( x \right) = b{\cdot a}^{x}\ hvor\ a&gt;0,b \in \mathbb{R}\ \]</span></p>
-<p>Tallet 𝑎 kaldes grundtallet, og tallet 𝑏 kaldes begyndelsesværdien, a er grundtallet eller væksttallet.r=a-1 er vækstraten.</p>
-<p><span class="math display">\[\text{Dm}\left( f \right) = \mathbb{R}\]</span>
-<span class="math display">\[VM(f)\in]0;\infty[\]</span></p>
-<p>funktionen er monotont aftagende for 0&lt;a&lt;1<br />
-funktionen er monotont voksende for a&gt;1<br />
-f(0)=b</p>
-<p><img src="media/image27.png" style="width:6in;height:3.65232in" /></p>
-<p>Hvis begyndelsesværdien b er 1 dvs. <span class="math inline">\(f\left( x \right) = a^{x}\)</span>, kaldes funktionen en eksponentialfunktion.</p>
-<p>Sætning:</p>
-<p>Hvis grafen for en eksponentiel funktion <span class="math inline">\(\text{f}\left( x \right) = \ b \cdot a^{x}\)</span> , går gennem de to forskel-</p>
-<p>lige punkter <span class="math inline">\((x_{1}\ ,\ y_{2}\ )\ og\ (x_{2}\ \ ,\ y_{2}\ )\)</span>, kan konstanterne <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span> bestemmes ved</p>
-<p><span class="math display">\[a = \left( \frac{y_{2}}{y_{1}} \right)^{\frac{1}{x_{2} - x_{1}}},\ b = \frac{y_{1}}{a^{x_{1}}}\]</span></p>
-<p>På tegningen nedenfor er afsat 2 punkter <span class="math inline">\(\left( x_{1},y_{1} \right) = \left( 2,3 \right),\left( x_{2},y_{2} \right) = \left( 4,5 \right)\)</span> , vha. denne sætning er forskriften for den eksponentielle funktion bestemt.</p>
-<p><img src="media/image28.png" style="width:6in;height:3.65232in" /></p>
-<div id="section" class="section level3">
-<h3><span class="header-section-number">9.0.1</span> </h3>
-</div>
-<div id="fordoblings--og-halveringskonstant." class="section level2">
-<h2><span class="header-section-number">9.1</span> Fordoblings- og halveringskonstant.</h2>
-<p>Fordoblingskonstanten er den bestemte værdi, der hvis man tillægger værdien til et vilkårligt x, fordobler funktionsværdien. På tegningen nedenfor ses at funktionsværdien fordobles hver gang x vokser med 3.8.</p>
-<p><img src="media/image30.png" style="width:6in;height:3.65132in" /></p>
-<p>For den monotont voksende eksponentielle funktion <span class="math inline">\(f(x)\  = \ ba^{x}\)</span>, hvor a &gt; 1 , er fordoblingskonstanten <span class="math inline">\(T_{2}\)</span> givet ved:</p>
-<p><span class="math display">\[T_{2}\  = \frac{\ln\left( 2 \right)}{\ln(a)}\]</span></p>
-<p>Fordi:</p>
-<p><span class="math display">\[f\left( x + T_{2} \right) = 2 \cdot f\left( x \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\text{ba}^{\left( x + T_{2} \right)}\  = 2 \cdot f\left( x \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\text{ba}^{x} \cdot a^{T_{2}}\  = 2 \cdot \text{ba}^{x} \Leftrightarrow\]</span></p>
-<p><span class="math display">\[a^{T_{2}}\  = 2 \Leftrightarrow\]</span></p>
-<p><span class="math display">\[\ln{(a}^{T_{2}})\  = ln(2) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[T_{2}\ln\left( a \right) = \ln\left( 2 \right) \Leftrightarrow\]</span></p>
-<p><span class="math display">\[T_{2} = \frac{\ln\left( 2 \right)}{\ln\left( a \right)}\]</span></p>
-<p>Halveringskonstanten</p>
-<p>Halveringskonstanten er en bestemt værdi for en monotont aftagende eksponentielfunktion . Hver gang værdien lægges til x halveres funktionsværdien.</p>
-<p><img src="media/image31.png" style="width:6in;height:3.65232in" /></p>
-<p>For den monotont aftagende eksponentielle funktion <span class="math inline">\(f(x)\  = \ ba^{x}\)</span>, hvor <span class="math inline">\(0 &lt; \ a\  &lt; \ 1\)</span> , er halveringskonstanten <span class="math inline">\(T_{\frac{1}{2}}\)</span> givet ved:</p>
-<p><span class="math display">\[T_{\frac{1}{2}}\  = \frac{\ln\left( \frac{1}{2} \right)}{ln(a)}\]</span></p>
-</div>
+<div id="reduktionsregneregler" class="section level1">
+<h1><span class="header-section-number">Kapitel 5</span> Reduktionsregneregler</h1>
+<p>Når a, b og c d er reelle tal gælder:</p>
+<p><span class="math display">\[a + b = b + a\]</span></p>
+<p><span class="math display">\[2 + 4 = 4 + 2\]</span></p>
+<p><span class="math display">\[a + (b + c) = (a + b) + c = a + b + c\]</span></p>
+<p><span class="math display">\[3 + \left( 4 + 5 \right) = \left( 3 + 4 \right) + 5 = 3 + 4 + 5 = 12\]</span></p>
+<p><span class="math display">\[a + \left( b + c - d \right) = a + b + c - d\]</span></p>
+<p><span class="math display">\[3 + \left( 4 + 5 - 6 \right) = 3 + 4 + 5 - 6 = 6\]</span></p>
+<p>Husk reglen om at ændre fortegn på alle led når man hæver en negativ parentes.</p>
+<p><span class="math display">\[a - ( b + c - d ) = a - b - c + d\]</span></p>
+<p><span class="math display">\[3 - ( 4 + 5 - 6 ) = 3 - 4 - 5 + 6 = 0\]</span></p>
+<hr />
+<p><span class="math display">\[a \cdot b\  = b \cdot a\ \]</span></p>
+<p><span class="math display">\[3 \cdot 4 = 4 \cdot 3 = 12\]</span></p>
+<hr />
+<p><span class="math display">\[a \cdot \left( b \cdot c \right) = \left( a \cdot b \right) \cdot c\  = a \cdot b \cdot c\ \]</span></p>
+<p><span class="math display">\[3 \cdot \left( 4 \cdot 5 \right) = \left( 3 \cdot 4 \right) \cdot 5 = 3 \cdot 4 \cdot 5 = 60\]</span></p>
+<p><span class="math display">\[a \cdot \left( b + c \right) = a \cdot b + a \cdot c\ \]</span></p>
+<p><span class="math display">\[3 \cdot \left( 4 + 5 \right) = 3 \cdot 4 + 3 \cdot 5 = 27\]</span></p>
+<hr />
+<p>Bemærk faktoren skal ganges på alle led i parentesen</p>
+<p><span class="math display">\[a \cdot \left( b - c \right) = a \cdot b - a \cdot c\ \]</span></p>
+<p><span class="math display">\[3 \cdot \left( 4 - 5 \right) = 3 \cdot 4 - 3 \cdot 5 = - 3\]</span></p>
+<p><span class="math display">\[\left( a + b \right) \cdot \left( c + d \right) = a \cdot \left( c + d \right) + b \cdot (c + d) = a \cdot c + a \cdot d + b \cdot c + b \cdot d\ \]</span></p>
+<p><span class="math display">\[\left( 3 + 4 \right) \cdot \left( 5 + 6 \right) = 3 \cdot 5 + 3 \cdot 6 + 4 \cdot 5 + 4 \cdot 6\]</span></p>
+<p><span class="math display">\[\left( a + b \right)^{2} = \left( a + b \right) \cdot \left( a + b \right) = a^{2} + b^{2} + 2ab\]</span></p>
+<p><span class="math display">\[\left( 2x + 3y \right)^{2} = 4x^{2} + 9y^{2} + 12xy\]</span></p>
+<p>Kvadratet af en toleddet størrelse, er kvadratet på første led + kvadratet på andet led plus det dobbelte produkt</p>
+<p><span class="math display">\[\left( a - b \right)^{2} = \left( a - b \right) \cdot \left( a - b \right) = a^{2} + b^{2} - 2ab\]</span></p>
+<p><span class="math display">\[\left( 2x + 3y \right)^{2} = 4x^{2} + 9y^{2} + 12xy\]</span></p>
+<p>Kvadratet af en toleddet størrelse, er kvadratet på første led + kvadratet på andet led minus det dobbelte produkt</p>
+<p><span class="math display">\[\left( a + b \right) \cdot \left( a - b \right) = a^{2} - b^{2}\]</span></p>
+<p><span class="math display">\[\left( 2x + 3y \right) \cdot \left( 2x - 3y \right) = 4x^{2} - 9y^{2}\]</span></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="polynomier.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="finansiel-regning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="procentpoint.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="brkregneregler.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
