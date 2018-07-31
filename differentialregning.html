@@ -161,12 +161,11 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>6</b> Differentialregning</a><ul>
 <li class="chapter" data-level="6.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>6.1</b> Regneregler differentiation</a></li>
-<li class="chapter" data-level="6.2" data-path="differentialregning.html"><a href="differentialregning.html#differentiation-af-sammensatte-funktioner."><i class="fa fa-check"></i><b>6.2</b> Differentiation af sammensatte funktioner.</a></li>
-<li class="chapter" data-level="6.3" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>6.3</b> Ekstremumspunkter</a></li>
-<li class="chapter" data-level="6.4" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>6.4</b> Lokale og globale ekstremumspunkter</a></li>
-<li class="chapter" data-level="6.5" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>6.5</b> Konveksitet og konkavitet</a></li>
-<li class="chapter" data-level="6.6" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>6.6</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
-<li class="chapter" data-level="6.7" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>6.7</b> Optimeringseksempel</a></li>
+<li class="chapter" data-level="6.2" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>6.2</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.3" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>6.3</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="6.4" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>6.4</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="6.5" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>6.5</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="6.6" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>6.6</b> Optimeringseksempel</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>7</b> Excel oversættelser</a></li>
 <li class="divider"></li>
@@ -278,40 +277,38 @@
 <p><span class="math display">\[\left( \frac{f\left( x \right)}{g\left( x \right)} \right)^{&#39;} = \frac{f^{&#39;}\left( x \right) \cdot g\left( x \right) - f\left( x \right) \cdot g^{&#39;}\left( x \right)}{\left( g\left( x \right) \right)^{2}}\]</span></p>
 <p>f.eks.</p>
 <p><span class="math display">\[{\left( \frac{2x^{2} - 3x + 3}{x + 5} \right)^{&#39;} = \frac{\left( 4x - 3 \right) \cdot \left( x + 5 \right) - \left( 2x^{2} - 3x + 3 \right) \cdot 1}{\left( x - 5 \right)^{2}} = }{\frac{4x^{2} + 20x - 3x - 15 - 2x^{2} + 3x - 3}{\left( x - 5 \right)^{2}} = \frac{2x^{2} + 20x - 18}{\left( x - 5 \right)^{2}}}\]</span></p>
-</div>
-<div id="differentiation-af-sammensatte-funktioner." class="section level2">
-<h2><span class="header-section-number">6.2</span> Differentiation af sammensatte funktioner.</h2>
-<p>En funktion f.eks. <span class="math display">\[h\left( x \right) = \sqrt{3x^{2} + x}\]</span>
-kaldes en sammensat funktion af de to funktioner den ydre
-<span class="math display">\[f\left( x \right) = \sqrt{\ldots}\]</span>
-og den indre <span class="math display">\[g\left( x \right) = 3x^{2} + x\]</span>
-Man skriver det som:
-<span class="math display">\[h\left( x \right) = f\left( g\left( x \right) \right)\]</span>
-og siger f af g af x, eller
-<span class="math display">\[h\left( x \right) = \left( f \circ g \right)\left( x \right)\]</span>&quot;
-f bolle g</p>
-<p>Man kan finde den afledte af en sammensat funktion som:</p>
-<p><span class="math display">\[\left( h\left( x \right) \right)^{&#39;} = f^{&#39;}\left( g\left( x \right) \right) \cdot g&#39;(x)\]</span></p>
-<p>I vores eksempel får vi altså:</p>
-<p><span class="math display">\[\left( \sqrt{3x^{2} + x} \right)^{&#39;} = \left( \left( 3x^{2} + x \right)^{\frac{1}{2}} \right)^{&#39;} =\]</span></p>
-<p><span class="math display">\[{\frac{1}{2}\left( 3x^{2} + x \right)^{\frac{1}{2} - 1} \cdot (6x + 1) = \frac{12x + 2}{\sqrt{3x^{2} + x}}}\]</span></p>
-<p>Funktionen</p>
-<p><span class="math display">\[e^{3x^{2}}\]</span></p>
-<p><span class="math display">\[g\left( x \right) = 3x^{2},\ f\left( x \right) = e^{\ldots}\]</span></p>
-<p>Så den afledede bliver:</p>
-<p><span class="math display">\[e^{3x^{2}} \cdot 6x\]</span></p>
-<p>Man kan også med fordel benytte differentiation af sammensatte funktioner i forbindelse med differentiationen andre udtryk f.eks. brøker.</p>
-<p><span class="math display">\[\frac{2x^{2} + 3x + 3}{\sqrt{4x^{3} + 2x^{2}}}\]</span></p>
-<p>Her kan man særskilt afgøre hvad den afledte til nævneren i brøken bliver, og herefter fortsætte med at finde den afledte til brøken.</p>
-<p>Man kan med fordel kontrollere sine resultater på <a href="https://www.wolframalpha.com" target="_blank">www.wolframalpha.com her.</a>. Det er gratis at bruge internetversionen, der naturligvis ikke fungerer offline.</p>
-<p>Husk hvis man kan huske potensregnereglerne kan man spare sig selv for bøvl, f.eks. kan man finde den afledede til <span class="math inline">\(f\left( x \right) = \frac{1}{9}\left( 3x^{2} \right)^{3}\)</span> nemmere ved at reducere før man differentierer.</p>
-<p><span class="math display">\[\frac{1}{9}\left( 3x^{2} \right)^{3} = \frac{1}{9} \cdot 27 \cdot x^{6} = 3x^{6}\]</span></p>
-<p>Dette udtryk kan jo differentieres direkte til<span class="math inline">\(\ 18x^{5}\)</span>.</p>
+<!-- Differentiation af sammensatte funktioner. -->
+<!-- ------------------------------------------ -->
+<!-- En funktion f.eks. $$h\left( x \right) = \sqrt{3x^{2} + x}$$  -->
+<!-- kaldes en sammensat funktion af de to funktioner den ydre  -->
+<!-- $$f\left( x \right) = \sqrt{\ldots}$$  -->
+<!-- og den indre $$g\left( x \right) = 3x^{2} + x$$ -->
+<!-- Man skriver det som: -->
+<!-- $$h\left( x \right) = f\left( g\left( x \right) \right)$$ -->
+<!-- og siger f af g af x, eller  -->
+<!-- $$h\left( x \right) = \left( f \circ g \right)\left( x \right)$$" -->
+<!-- f bolle g -->
+<!-- Man kan finde den afledte af en sammensat funktion som: -->
+<!-- $$\left( h\left( x \right) \right)^{'} = f^{'}\left( g\left( x \right) \right) \cdot g'(x)$$ -->
+<!-- I vores eksempel får vi altså: -->
+<!-- $$\left( \sqrt{3x^{2} + x} \right)^{'} = \left( \left( 3x^{2} + x \right)^{\frac{1}{2}} \right)^{'} =$$ -->
+<!-- $${\frac{1}{2}\left( 3x^{2} + x \right)^{\frac{1}{2} - 1} \cdot (6x + 1) = \frac{12x + 2}{\sqrt{3x^{2} + x}}}$$ -->
+<!-- Funktionen -->
+<!-- $$e^{3x^{2}}$$ -->
+<!-- $$g\left( x \right) = 3x^{2},\ f\left( x \right) = e^{\ldots}$$ -->
+<!-- Så den afledede bliver: -->
+<!-- $$e^{3x^{2}} \cdot 6x$$ -->
+<!-- Man kan også med fordel benytte differentiation af sammensatte funktioner i forbindelse med differentiationen andre udtryk f.eks. brøker. -->
+<!-- $$\frac{2x^{2} + 3x + 3}{\sqrt{4x^{3} + 2x^{2}}}$$ -->
+<!-- Her kan man særskilt afgøre hvad den afledte til nævneren i brøken bliver, og herefter fortsætte med at finde den afledte til brøken. -->
+<!-- Man kan med fordel kontrollere sine resultater på <a href="https://www.wolframalpha.com" target="_blank">www.wolframalpha.com her.</a>. Det er gratis at bruge internetversionen, der naturligvis ikke fungerer offline. -->
+<!-- Husk hvis man kan huske potensregnereglerne kan man spare sig selv for bøvl, f.eks. kan man finde den afledede til $f\left( x \right) = \frac{1}{9}\left( 3x^{2} \right)^{3}$ nemmere ved at reducere før man differentierer. -->
+<!-- $$\frac{1}{9}\left( 3x^{2} \right)^{3} = \frac{1}{9} \cdot 27 \cdot x^{6} = 3x^{6}$$ -->
+<!-- Dette udtryk kan jo differentieres direkte til$\ 18x^{5}$. -->
 </div>
 <div id="ekstremumspunkter" class="section level2">
-<h2><span class="header-section-number">6.3</span> Ekstremumspunkter</h2>
-<p>Indenfor økonomi er det vigtigt at kunne finde den afledede, når <span class="math inline">\(f^{&#39;}\left( x \right) = 0\\)</span>, har vi et globalt eller lokalt, minimum eller maksimum. Man vil således være i stand til at bestemme, f.eks. maksimal omsætning for en omsætningsfunktion vha. differentialregning. Antag vi har en pris/afsætningsfunktion <span class="math inline">\(f\left( x \right) = - 0.25x + 10\)</span>. Udfra denne kan vi danne omsætningsfunktionen, omsætning er jo per definition:</p>
-<p><span class="math display">\[Omsaetning = pris \cdot afsaetning\]</span></p>
+<h2><span class="header-section-number">6.2</span> Ekstremumspunkter</h2>
+<p>Indenfor økonomi er det vigtigt at kunne finde den afledede, når <span class="math inline">\(f^{&#39;}\left( x \right) = 0\\)</span>, har vi et globalt eller lokalt, minimum eller maksimum. Man vil således være i stand til at bestemme, f.eks. maksimal omsætning for en omsætningsfunktion vha. differentialregning. Antag vi har en pris/afsætningsfunktion <span class="math inline">\(f\left( x \right) = - 0.25x + 10\)</span>. Udfra denne kan vi danne omsætningsfunktionen, omsætning er jo per definition pris gange afsætning. Sælger man 3 is til 10 kr. er afsætningen 3 stk. og omsætningen 30 kr.</p>
 <p>Afsætningen er vores x-værdi, og den tilsvarende pris er jo vores funktionsværdi f(x). Derfor kan vi bestemme omsætningsfunktionen som</p>
 <p><span class="math display">\[\text{Oms}\left( x \right) = x \cdot f\left( x \right) = x\left( - 0.25x + 10 \right) = - 0.25x^{2} + 10x\]</span></p>
 <p>Vi kan nu bestemme den afledte til omsætningsfunktionen som:</p>
@@ -327,17 +324,17 @@ f bolle g</p>
 <p><span class="math display">\[x = 20\]</span></p>
 </div>
 <div id="lokale-og-globale-ekstremumspunkter" class="section level2">
-<h2><span class="header-section-number">6.4</span> Lokale og globale ekstremumspunkter</h2>
+<h2><span class="header-section-number">6.3</span> Lokale og globale ekstremumspunkter</h2>
 <p>Hvis vi har funktioner med flere ekstremaer, må man for at afgøre om der er tale om lokale/globale ekstremaer bestemme funktionsværdierne for x-værdi kandidaterne. I tegningen nedenfor har vi et 4-gradspolynomium <span class="math inline">\(f\left( x \right) = x^{4} - 3x^{3} + 2x^{2} + 3\)</span>, her kan man se at den afledede $f^{’}( x ) =  4x^{3} - 9x^{2} + 4x $ er tegnet ind med rødt, det fremgår at <span class="math inline">\(f&#39;(x)\)</span> har 3 nulpunkter, hvorfor vi kan konkludere at <span class="math inline">\(f\left( x \right)\)</span> har 3 ekstremaer, lokalt minimum i <span class="math inline">\((0;3),\\)</span>lokalt maksimum i <span class="math inline">\((0.6069;3.2017)\)</span> og globalt minimum i (1.6404; 2.3803). Et globalt ekstremum er altså funktionens største eller mindste værdi i hele definitionsmængden. Et lokalt ekstremum er altså funktionens største eller mindste værdi i en omegn omkring punktet.</p>
 <p><img src="media/image53.png" style="width:6in;height:3.65132in" /></p>
 </div>
 <div id="konveksitet-og-konkavitet" class="section level2">
-<h2><span class="header-section-number">6.5</span> Konveksitet og konkavitet</h2>
+<h2><span class="header-section-number">6.4</span> Konveksitet og konkavitet</h2>
 <p>Vi kan ved finde den dobbeltaflede (dvs. differentiere 2 gange) for en funktion , afgøre hvornår en funktion er konkav eller konveks. Dette kan direkte fortælle os om en funktion har maksimum eller minimum i et ekstremumspunkt. I intervaller hvor en funktion er konveks dvs. krummer opad vil ekstremumspunkter være minima, i disse intervaller vil den dobbeltafledede være positiv. I intervaller hvor en funktion er konkav dvs. krummer nedad vil ekstremumspunkter være maksima, i disse intervaller vil den dobbeltafledede være negativ. Når <span class="math inline">\(f^{&#39;&#39;}\left( x \right) = 0\\)</span> skifter grafen mellem konveks og konkav eller omvendt, vi siger grafen har vendetanget. I eksemplet nedenfor kan man se <span class="math inline">\(f\left( x \right)\)</span> er blå når den er konkav, og rød når den er konveks, hvilket stemmer overens med <span class="math inline">\(f&#39;&#39;(x)\)</span>, der er hhv. negativ for <span class="math inline">\(x \in \rbrack - \infty;1\lbrack\)</span> og positiv for <span class="math inline">\(x \in \rbrack 1;\infty\lbrack\)</span>.</p>
 <p><img src="media/image54.png" style="width:6in;height:3.65132in" /></p>
 </div>
 <div id="sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi" class="section level2">
-<h2><span class="header-section-number">6.6</span> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></h2>
+<h2><span class="header-section-number">6.5</span> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></h2>
 <p>Vi kan ud fra pris- afsætningskurven P(Q), altså kurven der angiver hvilken mængde man kan afsætte, finde TR(Q) ved at gange med Q.</p>
 <p><img src="media/image55.png" style="width:6in;height:3.77441in" /></p>
 <p>Q er quantity/mængde, der produceres og afsættes ud af x-aksen denne uafhængige variabel styrer værdien af de nedenstående størrelser:</p>
@@ -353,7 +350,7 @@ f bolle g</p>
 <p><img src="media/image57.png" style="width:6in;height:3.78539in" /></p>
 </div>
 <div id="optimeringseksempel" class="section level2">
-<h2><span class="header-section-number">6.7</span> Optimeringseksempel</h2>
+<h2><span class="header-section-number">6.6</span> Optimeringseksempel</h2>
 <p>TR total revenue er omsætningen total</p>
 <p>MR marginal revenue (dansk Groms grænseomsætningen ) betyder hvad øges med det at afsætte en enhed mere. <span class="math inline">\(MR = \frac{\text{dTR}}{\text{dQ}}\)</span> , grafisk er MR hældningen af tangenten i et punkt på TR kurven.</p>
 <p>I tegningen nedenfor er indtegnet en blå TR kurve og en rød MR kurve og 2 sorte tangenter, hvor MR er hhv. 25 og 0. X-aksen angiver afsætningen Q, y-aksen omsætningen. Man kan se at der hvor MR kurven skærer x-aksen (dvs er 0), har TR-kurven maksimum, for denne afsætning Q=45 er hældningen på tangenten 0. Bemærk MR er den afledte af TR. Den maksimale omsætning bliver <span class="math inline">\(\text{TR}\left( 45 \right) = - 0,5{\cdot 45}^{2} + 45 \cdot 45 = 1012,5\)</span>.</p>
