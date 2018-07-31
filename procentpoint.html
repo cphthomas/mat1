@@ -48,6 +48,37 @@
 
 
 <script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/proj4js-2.3.15/proj4.js"></script>
+<link href="libs/highcharts-5.0.6/css/motion.css" rel="stylesheet" />
+<script src="libs/highcharts-5.0.6/highstock.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-3d.js"></script>
+<script src="libs/highcharts-5.0.6/highcharts-more.js"></script>
+<script src="libs/highcharts-5.0.6/modules/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/modules/broken-axis.js"></script>
+<script src="libs/highcharts-5.0.6/modules/data.js"></script>
+<script src="libs/highcharts-5.0.6/modules/drilldown.js"></script>
+<script src="libs/highcharts-5.0.6/modules/exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/funnel.js"></script>
+<script src="libs/highcharts-5.0.6/modules/heatmap.js"></script>
+<script src="libs/highcharts-5.0.6/modules/map.js"></script>
+<script src="libs/highcharts-5.0.6/modules/no-data-to-display.js"></script>
+<script src="libs/highcharts-5.0.6/modules/offline-exporting.js"></script>
+<script src="libs/highcharts-5.0.6/modules/solid-gauge.js"></script>
+<script src="libs/highcharts-5.0.6/modules/treemap.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/annotations.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-legend.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/draggable-points.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/export-csv.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/grouped-categories.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/motion.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/pattern-fill-v2.js"></script>
+<script src="libs/highcharts-5.0.6/plugins/tooltip-delay.js"></script>
+<script src="libs/highcharts-5.0.6/custom/reset.js"></script>
+<script src="libs/highcharts-5.0.6/custom/symbols-extra.js"></script>
+<script src="libs/highcharts-5.0.6/custom/text-symbols.js"></script>
+<link href="libs/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
+<link href="libs/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="libs/highchart-binding-0.5.0/highchart.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.4/datatables.js"></script>
 <link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -87,7 +118,9 @@
 <li class="chapter" data-level="2" data-path="procentregneregler.html"><a href="procentregneregler.html"><i class="fa fa-check"></i><b>2</b> Procentregneregler</a><ul>
 <li class="chapter" data-level="2.1" data-path="procentregneregler.html"><a href="procentregneregler.html#video-procentregning"><i class="fa fa-check"></i><b>2.1</b> Video procentregning</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="indekstal.html"><a href="indekstal.html"><i class="fa fa-check"></i><b>3</b> Indekstal</a></li>
+<li class="chapter" data-level="3" data-path="indekstal.html"><a href="indekstal.html"><i class="fa fa-check"></i><b>3</b> Indekstal</a><ul>
+<li class="chapter" data-level="3.0.1" data-path="indekstal.html"><a href="indekstal.html#danske-bank-og-jyske-bank"><i class="fa fa-check"></i><b>3.0.1</b> Danske Bank og Jyske Bank</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="procentpoint.html"><a href="procentpoint.html"><i class="fa fa-check"></i><b>4</b> Procentpoint</a></li>
 <li class="chapter" data-level="5" data-path="reduktionsregneregler.html"><a href="reduktionsregneregler.html"><i class="fa fa-check"></i><b>5</b> Reduktionsregneregler</a><ul>
 <li class="chapter" data-level="5.1" data-path="reduktionsregneregler.html"><a href="reduktionsregneregler.html#video-regnearternes-hieraki."><i class="fa fa-check"></i><b>5.1</b> Video regnearternes hieraki.</a></li>
@@ -200,12 +233,12 @@
 <p>Modtager en kandidat til kommunalvalget 4% af stemmerne, mod 2% forrige periode, er stigningen 2 procentpoint. Stigningen i procent er imidlertid:</p>
 <p><span class="math display">\[\frac{4 - 2}{2} \cdot 100 = 100\%\]</span></p>
 <p>Vi kan undersøge hvor meget ændringen i procentpoint i forhold til perioden før har været, ved indeks nu minus indeks for perioden tidligere.</p>
-<p><div id="htmlwidget-a65c81e4403073e3068b" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a65c81e4403073e3068b">{"x":{"filter":"none","data":[["2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[1.11,-8.54,-0.33,-3.6,-3.1,-5.12],[4.44,-1.24,5.51,-7.32,1.2,2.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske Bank ændring i procentpoint<\/th>\n      <th>Jyske Bank ændring i procentpoint<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p><div id="htmlwidget-c0de7a6a2cbcb1bc362b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c0de7a6a2cbcb1bc362b">{"x":{"filter":"none","data":[["2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[1.11,-8.54,-0.33,-3.6,-3.1,-5.12],[4.44,-1.24,5.51,-7.32,1.2,2.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske Bank ændring i procentpoint<\/th>\n      <th>Jyske Bank ændring i procentpoint<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <br>
 <br>
-<div id="htmlwidget-ea3cdda7ee9a378f6d95" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ea3cdda7ee9a378f6d95">{"x":{"attrs":{"title":"Aktiekurser ændring i procentpoint","labels":["month","Danske Bank ændring i procentpoint","Jyske Bank ændring i procentpoint"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2018-01-30T23:00:00.000Z","2018-02-27T23:00:00.000Z","2018-03-30T22:00:00.000Z","2018-04-29T22:00:00.000Z","2018-05-30T22:00:00.000Z","2018-06-29T22:00:00.000Z"],[1.11,-8.54,-0.33,-3.6,-3.1,-5.12],[4.44,-1.24,5.51,-7.32,1.2,2.9]]},"evals":[],"jsHooks":[]}</script></p>
+<div id="htmlwidget-ca05fdf1bc7977ae0298" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ca05fdf1bc7977ae0298">{"x":{"attrs":{"title":"Aktiekurser ændring i procentpoint","labels":["month","Danske Bank ændring i procentpoint","Jyske Bank ændring i procentpoint"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2018-01-30T23:00:00.000Z","2018-02-27T23:00:00.000Z","2018-03-30T22:00:00.000Z","2018-04-29T22:00:00.000Z","2018-05-30T22:00:00.000Z","2018-06-29T22:00:00.000Z"],[1.11,-8.54,-0.33,-3.6,-3.1,-5.12],[4.44,-1.24,5.51,-7.32,1.2,2.9]]},"evals":[],"jsHooks":[]}</script></p>
 </div>
             </section>
 
