@@ -48,6 +48,12 @@
 
 
 <script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="libs/d3-3.5.12/d3.min.js"></script>
+<link href="libs/metrics-graphics-2.7.0/dist/metricsgraphics.css" rel="stylesheet" />
+<link href="libs/metrics-graphics-2.7.0/dist/mg_regions.css" rel="stylesheet" />
+<script src="libs/metrics-graphics-2.7.0/dist/metricsgraphics.min.js"></script>
+<script src="libs/metrics-graphics-2.7.0/dist/mg_regions.js"></script>
+<script src="libs/metricsgraphics-binding-0.9.0/metricsgraphics.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.4/datatables.js"></script>
 <link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -63,6 +69,71 @@
 <script src="libs/dygraphs-binding-1.1.1.4/dygraphs.js"></script>
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -86,86 +157,87 @@
 <li class="chapter" data-level="2.1" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html#simple-regneregler."><i class="fa fa-check"></i><b>2.1</b> Simple regneregler.</a></li>
 <li class="chapter" data-level="2.2" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html#reduktions-regneregler"><i class="fa fa-check"></i><b>2.2</b> Reduktions regneregler</a></li>
 <li class="chapter" data-level="2.3" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html#brkregneregler"><i class="fa fa-check"></i><b>2.3</b> Brøkregneregler</a></li>
-<li class="chapter" data-level="2.4" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html#procentregneregler"><i class="fa fa-check"></i><b>2.4</b> Procentregneregler</a></li>
-<li class="chapter" data-level="2.5" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html#indekstal"><i class="fa fa-check"></i><b>2.5</b> Indekstal</a></li>
-<li class="chapter" data-level="2.6" data-path="grundlggende-regneregler.html"><a href="grundlggende-regneregler.html#procentpoint"><i class="fa fa-check"></i><b>2.6</b> Procentpoint</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="potensregneregler.html"><a href="potensregneregler.html"><i class="fa fa-check"></i><b>3</b> Potensregneregler</a></li>
-<li class="chapter" data-level="4" data-path="linere-funktioner.html"><a href="linere-funktioner.html"><i class="fa fa-check"></i><b>4</b> Lineære funktioner</a><ul>
-<li class="chapter" data-level="4.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#generel-forskift"><i class="fa fa-check"></i><b>4.1</b> Generel Forskift</a></li>
-<li class="chapter" data-level="4.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>4.2</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
-<li class="chapter" data-level="4.3" data-path="linere-funktioner.html"><a href="linere-funktioner.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>4.3</b> Løsning af ligninger</a></li>
-<li class="chapter" data-level="4.4" data-path="linere-funktioner.html"><a href="linere-funktioner.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>4.4</b> 2 ligninger med 2 ubekendte.</a></li>
-<li class="chapter" data-level="4.5" data-path="linere-funktioner.html"><a href="linere-funktioner.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>4.5</b> Udbuds- og efterspørgselskurver</a></li>
-<li class="chapter" data-level="4.6" data-path="linere-funktioner.html"><a href="linere-funktioner.html#addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6</b> Addition af lineære funktioner</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#vertikal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6.1</b> Vertikal addition af lineære funktioner</a></li>
-<li class="chapter" data-level="4.6.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#horisontal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>4.6.2</b> Horisontal addition af lineære funktioner</a></li>
+<li class="chapter" data-level="3" data-path="procentregneregler.html"><a href="procentregneregler.html"><i class="fa fa-check"></i><b>3</b> Procentregneregler</a><ul>
+<li class="chapter" data-level="3.1" data-path="procentregneregler.html"><a href="procentregneregler.html#indekstal"><i class="fa fa-check"></i><b>3.1</b> Indekstal</a></li>
+<li class="chapter" data-level="3.2" data-path="procentregneregler.html"><a href="procentregneregler.html#procentpoint"><i class="fa fa-check"></i><b>3.2</b> Procentpoint</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="linere-funktioner.html"><a href="linere-funktioner.html#priselasticitet"><i class="fa fa-check"></i><b>4.7</b> Priselasticitet</a><ul>
-<li class="chapter" data-level="4.7.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#video-om-priselasticitet"><i class="fa fa-check"></i><b>4.7.1</b> Video om priselasticitet</a></li>
+<li class="chapter" data-level="4" data-path="potensregneregler.html"><a href="potensregneregler.html"><i class="fa fa-check"></i><b>4</b> Potensregneregler</a></li>
+<li class="chapter" data-level="5" data-path="linere-funktioner.html"><a href="linere-funktioner.html"><i class="fa fa-check"></i><b>5</b> Lineære funktioner</a><ul>
+<li class="chapter" data-level="5.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#generel-forskift"><i class="fa fa-check"></i><b>5.1</b> Generel Forskift</a></li>
+<li class="chapter" data-level="5.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#bestemmelse-af-forskrift-baseret-pa-2-punkter"><i class="fa fa-check"></i><b>5.2</b> Bestemmelse af forskrift baseret på 2 punkter</a></li>
+<li class="chapter" data-level="5.3" data-path="linere-funktioner.html"><a href="linere-funktioner.html#lsning-af-ligninger"><i class="fa fa-check"></i><b>5.3</b> Løsning af ligninger</a></li>
+<li class="chapter" data-level="5.4" data-path="linere-funktioner.html"><a href="linere-funktioner.html#ligninger-med-2-ubekendte."><i class="fa fa-check"></i><b>5.4</b> 2 ligninger med 2 ubekendte.</a></li>
+<li class="chapter" data-level="5.5" data-path="linere-funktioner.html"><a href="linere-funktioner.html#udbuds--og-eftersprgselskurver"><i class="fa fa-check"></i><b>5.5</b> Udbuds- og efterspørgselskurver</a></li>
+<li class="chapter" data-level="5.6" data-path="linere-funktioner.html"><a href="linere-funktioner.html#addition-af-linere-funktioner"><i class="fa fa-check"></i><b>5.6</b> Addition af lineære funktioner</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#vertikal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>5.6.1</b> Vertikal addition af lineære funktioner</a></li>
+<li class="chapter" data-level="5.6.2" data-path="linere-funktioner.html"><a href="linere-funktioner.html#horisontal-addition-af-linere-funktioner"><i class="fa fa-check"></i><b>5.6.2</b> Horisontal addition af lineære funktioner</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>5</b> Polynomier</a><ul>
-<li class="chapter" data-level="5.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>5.1</b> 2. Gradspolynomier</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier"><i class="fa fa-check"></i><b>5.1.1</b> Video 2. Gradspolynomier</a></li>
+<li class="chapter" data-level="5.7" data-path="linere-funktioner.html"><a href="linere-funktioner.html#priselasticitet"><i class="fa fa-check"></i><b>5.7</b> Priselasticitet</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="linere-funktioner.html"><a href="linere-funktioner.html#video-om-priselasticitet"><i class="fa fa-check"></i><b>5.7.1</b> Video om priselasticitet</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html"><i class="fa fa-check"></i><b>6</b> Eksponentielle funktioner</a><ul>
-<li class="chapter" data-level="6.0.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#section"><i class="fa fa-check"></i><b>6.0.1</b> </a></li>
-<li class="chapter" data-level="6.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#fordoblings--og-halveringskonstant."><i class="fa fa-check"></i><b>6.1</b> Fordoblings- og halveringskonstant.</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>7</b> Finansiel regning</a><ul>
-<li class="chapter" data-level="7.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>7.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
-<li class="chapter" data-level="7.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>7.1</b> Annuiteter</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>7.1.1</b> Fremtidsværdi af en annuitet</a></li>
-<li class="chapter" data-level="7.1.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>7.1.2</b> Nutidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="6" data-path="polynomier.html"><a href="polynomier.html"><i class="fa fa-check"></i><b>6</b> Polynomier</a><ul>
+<li class="chapter" data-level="6.1" data-path="polynomier.html"><a href="polynomier.html#gradspolynomier"><i class="fa fa-check"></i><b>6.1</b> 2. Gradspolynomier</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="polynomier.html"><a href="polynomier.html#video-2.-gradspolynomier"><i class="fa fa-check"></i><b>6.1.1</b> Video 2. Gradspolynomier</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="inverse-funktioner.html"><a href="inverse-funktioner.html"><i class="fa fa-check"></i><b>8</b> Inverse funktioner</a></li>
-<li class="chapter" data-level="9" data-path="logaritmefunktioner.html"><a href="logaritmefunktioner.html"><i class="fa fa-check"></i><b>9</b> Logaritmefunktioner</a></li>
-<li class="chapter" data-level="10" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>10</b> Differentialregning</a><ul>
-<li class="chapter" data-level="10.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>10.1</b> Regneregler differentiation</a></li>
-<li class="chapter" data-level="10.2" data-path="differentialregning.html"><a href="differentialregning.html#differentiation-af-sammensatte-funktioner."><i class="fa fa-check"></i><b>10.2</b> Differentiation af sammensatte funktioner.</a></li>
-<li class="chapter" data-level="10.3" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>10.3</b> Ekstremumspunkter</a></li>
-<li class="chapter" data-level="10.4" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>10.4</b> Lokale og globale ekstremumspunkter</a></li>
-<li class="chapter" data-level="10.5" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>10.5</b> Konveksitet og konkavitet</a></li>
-<li class="chapter" data-level="10.6" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>10.6</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
-<li class="chapter" data-level="10.7" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>10.7</b> Optimeringseksempel</a></li>
+<li class="chapter" data-level="7" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html"><i class="fa fa-check"></i><b>7</b> Eksponentielle funktioner</a><ul>
+<li class="chapter" data-level="7.0.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#section"><i class="fa fa-check"></i><b>7.0.1</b> </a></li>
+<li class="chapter" data-level="7.1" data-path="eksponentielle-funktioner.html"><a href="eksponentielle-funktioner.html#fordoblings--og-halveringskonstant."><i class="fa fa-check"></i><b>7.1</b> Fordoblings- og halveringskonstant.</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html"><i class="fa fa-check"></i><b>11</b> Partielle afledede og gradienten</a><ul>
-<li class="chapter" data-level="11.0.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-om-partielle-afledede-og-gradienten"><i class="fa fa-check"></i><b>11.0.1</b> Video om partielle afledede og gradienten</a></li>
-<li class="chapter" data-level="11.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#cobb-douglas-funktioner"><i class="fa fa-check"></i><b>11.1</b> Cobb-Douglas funktioner</a><ul>
-<li class="chapter" data-level="11.1.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-produktionsfunktioner"><i class="fa fa-check"></i><b>11.1.1</b> Video produktionsfunktioner</a></li>
-</ul></li>
-<li class="chapter" data-level="11.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isoquantisokvant-kurver"><i class="fa fa-check"></i><b>11.2</b> Isoquant/isokvant kurver</a></li>
-<li class="chapter" data-level="11.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isocostisokost-kurver"><i class="fa fa-check"></i><b>11.3</b> Isocost/Isokost kurver</a><ul>
-<li class="chapter" data-level="11.3.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-isocost-kurver"><i class="fa fa-check"></i><b>11.3.1</b> Video isocost kurver</a></li>
-<li class="chapter" data-level="11.3.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#section-1"><i class="fa fa-check"></i><b>11.3.2</b> </a></li>
-<li class="chapter" data-level="11.3.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>11.3.3</b> Eksempel på optimering af produktionsoutput for fast omkostningsniveau</a></li>
-<li class="chapter" data-level="11.3.4" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>11.3.4</b> Video optimering af produktionsoutput for fast omkostningsniveau</a></li>
-<li class="chapter" data-level="11.3.5" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-omkostningsniveauet-for-fast-produktionsniveau"><i class="fa fa-check"></i><b>11.3.5</b> Eksempel på optimering af omkostningsniveauet for fast produktionsniveau</a></li>
+<li class="chapter" data-level="8" data-path="finansiel-regning.html"><a href="finansiel-regning.html"><i class="fa fa-check"></i><b>8</b> Finansiel regning</a><ul>
+<li class="chapter" data-level="8.0.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-og-fremtidsvrdi-af-en-kapital"><i class="fa fa-check"></i><b>8.0.1</b> Nutidsværdi og fremtidsværdi af en kapital</a></li>
+<li class="chapter" data-level="8.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#annuiteter"><i class="fa fa-check"></i><b>8.1</b> Annuiteter</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="finansiel-regning.html"><a href="finansiel-regning.html#fremtidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>8.1.1</b> Fremtidsværdi af en annuitet</a></li>
+<li class="chapter" data-level="8.1.2" data-path="finansiel-regning.html"><a href="finansiel-regning.html#nutidsvrdi-af-en-annuitet"><i class="fa fa-check"></i><b>8.1.2</b> Nutidsværdi af en annuitet</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="integralregning.html"><a href="integralregning.html"><i class="fa fa-check"></i><b>12</b> Integralregning</a><ul>
-<li class="chapter" data-level="12.1" data-path="integralregning.html"><a href="integralregning.html#partiel-integration"><i class="fa fa-check"></i><b>12.1</b> Partiel integration</a></li>
-<li class="chapter" data-level="12.2" data-path="integralregning.html"><a href="integralregning.html#arealberegning"><i class="fa fa-check"></i><b>12.2</b> Arealberegning</a></li>
+<li class="chapter" data-level="9" data-path="inverse-funktioner.html"><a href="inverse-funktioner.html"><i class="fa fa-check"></i><b>9</b> Inverse funktioner</a></li>
+<li class="chapter" data-level="10" data-path="logaritmefunktioner.html"><a href="logaritmefunktioner.html"><i class="fa fa-check"></i><b>10</b> Logaritmefunktioner</a></li>
+<li class="chapter" data-level="11" data-path="differentialregning.html"><a href="differentialregning.html"><i class="fa fa-check"></i><b>11</b> Differentialregning</a><ul>
+<li class="chapter" data-level="11.1" data-path="differentialregning.html"><a href="differentialregning.html#regneregler-differentiation"><i class="fa fa-check"></i><b>11.1</b> Regneregler differentiation</a></li>
+<li class="chapter" data-level="11.2" data-path="differentialregning.html"><a href="differentialregning.html#differentiation-af-sammensatte-funktioner."><i class="fa fa-check"></i><b>11.2</b> Differentiation af sammensatte funktioner.</a></li>
+<li class="chapter" data-level="11.3" data-path="differentialregning.html"><a href="differentialregning.html#ekstremumspunkter"><i class="fa fa-check"></i><b>11.3</b> Ekstremumspunkter</a></li>
+<li class="chapter" data-level="11.4" data-path="differentialregning.html"><a href="differentialregning.html#lokale-og-globale-ekstremumspunkter"><i class="fa fa-check"></i><b>11.4</b> Lokale og globale ekstremumspunkter</a></li>
+<li class="chapter" data-level="11.5" data-path="differentialregning.html"><a href="differentialregning.html#konveksitet-og-konkavitet"><i class="fa fa-check"></i><b>11.5</b> Konveksitet og konkavitet</a></li>
+<li class="chapter" data-level="11.6" data-path="differentialregning.html"><a href="differentialregning.html#sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi"><i class="fa fa-check"></i><b>11.6</b> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></a></li>
+<li class="chapter" data-level="11.7" data-path="differentialregning.html"><a href="differentialregning.html#optimeringseksempel"><i class="fa fa-check"></i><b>11.7</b> Optimeringseksempel</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html"><i class="fa fa-check"></i><b>13</b> Excel simpel brug</a><ul>
-<li class="chapter" data-level="13.0.1" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html#video-excel-simpel-brug"><i class="fa fa-check"></i><b>13.0.1</b> Video excel simpel brug</a></li>
+<li class="chapter" data-level="12" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html"><i class="fa fa-check"></i><b>12</b> Partielle afledede og gradienten</a><ul>
+<li class="chapter" data-level="12.0.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-om-partielle-afledede-og-gradienten"><i class="fa fa-check"></i><b>12.0.1</b> Video om partielle afledede og gradienten</a></li>
+<li class="chapter" data-level="12.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#cobb-douglas-funktioner"><i class="fa fa-check"></i><b>12.1</b> Cobb-Douglas funktioner</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-produktionsfunktioner"><i class="fa fa-check"></i><b>12.1.1</b> Video produktionsfunktioner</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="excel-investering.html"><a href="excel-investering.html"><i class="fa fa-check"></i><b>14</b> Excel Investering</a><ul>
-<li class="chapter" data-level="14.0.1" data-path="excel-investering.html"><a href="excel-investering.html#video-om-investering-med-excel"><i class="fa fa-check"></i><b>14.0.1</b> Video om investering med excel</a></li>
-<li class="chapter" data-level="14.1" data-path="excel-investering.html"><a href="excel-investering.html#investeringer-med-ikke-periodiske-varierende-betalingsstrmme-i-excel"><i class="fa fa-check"></i><b>14.1</b> Investeringer med ikke-periodiske varierende betalingsstrømme i excel</a></li>
+<li class="chapter" data-level="12.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isoquantisokvant-kurver"><i class="fa fa-check"></i><b>12.2</b> Isoquant/isokvant kurver</a></li>
+<li class="chapter" data-level="12.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#isocostisokost-kurver"><i class="fa fa-check"></i><b>12.3</b> Isocost/Isokost kurver</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-isocost-kurver"><i class="fa fa-check"></i><b>12.3.1</b> Video isocost kurver</a></li>
+<li class="chapter" data-level="12.3.2" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#section-1"><i class="fa fa-check"></i><b>12.3.2</b> </a></li>
+<li class="chapter" data-level="12.3.3" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>12.3.3</b> Eksempel på optimering af produktionsoutput for fast omkostningsniveau</a></li>
+<li class="chapter" data-level="12.3.4" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#video-optimering-af-produktionsoutput-for-fast-omkostningsniveau"><i class="fa fa-check"></i><b>12.3.4</b> Video optimering af produktionsoutput for fast omkostningsniveau</a></li>
+<li class="chapter" data-level="12.3.5" data-path="partielle-afledede-og-gradienten.html"><a href="partielle-afledede-og-gradienten.html#eksempel-pa-optimering-af-omkostningsniveauet-for-fast-produktionsniveau"><i class="fa fa-check"></i><b>12.3.5</b> Eksempel på optimering af omkostningsniveauet for fast produktionsniveau</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="excel-malsgning.html"><a href="excel-malsgning.html"><i class="fa fa-check"></i><b>15</b> Excel målsøgning</a></li>
-<li class="chapter" data-level="16" data-path="excel-liner-programmering.html"><a href="excel-liner-programmering.html"><i class="fa fa-check"></i><b>16</b> Excel lineær programmering</a></li>
-<li class="chapter" data-level="17" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html"><i class="fa fa-check"></i><b>17</b> Excel Lineær regression</a><ul>
-<li class="chapter" data-level="17.0.1" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-excel-liner-regression"><i class="fa fa-check"></i><b>17.0.1</b> Video excel lineær regression</a></li>
-<li class="chapter" data-level="17.0.2" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-jmp-regressionseksempel"><i class="fa fa-check"></i><b>17.0.2</b> Video JMP regressionseksempel</a></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="lsning-af-ligningssystemer-med-excel.html"><a href="lsning-af-ligningssystemer-med-excel.html"><i class="fa fa-check"></i><b>18</b> Løsning af ligningssystemer med excel</a></li>
-<li class="chapter" data-level="19" data-path="excel-omkostnings-eksempel.html"><a href="excel-omkostnings-eksempel.html"><i class="fa fa-check"></i><b>19</b> Excel omkostnings-eksempel</a></li>
-<li class="chapter" data-level="20" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>20</b> Excel oversættelser</a></li>
+<li class="chapter" data-level="13" data-path="integralregning.html"><a href="integralregning.html"><i class="fa fa-check"></i><b>13</b> Integralregning</a><ul>
+<li class="chapter" data-level="13.1" data-path="integralregning.html"><a href="integralregning.html#partiel-integration"><i class="fa fa-check"></i><b>13.1</b> Partiel integration</a></li>
+<li class="chapter" data-level="13.2" data-path="integralregning.html"><a href="integralregning.html#arealberegning"><i class="fa fa-check"></i><b>13.2</b> Arealberegning</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html"><i class="fa fa-check"></i><b>14</b> Excel simpel brug</a><ul>
+<li class="chapter" data-level="14.0.1" data-path="excel-simpel-brug.html"><a href="excel-simpel-brug.html#video-excel-simpel-brug"><i class="fa fa-check"></i><b>14.0.1</b> Video excel simpel brug</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="excel-investering.html"><a href="excel-investering.html"><i class="fa fa-check"></i><b>15</b> Excel Investering</a><ul>
+<li class="chapter" data-level="15.0.1" data-path="excel-investering.html"><a href="excel-investering.html#video-om-investering-med-excel"><i class="fa fa-check"></i><b>15.0.1</b> Video om investering med excel</a></li>
+<li class="chapter" data-level="15.1" data-path="excel-investering.html"><a href="excel-investering.html#investeringer-med-ikke-periodiske-varierende-betalingsstrmme-i-excel"><i class="fa fa-check"></i><b>15.1</b> Investeringer med ikke-periodiske varierende betalingsstrømme i excel</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="excel-malsgning.html"><a href="excel-malsgning.html"><i class="fa fa-check"></i><b>16</b> Excel målsøgning</a></li>
+<li class="chapter" data-level="17" data-path="excel-liner-programmering.html"><a href="excel-liner-programmering.html"><i class="fa fa-check"></i><b>17</b> Excel lineær programmering</a></li>
+<li class="chapter" data-level="18" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html"><i class="fa fa-check"></i><b>18</b> Excel Lineær regression</a><ul>
+<li class="chapter" data-level="18.0.1" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-excel-liner-regression"><i class="fa fa-check"></i><b>18.0.1</b> Video excel lineær regression</a></li>
+<li class="chapter" data-level="18.0.2" data-path="excel-liner-regression.html"><a href="excel-liner-regression.html#video-jmp-regressionseksempel"><i class="fa fa-check"></i><b>18.0.2</b> Video JMP regressionseksempel</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="lsning-af-ligningssystemer-med-excel.html"><a href="lsning-af-ligningssystemer-med-excel.html"><i class="fa fa-check"></i><b>19</b> Løsning af ligningssystemer med excel</a></li>
+<li class="chapter" data-level="20" data-path="excel-omkostnings-eksempel.html"><a href="excel-omkostnings-eksempel.html"><i class="fa fa-check"></i><b>20</b> Excel omkostnings-eksempel</a></li>
+<li class="chapter" data-level="21" data-path="excel-oversttelser.html"><a href="excel-oversttelser.html"><i class="fa fa-check"></i><b>21</b> Excel oversættelser</a></li>
 <li class="divider"></li>
 <li><a href="https://tepedu.com" target="blank">Thomas Petersen</a></li>
 
@@ -187,7 +259,7 @@
 
             <section class="normal" id="section-">
 <div id="differentialregning" class="section level1">
-<h1><span class="header-section-number">Kapitel 10</span> Differentialregning</h1>
+<h1><span class="header-section-number">Kapitel 11</span> Differentialregning</h1>
 <p>Når man differentierer en funktion f, kaldes resultatet &quot; den afledede af f mht. x &quot; eller “f mærke af x”. At differentiere en funktion mht. til x, er en operation, hvor vi finder en ny funktion, vi skriver <span class="math inline">\(f^{&#39;}\left( x \right)\)</span>, der er en del teori og beviser omkring dette, som vi ikke gennemgår her.</p>
 <p>Hvis vi ser på grafen nedenfor, kan man se at funktionsværdien falder fra 0 til -1, når x ændres fra 0,5 til 1. Når x ændres fra 1 til 1,5 falder funktionsværdien fra -1 til -10,125.</p>
 <p><img src="media/image49.png" style="width:6in;height:3.65132in" /></p>
@@ -201,7 +273,7 @@
 <p>Det betyder at tangentens hældning i punktet (1,-1)[^4] -6, eller løst formuleret hastigheden i punktet er -6. Dette er tegnet ind nedenfor.</p>
 <p><img src="media/image50.png" style="width:6in;height:3.65132in" /></p>
 <div id="regneregler-differentiation" class="section level2">
-<h2><span class="header-section-number">10.1</span> Regneregler differentiation</h2>
+<h2><span class="header-section-number">11.1</span> Regneregler differentiation</h2>
 <p>Nedenstående skema giver en oversigt over gængse differentiationsregneregler, samt eksempler, k er en konstant <span class="math inline">\(a,b \in \mathbb{R,\ }n \in \mathbb{N}\)</span>.</p>
 <table>
 <colgroup>
@@ -271,7 +343,7 @@
 <p><span class="math display">\[{\left( \frac{2x^{2} - 3x + 3}{x + 5} \right)^{&#39;} = \frac{\left( 4x - 3 \right) \cdot \left( x + 5 \right) - \left( 2x^{2} - 3x + 3 \right) \cdot 1}{\left( x - 5 \right)^{2}} = }{\frac{4x^{2} + 20x - 3x - 15 - 2x^{2} + 3x - 3}{\left( x - 5 \right)^{2}} = \frac{2x^{2} + 20x - 18}{\left( x - 5 \right)^{2}}}\]</span></p>
 </div>
 <div id="differentiation-af-sammensatte-funktioner." class="section level2">
-<h2><span class="header-section-number">10.2</span> Differentiation af sammensatte funktioner.</h2>
+<h2><span class="header-section-number">11.2</span> Differentiation af sammensatte funktioner.</h2>
 <p>En funktion f.eks. <span class="math inline">\(h\left( x \right) = \sqrt{3x^{2} + x},\\)</span>kaldes en sammensat funktion af de to funktioner den ydre <span class="math inline">\(f\left( x \right) = \sqrt{\ldots}\\)</span>og den indre <span class="math inline">\(g\left( x \right) = 3x^{2} + x\)</span>. Man skriver det som <span class="math inline">\(h\left( x \right) = f\left( g\left( x \right) \right)\ og\ siger\ &quot;f\ af\ g\ af\ x&quot;\)</span>, eller <span class="math inline">\(h\left( x \right) = \left( f \circ g \right)\left( x \right)\ &quot;f\ bolle\ g\)</span>&quot;.</p>
 <p>Man kan finde den afledte af en sammensat funktion som:</p>
 <p><span class="math display">\[\left( h\left( x \right) \right)^{&#39;} = f^{&#39;}\left( g\left( x \right) \right) \cdot g&#39;(x)\]</span></p>
@@ -292,7 +364,7 @@
 <p>Dette udtryk kan jo differentieres direkte til<span class="math inline">\(\ 18x^{5}\)</span>.</p>
 </div>
 <div id="ekstremumspunkter" class="section level2">
-<h2><span class="header-section-number">10.3</span> Ekstremumspunkter</h2>
+<h2><span class="header-section-number">11.3</span> Ekstremumspunkter</h2>
 <p>Indenfor økonomi er det vigtigt at kunne finde den afledede, når <span class="math inline">\(f^{&#39;}\left( x \right) = 0\\)</span>, har vi et globalt eller lokalt, minimum eller maksimum. Man vil således være i stand til at bestemme, f.eks. maksimal omsætning for en omsætningsfunktion vha. differentialregning. Antag vi har en pris/afsætningsfunktion <span class="math inline">\(f\left( x \right) = - 0.25x + 10\)</span>. Udfra denne kan vi danne omsætningsfunktionen, omsætning er jo per definition:</p>
 <p><span class="math display">\[Omsaetning = pris \cdot afsaetning\]</span></p>
 <p>Afsætningen er vores x-værdi, og den tilsvarende pris er jo vores funktionsværdi f(x). Derfor kan vi bestemme omsætningsfunktionen som</p>
@@ -310,17 +382,17 @@
 <p><span class="math display">\[x = 20\]</span></p>
 </div>
 <div id="lokale-og-globale-ekstremumspunkter" class="section level2">
-<h2><span class="header-section-number">10.4</span> Lokale og globale ekstremumspunkter</h2>
+<h2><span class="header-section-number">11.4</span> Lokale og globale ekstremumspunkter</h2>
 <p>Hvis vi har funktioner med flere ekstremaer, må man for at afgøre om der er tale om lokale/globale ekstremaer bestemme funktionsværdierne for x-værdi kandidaterne. I tegningen nedenfor har vi et 4-gradspolynomium <span class="math inline">\(f\left( x \right) = x^{4} - 3x^{3} + 2x^{2} + 3\)</span>, her kan man se at den afledede <span class="math inline">\(f^{&#39;}\left( x \right) = \ 4x^{3} - 9x^{2} + 4x\ \\)</span> er tegnet ind med rødt, det fremgår at <span class="math inline">\(f&#39;(x)\)</span> har 3 nulpunkter, hvorfor vi kan konkludere at <span class="math inline">\(f\left( x \right)\)</span> har 3 ekstremaer, lokalt minimum i <span class="math inline">\((0;3),\\)</span>lokalt maksimum i <span class="math inline">\((0.6069;3.2017)\)</span> og globalt minimum i (1.6404; 2.3803). Et globalt ekstremum er altså funktionens største eller mindste værdi i hele definitionsmængden. Et lokalt ekstremum er altså funktionens største eller mindste værdi i en omegn omkring punktet.</p>
 <p><img src="media/image53.png" style="width:6in;height:3.65132in" /></p>
 </div>
 <div id="konveksitet-og-konkavitet" class="section level2">
-<h2><span class="header-section-number">10.5</span> Konveksitet og konkavitet</h2>
+<h2><span class="header-section-number">11.5</span> Konveksitet og konkavitet</h2>
 <p>Vi kan ved finde den dobbeltaflede (dvs. differentiere 2 gange) for en funktion , afgøre hvornår en funktion er konkav eller konveks. Dette kan direkte fortælle os om en funktion har maksimum eller minimum i et ekstremumspunkt. I intervaller hvor en funktion er konveks dvs. krummer opad vil ekstremumspunkter være minima, i disse intervaller vil den dobbeltafledede være positiv. I intervaller hvor en funktion er konkav dvs. krummer nedad vil ekstremumspunkter være maksima, i disse intervaller vil den dobbeltafledede være negativ. Når <span class="math inline">\(f^{&#39;&#39;}\left( x \right) = 0\\)</span> skifter grafen mellem konveks og konkav eller omvendt, vi siger grafen har vendetanget. I eksemplet nedenfor kan man se <span class="math inline">\(f\left( x \right)\)</span> er blå når den er konkav, og rød når den er konveks, hvilket stemmer overens med <span class="math inline">\(f&#39;&#39;(x)\)</span>, der er hhv. negativ for <span class="math inline">\(x \in \rbrack - \infty;1\lbrack\)</span> og positiv for <span class="math inline">\(x \in \rbrack 1;\infty\lbrack\)</span>.</p>
 <p><img src="media/image54.png" style="width:6in;height:3.65132in" /></p>
 </div>
 <div id="sammenhnge-avc-atc-tc-tr-mc-mr-og-mathbfpi" class="section level2">
-<h2><span class="header-section-number">10.6</span> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></h2>
+<h2><span class="header-section-number">11.6</span> Sammenhænge AVC, ATC, TC, TR, MC, MR og <span class="math inline">\(\mathbf{\pi}\)</span></h2>
 <p>Vi kan ud fra pris- afsætningskurven P(Q), altså kurven der angiver hvilken mængde man kan afsætte, finde TR(Q) ved at gange med Q.</p>
 <p><img src="media/image55.png" style="width:6in;height:3.77441in" /></p>
 <p>Q er quantity/mængde, der produceres og afsættes ud af x-aksen denne uafhængige variabel styrer værdien af de nedenstående størrelser:</p>
@@ -336,7 +408,7 @@
 <p><img src="media/image57.png" style="width:6in;height:3.78539in" /></p>
 </div>
 <div id="optimeringseksempel" class="section level2">
-<h2><span class="header-section-number">10.7</span> Optimeringseksempel</h2>
+<h2><span class="header-section-number">11.7</span> Optimeringseksempel</h2>
 <p>TR total revenue er omsætningen total</p>
 <p>MR marginal revenue (dansk Groms grænseomsætningen ) betyder hvad øges med det at afsætte en enhed mere. <span class="math inline">\(MR = \frac{\text{dTR}}{\text{dQ}}\)</span> , grafisk er MR hældningen af tangenten i et punkt på TR kurven.</p>
 <p>I tegningen nedenfor er indtegnet en blå TR kurve og en rød MR kurve og 2 sorte tangenter, hvor MR er hhv. 25 og 0. X-aksen angiver afsætningen Q, y-aksen omsætningen. Man kan se at der hvor MR kurven skærer x-aksen (dvs er 0), har TR-kurven maksimum, for denne afsætning Q=45 er hældningen på tangenten 0. Bemærk MR er den afledte af TR. Den maksimale omsætning bliver <span class="math inline">\(\text{TR}\left( 45 \right) = - 0,5{\cdot 45}^{2} + 45 \cdot 45 = 1012,5\)</span>.</p>

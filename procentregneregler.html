@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="prev" href="eksponentielle-funktioner.html">
-<link rel="next" href="inverse-funktioner.html">
+<link rel="prev" href="grundlggende-regneregler.html">
+<link rel="next" href="potensregneregler.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -258,117 +258,87 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="finansiel-regning" class="section level1">
-<h1><span class="header-section-number">Kapitel 8</span> Finansiel regning</h1>
-<div id="nutidsvrdi-og-fremtidsvrdi-af-en-kapital" class="section level3">
-<h3><span class="header-section-number">8.0.1</span> Nutidsværdi og fremtidsværdi af en kapital</h3>
-<p>Vi benytter i finansiel regning vor viden fra eksponentielle funktioner, nedenstående eksempel viser hvordan sammenhængen er:</p>
-<p>En kapital på K<sub>0</sub> = 10.000 kr. sættes ind på en bankkonto, hvor der hvert år tilskrives en rente på 10%. Betegner vi kapitalens værdi efter 1 år med K<sub>1</sub> , er denne:</p>
-<p>K<sub>1</sub> =10.000⋅1,10=11.000 kr.</p>
-<p>da vi lægger 10 % til et tal ved at gange tallet med 1,10.</p>
-<p>Efter 2 år er kapitalens værdi vokset til</p>
-<p>K<sub>2</sub> =11.000⋅1,10=12.100 kr.</p>
-<p>og efter 3 år står der følgende beløb på bankkontoen</p>
-<p>K<sub>3</sub> =12.100⋅ 1,10=13.310 kr.</p>
-<p>Der gælder altså at:</p>
-<p>K<sub>1</sub> =K<sub>0</sub> ⋅ (1+r)</p>
-<p>K<sub>2</sub> =K<sub>1</sub> ⋅ (1+r)</p>
-<p>K<sub>3</sub> =K<sub>2</sub> ⋅ (1+r)</p>
-<p>Osv.</p>
-<p>Men dette kan vi skrive som:</p>
-<p>K<sub>1</sub> =K<sub>0</sub> ⋅ (1+r)</p>
-<p>K<sub>2</sub> =K<sub>0</sub> ⋅ (1+r)⋅(1+r)</p>
-<p>K<sub>3</sub> =K<sub>0</sub> ⋅ (1+r)⋅(1+r)⋅(1+r)</p>
-<p>Osv.</p>
-<p>Eller vha. Potensregnereglerne:</p>
-<p>K<sub>1</sub> =K<sub>0</sub> ⋅ (1+r)</p>
-<p>K<sub>2</sub> =K<sub>0</sub> ⋅ (1+r)<sup>2</sup></p>
-<p>K<sub>3</sub> =K<sub>0</sub> ⋅ (1+r)<sup>3</sup></p>
-<p><sup>.</sup></p>
-<p><sup>.</sup></p>
-<p><sup>.</sup></p>
-<p>K<sub>n</sub> =K<sub>0</sub> ⋅ (1+r)<sup>n</sup></p>
-<p>En mand sætter 10.000 ind på en konto med årlig rentetilskrivning 5%, hvad har han på kontoen efter 3, 13 og 30 år ?</p>
-<p><span class="math display">\[K_{3} = 10.000 \cdot {1,05}^{3} = 11.576,25\]</span></p>
-<p><span class="math display">\[K_{13} = 10.000 \cdot {1,05}^{13} = 18.856,49\]</span></p>
-<p><span class="math display">\[K_{30} = 10.000 \cdot {1,05}^{30} = 43.219,42\]</span></p>
-<p>I excel den engelske version, kan man enten skrive ovenstående formler ud, eller benytte fv kommandoen, fv betyder future value. I den danske version skriver man også fv for fremtidsværdi. I første søjle nedenfor står resultaterne, i anden søjle formlen i gåseøjne. Bemærk der er forskel på hvad man separerer argumenter med i forskellige excel-versioner, nogle versioner bruger komma “,” , andre versioner bruger semikolon “;”. Man kan se hvad man skal bruge i den hjælpetekst der kommer op med gult.</p>
-<p>De forskellige argumenter er:</p>
-<p>FV(terminsrenten som decimaltal; antal terminer, ydelsen[^2]; nutidsværdi/pv/present value; type angiver man ikke da den står default korrekt)</p>
-<p>I B2 cellen nedenfor står der derfor:</p>
-<p>=FV(0,05;3;0;-10000)</p>
-<p>Vi har altså 5% terminsrente, 3 terminer, ydelser 0 og -10.000,- i nutidsværdi. Bemærk excel angiver nutidsværdien med negativ værdi, man indsætter jo et beløb i dag, man kan tænke på det som man tager penge op af lommen i dag (derfor minus) og sætter dem ind på sin konto. Resultatet fremtidsværdien, bliver positivt, man angiver jo beløbet, man kan hæve og putte i lommen igen.</p>
-<p><img src="media/image32.png" style="width:5.13925in;height:6.83381in" /></p>
-<p>Vi kan opfatte fremtidsværdien K<sub>n</sub> af en kapital K<sub>0</sub> på et vilkårligt tidspunkt n ude i fremtiden som en funktion af antallet af år/terminer. Dvs. kapitalen er en konstant, (1+r) er en konstant.</p>
-<p>Men potensen n er den variable.</p>
-<p>K<sub>n</sub> =K<sub>0</sub> ⋅ (1+r)<sup>n</sup></p>
-<p>Kaldes fremskrivningsformlen, vi kalder</p>
-<p>K<sub>0</sub> kapitalen/ nutidsværdien/begyndelsesværdien</p>
-<p>K<sub>n</sub> fremtidsværdien</p>
-<p>r renten/vækstraten</p>
-<p>a = 1 + r fremskrivningsfaktoren/grundtallet</p>
-<p>Vi har altså den generelle formel for fremtidsværdien af en kapital.</p>
-<p><span class="math display">\[K_{n} = K_{0}\  \cdot \ \left( 1 + r \right)^{n}\text{\ \ }\]</span></p>
-<p>Ved at isolere <span class="math inline">\(K_{0}\)</span> får vi formlen for nutidsværdien af en kapital.</p>
-<p><span class="math display">\[K_{0}\  = K_{n}\ \left( 1 + r \right)^{- n}\text{\ \ }\]</span></p>
-<p>Tilsvarende kan vi isolere antallet af terminer vha. logaritmefunktionen ln.</p>
-<p><span class="math display">\[K_{n} = K_{0}\  \cdot \ \left( 1 + r \right)^{n}\text{\ \ }\]</span></p>
-<p><span class="math display">\[{\frac{K_{n}}{K_{0}} = \ \left( 1 + r \right)^{n}\ }\]</span></p>
-<p><span class="math display">\[{\ln\left( \frac{K_{n}}{K_{0}} \right) = n \cdot \ln\left( 1 + r \right)}\]</span></p>
-<p><span class="math display">\[{n = \frac{\ln\left( \frac{K_{n}}{K_{0}} \right)}{\ln\left( 1 + r \right)}\ \text{\ \ }}\]</span></p>
-<p>Vi kan ligeledes isolere renten r.</p>
-<p><span class="math display">\[K_{n} = K_{0}\  \cdot \ \left( 1 + r \right)^{n}\]</span></p>
-<p><span class="math display">\[{\frac{K_{n}}{K_{0}} = \left( 1 + r \right)^{n}}\]</span></p>
-<p><span class="math display">\[{\sqrt[n]{\frac{K_{n}}{K_{0}}} = 1 + r}\]</span></p>
-<p><span class="math display">\[{r = \sqrt[n]{\frac{K_{n}}{K_{0}}} - 1}\]</span></p>
+<div id="procentregneregler" class="section level1">
+<h1><span class="header-section-number">Kapitel 3</span> Procentregneregler</h1>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141353" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
 </div>
-<div id="annuiteter" class="section level2">
-<h2><span class="header-section-number">8.1</span> Annuiteter</h2>
-<p>En annuitet er en række lige store betalinger/ydelser betalt ved starten af tidintervaller/terminer, af samme længde, renten er ens og tilskrives efter hver termin.</p>
-<div id="fremtidsvrdi-af-en-annuitet" class="section level3">
-<h3><span class="header-section-number">8.1.1</span> Fremtidsværdi af en annuitet</h3>
-<p><img src="media/image33.png" style="width:6in;height:1.39861in" /></p>
-<p>Hvis man indbetaler ydelsen y på en konto n gange til en fast terminsrente r, vil man kunne hæve <span class="math inline">\(A_{n}\)</span>, på tidspunkt n. Man kalder denne formel opsparingsformlen, fordi man sparer et beløb op det opsparede beløb på tidspunkt n er <span class="math inline">\(A_{n}\)</span>. Dette er illustreret på tidslinjen ovenfor, formlen for fremtidsværdien af annuiteten bliver:</p>
-<p><span class="math display">\[A_{n} = y \cdot \frac{\left( 1 + r \right)^{n} - 1}{r}\]</span></p>
-<p>En person indbetaler hvert halve år 1.000,- på en konto med halvårlig rentetilskrivning <span class="math inline">\(r = \ 0,02\)</span>, der foretages 10 indbetalinger, hvad er saldoen på kontoen efter sidste indbetaling.</p>
-<p><img src="media/image34.png" style="width:6in;height:2.48819in" /></p>
-<p>Her benytter vi i B2 cellen igen FV kommandoen. Bemærk ydelse/pmt argumentet der før var 0 er nu -1000, mens pv/nutidsværdi nu er 0. De -1000 er det beløb personen skal indbetale, i starten af hver termin.</p>
-<p>Man kan komme ud for at man ikke kender en af de andre størrelser r, n eller y, men derimod kender <span class="math inline">\(A_{n}\)</span>. Hvis y eller n er ukendte, kan man udfra ovenstående formel isolere den ukendte størrelse ved reduktionsregnereglerne.</p>
-<p><span class="math display">\[y = A_{n} \cdot \frac{r}{\left( 1 + r \right)^{n} - 1}\]</span></p>
-<p>Excelformlen er PMT (YDELSE dansk version) denne bruger følgende argumenter</p>
-<p>PMT(rate, nper, pv, fv, type), bemærk denne formel kan bruges til at finde ydelsen for både opsparings- og gældsformlen. Opsparingsformlens fv-værdi skal være 0.</p>
-<p>Hvis man skal finde n, kan man isolere n i opsparingsformlen, man får da:</p>
-<p><span class="math display">\[A_{n} = y \cdot \frac{\left( 1 + r \right)^{n} - 1}{r} \Leftrightarrow\]</span></p>
-<p><span class="math display">\[n = \frac{\ln\left( \frac{A_{n} \cdot r}{y} + 1 \right)}{\ln\left( 1 + r \right)}\]</span></p>
-<p>Eller bruge NPER(rate,pmt,pv,fv,type) funktionen i excel, her skal man huske at pv present value skal være 0. Hvis Öztürk ønsker at have $A_{n} =$15.000,- til rådighed, og kan betale terminsydelser på <span class="math inline">\(y = 500, -\)</span> og terminsrenten er r=0,01, hvor mange ydelser skal der da betales.</p>
-<p><img src="media/image35.png" style="width:6in;height:1.24375in" /></p>
-<p>Hvis renten er ukendt kan vi ikke opskrive en entydig formel hvor r isoleres. Vi kan benytte excels RATE(nper,pmt,pv,fv,type,guess) funktion. Hvis Sørensen indsætter 2000 hvert 12 gange, og han lige efter sidste indsættelse har 25340,- på kontoen, har terminsrenten været:</p>
-<p><img src="media/image36.png" style="width:6in;height:1.25694in" /></p>
+<p><br></p>
+<p>Procent betyder hundrededele, vi angiver procent med symbolet %.</p>
+<p>Har man 200 kr. er 1% af 200 kr., altså en hundrededel af 200 kr. dvs. <span class="math display">\[\frac{200\ kr.}{100} = 2\ kr.\]</span></p>
+<p>Af de 200 kr. er 100% af 200 kr., altså hundrede hundrededele af 200 kr. dvs.
+<span class="math display">\[\frac{200\ kr.}{100} \cdot 100 = 200\ kr.\]</span>
+altså hele beløbet.</p>
+<p>Af de 200 kr. er 40% af 200 kr., altså hundrede hundrededele af 200 kr. dvs. <span class="math display">\[\frac{200\ kr.}{100} \cdot 40 = 80\ kr.\]</span></p>
+<p>Af de 200 kr. er 120% af 200 kr., altså hundrede hundrededele af 200 kr. dvs. <span class="math display">\[\frac{200\ kr.}{100} \cdot 120 = 240\ kr.\]</span></p>
+<p>Vi dividerer altså med 100, når vi skal finde 1 %, og ganger med antallet af procent vi skal bestemme.</p>
+<p>Hvor mange procent udgør 10 kr. af 100 kr.?</p>
+<p>Dette kan vi finde ud af ved at bestemme andelen af 10 kr. ud af 100 kr., og derefter gange med 100:</p>
+<p><span class="math display">\[\frac{10}{100} \cdot 100\% = 10\%\]</span></p>
+<p>Hvor mange procent udgør 20 kr. af 400 kr.?</p>
+<p><span class="math display">\[\frac{20}{400} \cdot 100\% = 5\%\]</span></p>
+<p>Hvad er 50 + 10%</p>
+<p><span class="math display">\[50 + \frac{50}{100} \cdot 10 = 55\]</span></p>
+<p>Eller mere generelt og lidt nemmere, de 50 kr. er 100% + 10% er 110%, når vi omskriver dette til decimaltal får vi <span class="math inline">\(\frac{110\%}{100} = 1,1\)</span></p>
+<p>Dvs. vi kan finde 50 + 10% som <span class="math inline">\(50 \cdot 1,1 = 55\)</span></p>
+<p>Tilsvarende kan vi hurtigt finde 50 kr. - 10% som 100%-10%=90%=0.9</p>
+<p><span class="math display">\[50*0.9 = 45\]</span></p>
+<p>Et beløb er faldet fra 400 kr. til 250 kr. Hvor mange % er beløbet faldet?</p>
+<p><span class="math display">\[\frac{400 - 250}{400} \cdot 100\% = 37.5\%\]</span></p>
+<p>Efter at have lagt momsen 25% til et beløb, er beløbet vokset til 1000 kr. hvad var beløbet før vi lagde 25% til. Det betyder vi har lagt 25% til det ukendte beløb X, altså ganget det med 1.25.</p>
+<p>Her kan vi tænke på udregningen som en ligning, dvs. et udsagn der skal være sandt.</p>
+<p><span class="math display">\[X \cdot 1.25 = 1000\ kr.\]</span></p>
+<p>Vi skal nu bestemme/isolere X, ved at dividere med 1.25 på begge sider:</p>
+<p><span class="math display">\[\frac{X \cdot 1.25}{1.25} = 1000\ kr.\frac{1}{1.25} \rightarrow X = 1000\ kr.\  \cdot 0.8 \rightarrow X = 800\ kr.\]</span></p>
+<p>Vi kan når man skal finde et beløb uden moms 25%, gange med <span class="math inline">\(\frac{1}{1.25} = 0.8\)</span></p>
+<div id="indekstal" class="section level2">
+<h2><span class="header-section-number">3.1</span> Indekstal</h2>
+<p>Tal omregnes til indekstal, ved at lade indekstallene være procentværdier i forhold til en bestemt værdi kaldet basis der har indeks 100.</p>
+<p><span class="math display">\[Indeks = \frac{Væ\ \ rdi}{\text{basis}} \cdot 100\]</span></p>
+<p>Hvis fx en aktie er steget fra kurs 133 til kurs 180, kan vi indeksere ved at sætte kurs 133 til basis og bestemme, den indekserede værdi af den nye kurs 180.</p>
+<p><span class="math display">\[Indeks = \frac{180}{133} \cdot 100 = 135.34\]</span></p>
+<p>Dette er smart hvis vi skal sammenligne, hvordan forskellige værdier udvikler sig over tiden.</p>
+<p>Herunder har vi de de seneste justerede slutkurser for Danske Bank og Jyske Bank på månedsbasis.</p>
+<p><div id="htmlwidget-e7bc008b49508c9b0687" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e7bc008b49508c9b0687">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank<\/th>\n      <th>Jyske.Bank<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<br>
+<br>
+<div id="htmlwidget-cab132728cb9292648d8" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cab132728cb9292648d8">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank","labels":["month","Danske Bank","Jyske Bank"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]]},"evals":[],"jsHooks":[]}</script>
+<br>
+<br>
+<br>
+Vi kan bedre sammenligne udviklingerne i aktiekursen ved at indeksere kurserne for de to banker.<br />
+<br>
+<div id="htmlwidget-d7e26fd66677e6d17c2b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d7e26fd66677e6d17c2b">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank.indekseret<\/th>\n      <th>Jyske.Bank.indekseret<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<br>
+<br></p>
+<p>Her ses den indekseredde kursudvikling grafisk:</p>
+<div id="htmlwidget-a898dc9d53747f585354" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a898dc9d53747f585354">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank indekseret","labels":["month","Danske Bank indekseret","Jyske Bank indekseret"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]]},"evals":[],"jsHooks":[]}</script>
+<p><br>
+<br>
+Hvordan kommer man fra indekstal til det oprindelige beløb, når Danske Bank aktien i har kurs 233.53 2017-12-31, hvad er da kursen 2018-01-31 når indeks er 101.11?</p>
+<p>Nu kan man opstille en ligning for beregning af indekstal, med en ubekendt værdi kursen 2018-01-31 nemlig:</p>
+<p><span class="math display">\[\frac{X}{233.53}*100 = 101.11 \rightarrow X = 101.11*\frac{233.53}{100} \rightarrow X = 236.12\]</span></p>
+<p>Det betyder kursen 2018-01-31 vil være 236.12.</p>
 </div>
-<div id="nutidsvrdi-af-en-annuitet" class="section level3">
-<h3><span class="header-section-number">8.1.2</span> Nutidsværdi af en annuitet</h3>
-<p><img src="media/image37.png" style="width:6in;height:1.14931in" /></p>
-<p>Nutidsværdien af en annuitet fortæller os hvad en person kan låne på tidspunkt 0, hvis han i n terminer afdrager samme beløb y, og renten tilskrives terminsvis. Bemærk tidslinjen har tidpunkt 0 med, i modsætning til fremtidsværdien af en annuitet, det er på dette tidspunkt man låner beløbet <span class="math inline">\(A_{0}\)</span>. Man kalder formlen for nutidsværdien af en annuitet gældsformlen fordi, man stifter gæld på tidspunkt 0. Hvorfor starter man ikke ved 1 ligesom i forrige formel, det skyldes at når man ønsker at låne penge nu, låner man ikke penge man betaler tilbage med det samme, dem ville man jo så alligevel ikke have glæde af.</p>
-<p><span class="math display">\[A_{0} = y \cdot \frac{1 - \left( 1 + r \right)^{- n}}{r}\]</span></p>
-<p>Hvis en person kan afdrage y/pmt. kr. 1.000,- på et lån over n=10 terminer, og der på restgælden tilskrives en fast terminsrente r=0,02, ved begyndelsen af hver termin, kan han i alt låne kr. 8.982,50 kr nu. Den første linje i udskriften fra excel, viser hvordan formlen bruges. Den anden linje viser hvorledes den indbyggede excelfunktion beregner nutidsværdien, bemærk PV (present value) er den engelske formel den danske hedder NV (nutidsværdien).</p>
-<p><img src="media/image38.png" style="width:5.65317in;height:2.88909in" /></p>
-<p>Der er en tæt sammenhæng mellem fremtids- og nutidsværdien af en annuitet. Nutidsværdien af annuiteten er fremtidsværdien <span class="math inline">\(A_{n}\)</span> på tidspunkt n tilbagediskonteret til tidspunkt 0.</p>
-<p><span class="math display">\[A_{n} \cdot \left( 1 + r \right)^{- n} = y \cdot \frac{\left( 1 + r \right)^{n} - 1}{r} \cdot \left( 1 + r \right)^{- n} = A_{0}\]</span></p>
-<p>Tilsvarende er <span class="math inline">\(A_{0}\\)</span> fremskrevet til tidspunkt n ved at gange med faktoren <span class="math inline">\(\left( 1 + r \right)^{n}\)</span> det samme som <span class="math inline">\(A_{n}\)</span>.</p>
-<p><span class="math display">\[A_{0} \cdot \left( 1 + r \right)^{n} = y \cdot \frac{1 - \left( 1 + r \right)^{- n}}{r} \cdot \left( 1 + r \right)^{n} = A_{n}\]</span></p>
-<p>Man kan komme ud for at man ikke kender en af de andre størrelser r, n eller y, men derimod kender <span class="math inline">\(A_{0}\)</span>. Hvis y eller n er ukendte, kan man ud fra ovenstående formel isolere den ukendte størrelse ved reduktionsregnereglerne. Er y ukendt får vi:</p>
-<p><span class="math display">\[y = A_{0} \cdot \frac{r}{1 - \left( 1 + r \right)^{- n}}\]</span></p>
-<p>Hvis Jensen gerne vil låne 20.000,- og kender terminsrenten 4%, og skal betale gælden af over 12 terminer, kan man vha. ovenstående formel beregne hans ydelse.</p>
-<p><img src="media/image39.png" style="width:6in;height:2.85903in" /></p>
-<p>Er n antallet af ydelser ukendt kan vi omskrive formlen til</p>
-<p><span class="math display">\[n = - \frac{\ln\left( 1 - \frac{\left( A_{0} \cdot r \right)}{y} \right)}{\ln\left( 1 + r \right)}\ \]</span></p>
-<p>Hansen betaler 1.000,- i ydelse, på et lån på 10.000,- med en terminsrente på 3%, antallet af ydelser n bliver:</p>
-<p><img src="media/image40.png" style="width:6in;height:1.97778in" /></p>
-<p>Hansen skal altså betale 13 ydelser, den sidste ydelse bliver mindre end de første 12.</p>
-<p>Hvis der er ukendt terminsrente r, kan man ikke opstille et eksplicit udtryk for renten, ligningen bliver et polynomium af grad n. Der findes ikke altid en entydig løsning til et polynomium, hvorfor excel og anden software benytter en algoritme til at finde en løsning.</p>
-<p>Hvis Larsen låner 10.000,- der afdrages ved 12 ydelser af 1.500,-, vil vi kunne benytte rate-kommandoen. Vi vil få en terminsrente på 10,45.</p>
-<p><img src="media/image41.png" style="width:6in;height:1.83542in" /></p>
-</div>
+<div id="procentpoint" class="section level2">
+<h2><span class="header-section-number">3.2</span> Procentpoint</h2>
+<p>Procentpoint angiver hvor meget ændringen er i indekstallene. Hvis fx en indekseret kurs er ændret fra 110 til 130 er ændringen: 130-110=20 procentpoint. Vi kan udregne den procentvise ændring som:</p>
+<p><span class="math inline">\(\frac{130 - 110}{110} \cdot 100 = 18,18\%\)</span></p>
+<p>Modtager en kandidat til kommunalvalget 4% af stemmerne, mod 2% forrige periode, er stigningen 2 procentpoint. Stigningen i procent er imidlertid:</p>
+<p><span class="math display">\[\frac{4 - 2}{2} \cdot 100 = 100\%\]</span></p>
+<p>Vi kan undersøge hvor meget ændringen i procentpoint i forhold til perioden før har været, ved indeks nu minus indeks for perioden tidligere.</p>
+<p><div id="htmlwidget-8a988fe495c5ca278335" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8a988fe495c5ca278335">{"x":{"filter":"none","data":[["2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[1.11,-8.54,-0.33,-3.6,-3.1,-5.12],[4.44,-1.24,5.51,-7.32,1.2,2.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske Bank ændring i procentpoint<\/th>\n      <th>Jyske Bank ændring i procentpoint<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<br>
+<br>
+<div id="htmlwidget-0e9590ee6839ea42755a" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0e9590ee6839ea42755a">{"x":{"attrs":{"title":"Aktiekurser ændring i procentpoint","labels":["month","Danske Bank ændring i procentpoint","Jyske Bank ændring i procentpoint"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2018-01-30T23:00:00.000Z","2018-02-27T23:00:00.000Z","2018-03-30T22:00:00.000Z","2018-04-29T22:00:00.000Z","2018-05-30T22:00:00.000Z","2018-06-29T22:00:00.000Z"],[1.11,-8.54,-0.33,-3.6,-3.1,-5.12],[4.44,-1.24,5.51,-7.32,1.2,2.9]]},"evals":[],"jsHooks":[]}</script></p>
 </div>
 </div>
             </section>
@@ -376,8 +346,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="eksponentielle-funktioner.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="inverse-funktioner.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="grundlggende-regneregler.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="potensregneregler.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
