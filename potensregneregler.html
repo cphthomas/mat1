@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="prev" href="procentregneregler.html">
-<link rel="next" href="procentpoint.html">
+<link rel="prev" href="brkregneregler.html">
+<link rel="next" href="linere-funktioner.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -191,46 +191,67 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="indekstal" class="section level1">
-<h1><span class="header-section-number">Kapitel 3</span> Indekstal</h1>
-<p>Tal omregnes til indekstal, ved at lade indekstallene være procentværdier i forhold til en bestemt værdi kaldet basis der har indeks 100.</p>
-<p><span class="math display">\[Indeks = \frac{Væ\ \ rdi}{\text{basis}} \cdot 100\]</span></p>
-<p>Hvis fx en aktie er steget fra kurs 133 til kurs 180, kan vi indeksere ved at sætte kurs 133 til basis og bestemme, den indekserede værdi af den nye kurs 180.</p>
-<p><span class="math display">\[Indeks = \frac{180}{133} \cdot 100 = 135.34\]</span></p>
-<p>Dette er smart hvis vi skal sammenligne, hvordan forskellige værdier udvikler sig over tiden.</p>
-<p>Herunder har vi de de seneste justerede slutkurser for Danske Bank og Jyske Bank på månedsbasis.</p>
-<p><div id="htmlwidget-e78dfaf09877f38ae922" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e78dfaf09877f38ae922">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank<\/th>\n      <th>Jyske.Bank<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="potensregneregler" class="section level1">
+<h1><span class="header-section-number">Kapitel 7</span> Potensregneregler</h1>
+<div id="video" class="section level2">
+<h2><span class="header-section-number">7.1</span> Video</h2>
 <br>
-<br>
-<div id="htmlwidget-aaf6accb8eff2d197016" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
-<script type="application/json" data-for="htmlwidget-aaf6accb8eff2d197016">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank","labels":["month","Danske Bank","Jyske Bank"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[233.53,236.12,216.17,215.4,207,199.75,187.8],[341.17,356.33,352.1,370.9,345.9,350,359.9]]},"evals":[],"jsHooks":[]}</script>
-<br>
-<br>
-<br>
-Vi kan bedre sammenligne udviklingerne i aktiekursen ved at indeksere kurserne for de to banker.<br />
-<br>
-<div id="htmlwidget-a17c56c51bc64c7ff9f6" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a17c56c51bc64c7ff9f6">{"x":{"filter":"none","data":[["2017-12-31","2018-01-31","2018-02-28","2018-03-31","2018-04-30","2018-05-31","2018-06-30"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Danske.Bank.indekseret<\/th>\n      <th>Jyske.Bank.indekseret<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-<br>
-<br></p>
-<p>Her ses den indekseredde kursudvikling grafisk:</p>
-<div id="htmlwidget-4c1de14cd05d81cfeedd" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4c1de14cd05d81cfeedd">{"x":{"attrs":{"title":"Aktiekurs Danske Bank og Jyske Bank indekseret","labels":["month","Danske Bank indekseret","Jyske Bank indekseret"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}}},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-12-31T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-28T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-30T00:00:00.000Z"],[100,101.11,92.57,92.24,88.64,85.54,80.42],[100,104.44,103.2,108.71,101.39,102.59,105.49]]},"evals":[],"jsHooks":[]}</script>
-<p><br>
-<br>
-Hvordan kommer man fra indekstal til det oprindelige beløb, når Danske Bank aktien i har kurs 233.53 2017-12-31, hvad er da kursen 2018-01-31 når indeks er 101.11?</p>
-<p>Nu kan man opstille en ligning for beregning af indekstal, med en ubekendt værdi kursen 2018-01-31 nemlig:</p>
-<p><span class="math display">\[\frac{X}{233.53}*100 = 101.11 \rightarrow X = 101.11*\frac{233.53}{100} \rightarrow X = 236.12\]</span></p>
-<p>Det betyder kursen 2018-01-31 vil være 236.12.</p>
+<div class="embed-container">
+<iframe src="https://player.vimeo.com/video/282141320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</div>
+<p><br></p>
+<p>Lad a, b være reelle tal og m og n naturlige tal, der gælder følgende regler for potensregneregler.</p>
+<p><span class="math display">\[a^{n} \cdot a^{m} = a^{n + m}\]</span></p>
+<p><span class="math display">\[3^{2} \cdot 3^{4} = 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 = 3^{6}\]</span></p>
+<hr />
+<p><span class="math display">\[\frac{a^{n}}{a^{m}} = a^{n - m}\]</span></p>
+<p><span class="math display">\[\frac{3^{4}}{3^{2}} = \frac{3 \cdot 3 \cdot 3 \cdot 3}{3 \cdot 3} = 3 \cdot 3 = 3^{2}\]</span></p>
+<hr />
+<p><span class="math display">\[a^{n^{m}} = a^{n \cdot m}\]</span></p>
+<p><span class="math display">\[4^{2^{3}} = 4^{2} \cdot 4^{2} \cdot 4^{2} = 4^{2 \cdot 3}\]</span></p>
+<hr />
+<p><span class="math display">\[a^{n} \cdot b^{n} = \left( a \cdot b \right)^{n}\]</span></p>
+<p><span class="math display">\[4^{3} \cdot 7^{3} = 4 \cdot 4 \cdot 4 \cdot 7 \cdot 7 \cdot 7 = 4 \cdot 7 \cdot 4 \cdot 7 \cdot 4 \cdot 7 = 28^{3} = \left( 4 \cdot 7 \right)^{3}\]</span></p>
+<hr />
+<p><span class="math display">\[\frac{a^{n}}{b^{n}} = \left( \frac{a}{b} \right)^{n}\]</span></p>
+<p><span class="math display">\[\frac{3^{3}}{4^{3}} = \frac{3 \cdot 3 \cdot 3}{4 \cdot 4 \cdot 4} = \frac{3}{4} \cdot \frac{3}{4} \cdot \frac{3}{4} = \left( \frac{3}{4} \right)^{3}\]</span></p>
+<hr />
+<p><span class="math display">\[\frac{1}{a^{n}} = a^{- n}\]</span></p>
+<p><span class="math display">\[\frac{1}{4^{3}} = \frac{4^{0}}{4^{3}} = 4^{0 - 3} = 4^{- 3}\]</span></p>
+<hr />
+<p><span class="math display">\[a^{0} = 1\]</span></p>
+<p><span class="math display">\[37^{0} = 1\]</span></p>
+<hr />
+<p>Resultatet af kvadratroden af 16, <span class="math inline">\(\sqrt{16}\)</span>, er det tal der gange med sig selv giver 16</p>
+<p><span class="math display">\[\sqrt{16} \cdot \sqrt{16} = 16 = 4 \cdot 4\]</span></p>
+<p>dvs.</p>
+<p><span class="math display">\[\sqrt{16} = 4\]</span></p>
+<p>Bemærk her noget helt fantastisk!</p>
+<p><span class="math display">\[\sqrt{16} \cdot \sqrt{16} = 16 = 16^{1} = 16^{\frac{1}{2} + \frac{1}{2}} = 16^{\frac{1}{2}} \cdot 16^{\frac{1}{2}}\]</span></p>
+<p>Vi kan altså skrive <span class="math inline">\(\sqrt{16}\)</span> som <span class="math inline">\(16^{\frac{1}{2}}\)</span></p>
+<p>Tilsvarende betyder f.eks. 4 roden af 256, <span class="math inline">\(\sqrt[4]{256}\)</span>, at man skal finde det tal der gange med sig selv 4 gange giver 256.</p>
+<p><span class="math display">\[\sqrt[4]{256} = 4\]</span></p>
+<p>Fordi</p>
+<p><span class="math display">\[4 \cdot 4 \cdot 4 \cdot 4 = 256\]</span></p>
+<p>Det kan vi skrive som</p>
+<p><span class="math display">\[\sqrt[4]{256} = 256^{\frac{1}{4}}\]</span></p>
+<p>Husk et par nyttige regler eksemplificeret nedenfor:</p>
+<p><span class="math display">\[\frac{1}{x} = x^{- 1}\]</span></p>
+<p><span class="math display">\[\frac{1}{x^{17}} = x^{- 17}\]</span></p>
+<p><span class="math display">\[\sqrt{x} = \sqrt[2]{x} = x^{\frac{1}{2}}\]</span></p>
+<p><span class="math display">\[\sqrt[7]{x^{3}} = x^{\frac{3}{7}}\]</span></p>
+<p><span class="math display">\[x^{0} = 1\]</span></p>
+<p><span class="math display">\[2 \cdot \sqrt{2} = \sqrt{2} \cdot \sqrt{2} \cdot \sqrt{2} = \sqrt{8}\]</span></p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="procentregneregler.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="procentpoint.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="brkregneregler.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="linere-funktioner.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
